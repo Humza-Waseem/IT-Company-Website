@@ -1,0 +1,15 @@
+.libre-franklin-FontForIndexPage {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-nav {
+  background-color: rgb(199, 224, 221);
+}
+
+.menu-list {
+  display: flex;
+  margin-right: 20px;
+}/*# sourceMappingURL=style.css.map */
