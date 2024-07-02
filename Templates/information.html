@@ -1,0 +1,55 @@
+{% load static%}
+{% block content %}
+<div class="info-box">
+    <div class= "info-sections">
+
+
+        <section class="section1">
+           <p class="text-big">Company</p>
+           <div class="text-small">
+            <ul>
+              <li><a href="{% url 'Home'%}">Home</a></li>
+              <!-- <li><a href="{% url 'Services'%}">Services</a></li> -->
+              <li><a href="{% url 'About'%}">About</a></li>
+              <li><a href="{% url 'Careers'%}">Careers</a></li>
+            </ul>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+      <section class="section2">
+           <p class="text-big">Services</p>
+           <div class="text-small">
+           <ul>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Mobile App Development</a></li>
+              <li><a href="#">UI/UX Design</a></li>
+              <li><a href="#">Search Engine Optimization</a></li>
+           </ul>
+           </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="section3">
+            <p class="text-big">Contact</p>
+            <div class="text-small">
+            <ul>
+               <li>Home</li>
+               <li>About</li>
+               <li>Careers</li>
+               <li>Services</li>
+            </ul>
+         </div>
+         </section>
+
+         
+         <div class="divider"></div>
+
+
+     <!-- <section class="section4"></section> -->
+    </div>
+
+</div>
+{% endblock content %}
