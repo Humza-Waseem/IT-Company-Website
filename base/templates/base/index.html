@@ -28,7 +28,7 @@
 
     <meta property="og:site_name" content="{{title}}">
     <meta property="og:url" content="https://www.cdoxs.com/index.html">
-<!-- {% comment %} 
+    <!-- {% comment %} 
     <link rel="icon" href="./assets/images/icons/logo-icon.svg" type="image/gif" sizes="20x20">
 
     <link rel="stylesheet" href="./assets/css/animate.css">
@@ -83,31 +83,33 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
 </head>
 <body  class="tt-magic-cursor bg-image-overlay">
     <!-- ==================================================PRELOADERN  START ==============================-->
-    <!-- <div class="preloader">
+    {% comment %} <div class="preloader">
         <div class="counter">0</div>
-        </div> -->
+    </div> 
+    <script src="{% static 'javascript/script.js'%}"></script> {% endcomment %}
     <!-- ==================================================PRELOADERN  END ==============================-->
-        
-        <!-- ==================================================MAGIC CURSOR START ==============================-->
-        <!-- <div id="magic-cursor">
-            <div id="ball"></div>
-            </div> -->
+    
+    <!-- ==================================================MAGIC CURSOR START ==============================-->
+    {% comment %} <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+    <script src="{% static 'javascript/script.js'%}"></script> {% endcomment %}
         <!-- ==================================================MAGIC CURSOR   END ==============================-->
         
             <!-- <script src="./assets/javascript/script.js"></script> -->
           
-            <script src="{% static 'javascript/script.js'%}"></script>
+    <script src="{% static 'javascript/script.js'%}"></script>
 
             
             
@@ -120,99 +122,20 @@
             
         
         
-        <!-- ==================================================TOPBAR Start==============================-->
-        
-            <div class="topbar-five">
-                <div class="container-fluid">
-         <div class="row">
-
-
-             <div class="col-lg-5 topbar-five-right">
-                 <ul class="topbar-address-list">
-                     <li><i class="bi bi-telephone"></i> <a href="tel:+998-8776345">+998-8776345</a></li>
-                     <li><i class="bi bi-geo-alt"></i><a href="#">Road: 02, House: 122-123, NewYork</a></li>
-                 </ul>
-             </div>
-         </div>
-        </div>
-     </div>
-
-     <!-- ==================================================TOPBAR END==============================-->
-
- <!-- ==================================================NAVBAR START==============================-->
-
-<nav class="navBar h-nav-responsive">
-
-    {% comment %} <!-- -----------------------    COMPANY LOGO--------------------- --> {% endcomment %}
-    <!-- <div class="header-logo">
-        <a href="index.html"><img alt="LogoOfCDOXS" class="img-fluid" src="./assets/images/_bg/Cdoxs-Logo.png" width="70" height="70"></a>
-    </div> -->
-
-    <div class="nav-logo">
-        {% comment %} <a href="index.html"><img src="./assets/images/_bg/Cdoxs-Logo.png" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
-
-        {% comment %} <a href="index.html"><img src="{% static 'css/images/_bg/Cdoxs-Logo.png' %}%}" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
-        <a href="index.html">
-            <img src="{% static 'images/_bg/Cdoxs-Logo.png' %}" alt="LogoOfCDOXS" width="70" height="70">
-        </a>
-        
+  <!-- ==================================================TOPBAR Start==============================-->
+     {% include 'topbar.html'%}
+  <!-- ==================================================TOPBAR END==============================-->
 
 
 
-
-
-    </div>
-    <ul class ="nav-list v-class-responsive">
-           <li><a href="">Home</a></li>
-           <li><a href="">Services</a></li>
-           <li><a href="">About</a></li>
-           <li><a href="">Careers</a></li>
-           <!-- <li><a href="">Contact Us</a></li>
-           -->
-           <button class="btn">Let's Talk</button>
-           <!-- <button class="btn">Let's Talk</button> -->
-    </ul>
-
-    <div class="nav-right v-class-responsive">
-        <!-- <div class="search-icon">
-            <input type="text" name="" id="">
-           <button> <img src="./assets/images/_icons/search.png "alt="search-icon" width="10px" height="10px"></button>
-        </div> -->
-
-        <div class="search-container">
-            <div class="search-bar" id="searchBar">
-              <input type="text" class="search-input" id="search" placeholder="Search..." name = "search">
-              <span class="close-icon" id="closeIcon">&times;</span>
-            </div>
-            {% comment %} <img src="./assets/images/_icons/search.png" alt="searchIcon" class = "search-button" id = "searchButton"> {% endcomment %}
-           
-            <img src="{% static 'images/_icons/search.png' %}" alt="searchIcon" class = "search-button" id = "searchButton"">
-           
-            
-           {% comment %} <button class="search-button" id="searchButton">Search</button>  {% endcomment %}
-        </div>
-    </div>
-    <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-    {% comment %} <script src="./assets/javascript/script.js"></script> {% endcomment %}
-    <script src="{% static 'javascript/responsive.js'%}"></script>
-     <script src="{% static 'javascript/script.js'%}"></script>
-   
-    {% comment %} <script src="./assets/javascript/responsive.js"></script> {% endcomment %}
-
-</nav>
-
-
-<!-- ==================================================NAVBAR END ==============================-->
+   <!-- ==================================================NAVBAR START==============================-->
+     {% include "navBar.html" %}
+   <!-- ==================================================NAVBAR END ==============================-->
 
 
 
-
-<!-- ===========================================START OF Banner========================================  -->
-<section class=" background firstSection "  >
+  <!-- ===========================================START OF Banner========================================  -->
+  <section class=" background firstSection "  >
     
     {% comment %} <!-- <iframe src="https://www.youtube.com/embed/GxEZsyoYHGY?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Faxixtechnologies.com&widgetid=1" frameborder="0" allowfullscreen></iframe> --> {% endcomment %}
 
@@ -254,11 +177,11 @@
 
     </div>
     
-</section>
+  </section>
 
-<hr>
+  <hr>
 
-<div class="sections">
+  <div class="sections">
  <section class="secRight">
         <div class="paragraphs">
          <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
@@ -300,18 +223,18 @@
        <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
     </div>
  </section>
-</div>
-<!-- 
+  </div>
+  <!-- 
  ===========================================END OF Banner======================================== -->
  
  
  
  
- <!-- ===========================================START OF CLIENT TESTIMONIAL======================================== --> 
+   <!-- ===========================================START OF CLIENT TESTIMONIAL======================================== --> 
  <hr>
-<section class="clienTestimonial">    
+  <section class="clienTestimonial">    
   
-<div class="paragraphs">
+  <div class="paragraphs">
     <div class="text-bigg">
        <p> Client Testimonial </p>
     </div>
@@ -322,15 +245,15 @@
     <div class="text-smalll">
         <p "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eveniet alias labore itaque tenetur? Odio, sed! Quos sit modi corporis suscipit vitae quo. Ipsum, error. Blanditiis ab veniam corporis qui?</p>
      </div>
-</div>
-</section>
+  </div>
+  </section>
 
  
  
  <!-- ===========================================END OF CLIENT TESTIMONIAL======================================== --> 
 
 
- <div class="endingBar">
+  <div class="endingBar">
         <div class="endingBarContent">
             <p> &copy 2024 | CDOXS &nbsp;  &nbsp; &nbsp;</p> 
             <p>Let's make amazing things together!</p>
@@ -338,7 +261,7 @@
             <!-- <button>click</button>
             <button>hi</button> -->
         </div>
- </div>
+  </div>
 
 
 
@@ -352,11 +275,11 @@
 
     <!-- ===========================================START OF HEADER========================================  -->
   
- <!-- =============================================End of Header=============================================-->
+   <!-- =============================================End of Header=============================================-->
 
  
 
-     <!-- ========== banner-section start============= -->
+     {% comment %} <!-- ========== banner-section start============= -->
 
      <!-- <div class="banner-five-area overflow-hidden">
         <div class="container-fluid px-0">
@@ -439,7 +362,7 @@
     </div> -->
 
     <!--- ========== banner-section end============= -->
-
+  {% endcomment %}
 
 </body>
 </html>

@@ -1,0 +1,71 @@
+{% load static %}
+{% block content %}
+<nav class="navBar h-nav-responsive">
+
+    {% comment %} <!-- -----------------------    COMPANY LOGO--------------------- --> {% endcomment %}
+    <!-- <div class="header-logo">
+        <a href="index.html"><img alt="LogoOfCDOXS" class="img-fluid" src="./assets/images/_bg/Cdoxs-Logo.png" width="70" height="70"></a>
+    </div> -->
+
+    <div class="nav-logo">
+        {% comment %} <a href="index.html"><img src="./assets/images/_bg/Cdoxs-Logo.png" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
+
+        {% comment %} <a href="index.html"><img src="{% static 'css/images/_bg/Cdoxs-Logo.png' %}%}" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
+        <a href="index.html">
+            <img src="{% static 'images/_bg/Cdoxs-Logo.png' %}" alt="LogoOfCDOXS" width="70" height="70">
+        </a>
+        
+
+
+
+
+
+    </div>
+    <ul class ="nav-list v-class-responsive">
+           {% comment %} <li><a href="#">Home</a></li> {% endcomment %}
+           <li><a href="{% url 'Home'%}">Home</a></li>
+           <li><a href="{% url 'Services'%}">Services</a></li>
+           <li><a href="{% url 'About'%}">About</a></li>
+           <li><a href="{% url 'Careers'%}">Careers</a></li>
+           {% comment %} <li><a href="">Services</a></li>
+           <li><a href="">About</a></li>
+           <li><a href="">Careers</a></li> {% endcomment %}
+           
+           <!-- <li><a href="">Contact Us</a></li>
+           -->
+           <button class="btn">Let's Talk</button>
+           <!-- <button class="btn">Let's Talk</button> -->
+    </ul>
+
+    <div class="nav-right v-class-responsive">
+        <!-- <div class="search-icon">
+            <input type="text" name="" id="">
+           <button> <img src="./assets/images/_icons/search.png "alt="search-icon" width="10px" height="10px"></button>
+        </div> -->
+
+        <div class="search-container">
+            <div class="search-bar" id="searchBar">
+              <input type="text" class="search-input" id="search" placeholder="Search..." name = "search">
+              <span class="close-icon" id="closeIcon">&times;</span>
+            </div>
+            {% comment %} <img src="./assets/images/_icons/search.png" alt="searchIcon" class = "search-button" id = "searchButton"> {% endcomment %}
+           
+            <img src="{% static 'images/_icons/search.png' %}" alt="searchIcon" class = "search-button" id = "searchButton"">
+           
+            
+           {% comment %} <button class="search-button" id="searchButton">Search</button>  {% endcomment %}
+        </div>
+    </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    {% comment %} <script src="./assets/javascript/script.js"></script> {% endcomment %}
+    <script src="{% static 'javascript/responsive.js'%}"></script>
+     <script src="{% static 'javascript/script.js'%}"></script>
+   
+    {% comment %} <script src="./assets/javascript/responsive.js"></script> {% endcomment %}
+
+</nav>
+{% endblock content %}

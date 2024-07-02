@@ -7,20 +7,8 @@
   background: rgba(0, 0, 0, 0.7) url("../images/_bg/coding.jpg");
   background-size: cover;
   background-blend-mode: darken;
+  
 }
-/* #video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-#video-background iframe {
-  width: 100%;
-  height: 100%;
-}  */
 
 .text-big {
   background-color: #000000;
@@ -82,6 +70,103 @@
 .btn-big  .clicked{
 
 }
+
+
+
+
+/*=======================================
+ 03.Preloader
+=======================================*/
+.preloader {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #070707;
+  z-index: 999999999;
+}
+.preloader::before {
+  position: absolute;
+  top: 45%;
+  content: url("../images/bg/footer-logo.svg");
+  width: 100%;
+  /* max-width: 300px; */
+  margin: auto auto;
+  text-align: center;
+  transform: scale(4);
+  opacity: 0.15;
+}
+@media (max-width: 991px) {
+  .preloader::before {
+    transform: scale(1.5);
+  }
+}
+.preloader.active {
+  transform: translateY(-100vh);
+  transition: ease-in-out 1.5s;
+  transition-delay: 1s;
+}
+.preloader .counter {
+  position: relative;
+  color: #fff;
+  font-size: 6rem;
+  font-weight: 600;
+  z-index: 1;
+}
+.preloader .counter::after {
+  content: "%";
+  font-size: 80px;
+}
+.preloader .hide {
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+
+/*=======================================
+ 04.Magic Cursor
+=======================================*/
+#magic-cursor {
+  position: absolute;
+  display: none;
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0;
+  padding: 20px;
+}
+
+body.tt-magic-cursor #magic-cursor {
+  display: block;
+}
+
+#ball {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light-one);
+  pointer-events: none;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: var(--text-light2);
+  /* Note: border width handled through JS */
+}
+
+.cursor-style-two {
+  border-radius: 0% !important;
+  background-color: var(--white) !important;
+  color: #000 !important;
+  padding: 15px;
+  font-family: var(--font-kegina);
+}
+
+
+
 
 
 /*=======================================  TOPBAR START  =======================================*/
