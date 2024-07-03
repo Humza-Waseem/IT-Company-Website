@@ -57,6 +57,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+////////////////////////////////    SECTIONS LEFT AND RIGHT  ////////////////////////////////
+document.addEventListener('DOMContentLoaded', function() {
+    const secRight = document.querySelector('.secRight');
+
+    function checkVisibility() {
+      const rect = secRight.getBoundingClientRect();
+      const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+      if (rect.top <= windowHeight) {
+        secRight.classList.add('visible');
+      }
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility);
+
+    // Initial check in case the element is already in view on load
+    checkVisibility();
+  });
+
+  
+
+
+
 
 
 

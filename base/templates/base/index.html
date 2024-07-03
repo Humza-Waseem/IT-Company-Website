@@ -135,127 +135,68 @@
 
 
   <!-- ===========================================START OF Banner========================================  -->
-  <section class=" background firstSection "  >
-    
-    {% comment %} <!-- <iframe src="https://www.youtube.com/embed/GxEZsyoYHGY?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Faxixtechnologies.com&widgetid=1" frameborder="0" allowfullscreen></iframe> --> {% endcomment %}
 
-    <div class="box-main">
+  
+  {% comment %} <style>
+    .background {
+        background: rgba(0, 0, 0, 0.7) url("
+        {% if content.image %}
+        {{ content.image.url }}
+        {% else %}
+        ../images/_bg/coding.jpg
+        {% endif %}");
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+</style> {% endcomment %}
+
+ {% include "firstSection.html"%}
+
+ {% comment %} ===========================================END OF Banner=========================================  {% endcomment %}
 
 
 
-        <div class="firstHalf">
-        <p class="text-big">Welcome to CDOXS!</p>
-        <p class="text-small">Boost your career in <span id="dynamicText" ></span>  <div class="btn-big clicked">
-            <button id="btn-getStarted"  > Get Started</button>
-          </div></p>
-        </div>
-        {% comment %} <script src="./assets/javascript/dynamic.js"></script> {% endcomment %}
-        <script src="{% static 'javascript/dynamic.js'%}"></script>
-        
-      
-        
-
-        
-        <div class="secondHalf ">
-            <!--   =======================     3 GIF FOR A SLIDE SHOW    =================================-->
-            {% comment %} <img src="./assets/images/_bg/giphy2.webp" alt="image" height="300px" width="300px">  {% endcomment %}
-
-            <img src="{% static 'images/_bg/giphy2.webp' %}" alt="image" height="300px" width="300px">
-            
-            {% comment %} <a href="index.html"><img src="{% static 'css/images/_bg/Cdoxs-Logo.png' %}%}" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
-
-            {% comment %} <!-- <img src="./assets/images/_bg/giphy.webp" alt="image" height="300px" width="300px">  -->
-            <!-- <img src="./assets/images/_bg/giphy.webp" alt="image" height="300px" width="300px">  -->  {% endcomment %}
-        </div>
-
-        <div class="arrow-button">
-            <!-- <span>Next</span> -->
-          {% comment %} <img src="./assets/images/_icons/right-arrow.png" alt="right-arrow" width="80px" height="40px"> {% endcomment %}
-            <img src="{% static 'images/_icons/right-arrow.png' %}" alt="right-arrow" width="80px" height="40px">
-        </div>
-        
-
-    </div>
-    
-  </section>
-
+ 
   <hr>
-
-  <div class="sections">
- <section class="secRight">
-        <div class="paragraphs">
-         <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
-    
-         <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur doloremque natus maiores debitis odio saepe dolore, accusantium qui libero.</p>
-        </div>
-        <div class = "thumbnail">
-          {% comment %} <img src="./assets/images/_bg/bgg.jpg" alt="" class="imgFluid"> {% endcomment %}
-          <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
-        </div>
- </section>
- <section class="secLeft">
-    <div class="paragraphs">
-     <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
-
-     <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur e dolorem repellendus aliquid. Ab omnis minima iure exercitationem nulla quam doloremque amet necessitatibus consequatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ratione adipisci ducimus accusamus obcaecati laudantium dolorem unde praesentium maxime eos ex tempore vero explicabo odit, magni neque consequatur. Praesentium, debitis.</p>
-    </div>
-    <div class = "thumbnail">
-        <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
-    </div>
- </section>
- <section class="secRight">
-    <div class="paragraphs">
-     <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
-
-     <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur doloremque natus maiores debitis odio saepe dolore, accusantium qui libero.</p>
-    </div>
-    <div class = "thumbnail">
-        <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
-    </div>
- </section>
- <section class="secLeft">
-    <div class="paragraphs">
-     <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
-
-     <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur e dolorem repellendus aliquid. Ab omnis minima iure exercitationem nulla quam doloremque amet necessitatibus consequatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ratione adipisci ducimus accusamus obcaecati laudantium dolorem unde praesentium maxime eos ex tempore vero explicabo odit, magni neque consequatur. Praesentium, debitis.</p>
-    </div>
-    <div class = "thumbnail">
-       <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
-    </div>
- </section>
-  </div>
-  <!-- 
- ===========================================END OF Banner======================================== -->
+ {% comment %} ===========================================START OF SECTIONS=====================================  {% endcomment %}
+ 
+ {% include "sections.html"%}
+ 
+ {% comment %} ===========================================END OF SECTIONS========================================  {% endcomment %}
  
  
- 
- 
-   <!-- ===========================================START OF CLIENT TESTIMONIAL======================================== --> 
+  
+
+
+ {% comment %} ===========================================START OF CLIENT TESTIMONIAL============================  {% endcomment %}
+  
  <hr>
-  <section class="clienTestimonial">    
+<section class="clienTestimonial">    
   
   <div class="paragraphs">
-    <div class="text-bigg">
-       <p> Client Testimonial </p>
-    </div>
-    <div class="testimonialImage">
-        <img src="{% static 'images/_bg/masoon.png' %}" alt="searchIcon" class = "search-button" id = "searchButton"">
+       <div class="text-bigg">
+           <p> Client Testimonial </p>
+       </div>
+       <div class="testimonialImage">
+           <img src="{% static 'images/_bg/masoon.png' %}" alt="searchIcon" class = "search-button" id = "searchButton">
         
-    </div>
-    <div class="text-smalll">
-        <p "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eveniet alias labore itaque tenetur? Odio, sed! Quos sit modi corporis suscipit vitae quo. Ipsum, error. Blanditiis ab veniam corporis qui?</p>
-     </div>
+       </div>
+       <div class="text-smalll">
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eveniet alias labore itaque tenetur? Odio, sed! Quos sit modi corporis suscipit vitae quo. Ipsum, error.    Blanditiis ab veniam corporis qui?</p>
+        </div>
   </div>
-  </section>
+</section>
 
- <!-- ===========================================END OF CLIENT TESTIMONIAL======================================== --> 
+ {% comment %} ===========================================END OF CLIENT TESTIMONIAL==============================  {% endcomment %}
 
 
- <!-- ===========================================START OF Information section======================================== --> 
-  <hr class = "customHR">
+
+
+ {% comment %} ===========================================START OF Information section===========================  {% endcomment %}
+  {% comment %} <hr class = "customHR"> {% endcomment %}
 {% include 'information.html'%}
 
- <!-- ===========================================End OF Information section======================================== --> 
+ {% comment %} ===========================================End OF Information section=============================   {% endcomment %}
  
  
  
@@ -264,7 +205,7 @@
  
  
  
- <!-- ===========================================START OF ENDING BAR ======================================== --> 
+  {% comment %} ===========================================START OF ENDING BAR ==================================   {% endcomment %}
   <div class="endingBar">
         <div class="endingBarContent">
             <p> &copy 2024 | CDOXS &nbsp;  &nbsp; &nbsp;</p> 
@@ -274,7 +215,7 @@
             <button>hi</button> -->
         </div>
   </div>
- <!-- ===========================================END OF ENDING BAR======================================== --> 
+  {% comment %} ===========================================END OF ENDING BAR=====================================   {% endcomment %}
 
 
 

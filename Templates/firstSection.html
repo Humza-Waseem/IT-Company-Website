@@ -1,0 +1,48 @@
+{% load static%}
+{% block content%}
+<section class=" background firstSection "  >
+    
+    {% comment %} <!-- <iframe src="https://www.youtube.com/embed/GxEZsyoYHGY?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Faxixtechnologies.com&widgetid=1" frameborder="0" allowfullscreen></iframe> --> {% endcomment %}
+
+    <div class="box-main">
+
+
+        <div class="firstHalf">
+        
+        <p class="text-big">{{content.title}}</p>
+        <p class="text-small">{{content.description}} <span id="dynamicText" ></span>  <div class="btn-big clicked">
+            <button id="btn-getStarted"  > Get Started</button>
+           
+          </div></p>
+        </div>
+        {% comment %} <script src="./assets/javascript/dynamic.js"></script> {% endcomment %}
+        <script src="{% static 'javascript/dynamic.js'%}"></script>
+        
+      
+        
+
+        
+        <div class="secondHalf ">
+            <!--   =======================     3 GIF FOR A SLIDE SHOW    =================================-->
+            {% comment %} <img src="./assets/images/_bg/giphy2.webp" alt="image" height="300px" width="300px">  {% endcomment %}
+
+            <img src="{% static 'images/_bg/giphy2.webp' %}" alt="image" height="300px" width="300px">
+            
+            {% comment %} <a href="index.html"><img src="{% static 'css/images/_bg/Cdoxs-Logo.png' %}%}" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
+
+            {% comment %} <!-- <img src="./assets/images/_bg/giphy.webp" alt="image" height="300px" width="300px">  -->
+            <!-- <img src="./assets/images/_bg/giphy.webp" alt="image" height="300px" width="300px">  -->  {% endcomment %}
+        </div>
+
+        <div class="arrow-button">
+            <!-- <span>Next</span> -->
+          {% comment %} <img src="./assets/images/_icons/right-arrow.png" alt="right-arrow" width="80px" height="40px"> {% endcomment %}
+            <img src="{% static 'images/_icons/right-arrow.png' %}" alt="right-arrow" width="80px" height="40px">
+        </div>
+        
+
+    </div>
+    
+</section>
+
+{% endblock content%}

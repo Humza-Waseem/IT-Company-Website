@@ -13,6 +13,7 @@ urlpatterns = [
     path('Services/',views.services ,name= "Services"),
     path('About/',views.about ,name= "About"),
     path('Careers/',views.careers ,name= "Careers"),
+    path('Contact/',views.careers ,name= "contact"),    
 ]
 
 if settings.DEBUG:

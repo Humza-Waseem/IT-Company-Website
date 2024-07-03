@@ -1,0 +1,52 @@
+{% load static%}
+{% block content%}
+<div class="sections">
+    <script src="{% static 'javascript/script.js'%}"></script>
+
+    <section class="secRight visible">
+           <div class="paragraphs">
+            <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
+       
+            <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur doloremque natus maiores debitis odio saepe dolore, accusantium qui libero.</p>
+           </div>
+           <div class = "thumbnail">
+             {% comment %} <img src="./assets/images/_bg/bgg.jpg" alt="" class="imgFluid"> {% endcomment %}
+             <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
+           </div>
+    </section>
+   
+    <section class="secLeft visible">
+       <div class="paragraphs">
+        <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
+   
+        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur e dolorem repellendus aliquid. Ab omnis minima iure exercitationem nulla quam doloremque amet necessitatibus consequatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ratione adipisci ducimus accusamus obcaecati laudantium dolorem unde praesentium maxime eos ex tempore vero explicabo odit, magni neque consequatur. Praesentium, debitis.</p>
+       </div>
+       <div class = "thumbnail">
+           <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
+       </div>
+    </section>
+   
+    <section class="secRight visible">
+       <div class="paragraphs">
+        <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
+   
+        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur doloremque natus maiores debitis odio saepe dolore, accusantium qui libero.</p>
+       </div>
+       <div class = "thumbnail">
+           <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
+       </div>
+    </section>
+    
+    <section class="secLeft visible">
+       <div class="paragraphs">
+        <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
+   
+        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur e dolorem repellendus aliquid. Ab omnis minima iure exercitationem nulla quam doloremque amet necessitatibus consequatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ratione adipisci ducimus accusamus obcaecati laudantium dolorem unde praesentium maxime eos ex tempore vero explicabo odit, magni neque consequatur. Praesentium, debitis.</p>
+       </div>
+       <div class = "thumbnail">
+          <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
+       </div>
+    </section>
+   
+</div>
+{% endblock content%}

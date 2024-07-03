@@ -5,6 +5,7 @@
 
 .background {
   background: rgba(0, 0, 0, 0.7) url("../images/_bg/coding.jpg");
+
   background-size: cover;
   background-blend-mode: darken;
   
@@ -64,15 +65,15 @@
   position: absolute;
   margin-top: 14px;
   display: inline;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   /* justify-content: flex-start;
   align-items: center; */
 
 }
 #btn-getStarted:hover{
   background-color: white;
-  color: rgb(53, 52, 52);
-  transition: 0.5s;
+  color: #8a0226;
+  transition: 0.7s;
   
 }
 .btn-big  .clicked{
@@ -558,7 +559,7 @@ body.tt-magic-cursor #magic-cursor {
 }
 
 .sections {
-  background-color: rgb(230, 230, 203);
+  background-color: rgb(255, 255, 255);
 }
 
 .sections .secRight {
@@ -570,8 +571,19 @@ body.tt-magic-cursor #magic-cursor {
   max-width: 85%;
   margin: auto;
   max-height: 2%;
-  background: linear-gradient(90deg, #a3465f 0%, #243c94 100%);
+  margin-top: 4px;
+  /* background: linear-gradient(90deg, #a3465f 0%, #243c94 100%); */
+  background: #dfdfdf;
+  /* opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out, opacity 1s ease-out; */
+  
 }
+/* .sections .secRight.visible {
+  opacity: 1;
+  transform: translateX(0);
+} */
+
 .sections .secRight .thumbnail img {
   width: 250px;
   height: 250px;
@@ -620,10 +632,13 @@ body.tt-magic-cursor #magic-cursor {
   max-width: 85%;
   margin: auto;
   max-height: 2%;
+  margin-top: 4px;
   /* background: linear-gradient(90deg, #243c94 0%, #e21c51 100%); */
   flex-direction: row-reverse;
-  background: whitesmoke;
-  background: linear-gradient(90deg, #243c94 0%, #a3465f 100%);
+  /* background: whitesmoke; */
+  /* background: linear-gradient(90deg, #243c94 0%, #a3465f 100%); */
+  background: #dfdfdf;
+  transition: all 0.5s ease-in;
 }
 .sections .secLeft .thumbnail img {
   width: 250px;
@@ -643,6 +658,9 @@ body.tt-magic-cursor #magic-cursor {
   font-family: "Plus Jakarta Sans";
 }
 
+
+
+
 .clienTestimonial {
   display: flex;
   justify-content: center;
@@ -654,14 +672,14 @@ body.tt-magic-cursor #magic-cursor {
   background: rgb(255, 255, 255);
 }
 .clienTestimonial .paragraphs {
-  width: 83%;
+  width: 40%;
   font-family: "Montserrat";
   height: 91%;
   text-overflow: ellipsis;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: rgb(214, 216, 216);
+  background: rgb(255, 129, 129);
 }
 .clienTestimonial .paragraphs .text-bigg {
   display: flex;
@@ -673,14 +691,15 @@ body.tt-magic-cursor #magic-cursor {
 }
 .clienTestimonial .paragraphs .text-smalll {
   color: #243c94;
-  max-width: 54%;
+  max-width: 52%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-style: italic;
   font-weight: 100px;
   text-align: center;
-  margin-left: 360px;
+  margin-left: 171px;
+ 
 }
 .clienTestimonial .paragraphs .testimonialImage img {
   display: flex;
@@ -738,12 +757,14 @@ body.tt-magic-cursor #magic-cursor {
   /* background: rgb(255, 255, 255); */
 }
 .info-box .text-big{
-  color: linear-gradient(90deg, #850909 0%, #0e1c50 100%);;
+  color: linear-gradient(90deg, #850909 0%, #0e1c50 100%);
+  
 }
 .info-box .text-small{
   font-weight: 400px;
   font-size: 22px;
   text-decoration: none;
+  color: white;
   padding: 10px 10px;
 }
 .info-box a{
@@ -784,13 +805,16 @@ body.tt-magic-cursor #magic-cursor {
   /* color: #C80036; */
   /* background: rgb(255, 255, 255); */
 }
+
+
+
 .section1{
   display: flex;
   flex-direction: column;
   /* background-color: #2cb349; */
   /* background-color: transparent; */
   width: 20%;
-  height: 300px;
+  height: 340px;
   justify-content: center;
   align-items: center;
 
@@ -802,7 +826,7 @@ body.tt-magic-cursor #magic-cursor {
   /* background-color: #2cb349; */
   /* background-color: transparent; */
   width: 20%;
-  height: 300px;
+  height: 340px;
   justify-content: center;
   align-items: center;
 }
@@ -812,7 +836,7 @@ body.tt-magic-cursor #magic-cursor {
   /* background-color: #2cb349; */
   /* background-color: transparent; */
   width: 20%;
-  height: 300px;
+  height: 340px;
   justify-content: center;
   align-items: center;
 }
@@ -832,7 +856,9 @@ body.tt-magic-cursor #magic-cursor {
 .info-contact li img{
   padding: 6px 6px;
 }
-
+.info-socials a{
+  padding: 5px 5px;
+}
 
 
 @media only screen and (max-width:855px){

@@ -1,24 +1,20 @@
 from django.shortcuts import render
-from .models import NavBar, firstSection
+from .models import NavBar, firstSection,service
 
 # Create your views here.
 def home(request):
-    
+    content = firstSection.objects.first()
     context= {
-        'title': 'CDOCXS | Enabling a Digital Tomorrow',
-        'content': 'CDOCXS is a digital marketing company that offers SEO services, PPC services, social media marketing services, web design services, web development services and a host of other online marketing services.',
+        'content':content,
     }
 
     return render(request, 'base/index.html', context)
   
 
 def services(request):
-    context= {
-        'title': 'CDOCXS | Services',
-        'content': 'CDOCXS is a digital marketing company that offers SEO services, PPC services, social media marketing services, web design services, web development services and a host of other online marketing services.',
-    }
+    servicesList = service.objects.all()    
+    return render(request, 'information.html', {'servicesList': servicesList})
 
-    return render(request, 'base/services.html', context)
  
 
 def about(request):

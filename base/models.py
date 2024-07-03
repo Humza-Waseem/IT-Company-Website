@@ -30,3 +30,15 @@ class firstSection(models.Model):
          return self.title
     
 
+
+
+
+class service(models.Model):
+    title = models.CharField(max_length=100 , null=False, blank=False)
+    updated = models.DateTimeField(auto_now=True)  # auto_now will update the time whenever the room is updated
+    created = models.DateTimeField(auto_now_add=True)  # auto_now_add will update the time only when the room is created for the first time
+    
+    # def __str__(self):
+    #     return self.title
+    class Meta:
+        ordering = ['-updated','created']   # here we are ordering the rooms according to the most recent updated and created room in the list..     The ( - ) sign means to update according to most recent....

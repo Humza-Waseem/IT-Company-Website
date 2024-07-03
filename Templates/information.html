@@ -12,6 +12,7 @@
               <!-- <li><a href="{% url 'Services'%}">Services</a></li> -->
               <li><a href="{% url 'About'%}">About</a></li>
               <li><a href="{% url 'Careers'%}">Careers</a></li>
+               <li><a href="{% url 'contact'%}">Contact</a></li>
             </ul>
             </div>
         </section>
@@ -21,28 +22,36 @@
       <section class="section2">
            <p class="text-big">Services</p>
            <div class="text-small">
-           <ul>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">App Development</a></li>
-              <li><a href="#">UI/UX Design</a></li>
-              <li><a href="#">SEO</a></li>
+            <ul>
+               {% for item in servicesList %}
+                   <li><a href="#">{{ item.title }} hello</a></li>
+                   {% comment %} <li><a href="#">{{ item.content }}</a></li>
+                   <li><a href="#">{{ item.content }}</a></li>
+                   <li><a href="#">{{ item.content }}</a></li> {% endcomment %}
+                   <!-- <p>hamzaaa</p> -->
+               {% endfor %}
            </ul>
            </div>
-        </section>
+      </section>
 
         <div class="divider"></div>
 
-        <section class="section3">
+      <section class="section3">
             <p class="text-big">Contact</p>
             <div class="text-small">
             <ul class="info-contact">
                <li class="address"> 308-Negra Arroyo Lane, Albequerqe, New Mexico</li>
                <li class="phone">+1 505-379-5755</li>
                <li class="email">example@gmail.com</li>
-               <li class="socials"><img src="{% static  "images/_icons/linkedin.png" %}" alt="linkedin" width= "60px" height= "60px">  <img src="{% static  "images/_icons/facebook.png" %}" alt="facebook" width= "60px" height= "60px"></li>
+               <div. class="info-socials">
+                  <a href=""> <img src="{% static 'images/_icons/twitter.png' %}" alt="X Logo" width="25px" height="25px"> </a>
+                  <a href="#"> <img src="{% static 'images/_icons/facebook.png' %}" alt=" facebook" width="25px" height="25px"> </a>
+                  <a href="https://www.linkedin.com/company/cdoxs/?originalSubdomain=pk"> <img src="{% static 'images/_icons/linkedin.png' %}" alt=" Linkedin"  width="25px" height="25px">  </a>
+               </div>
+               <!-- <li class="socials"><img src="{% static  "images/_icons/linkedin.png" %}" alt="linkedin" width= "60px" height= "60px">  <img src="{% static  "images/_icons/facebook.png" %}" alt="facebook" width= "60px" height= "60px"></li> -->
             </ul>
          </div>
-         </section>
+      </section>
 
          
          <div class="divider"></div>
