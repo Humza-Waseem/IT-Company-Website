@@ -776,7 +776,7 @@ body.tt-magic-cursor #magic-cursor {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin: auto;
   /* height: 80%; */
   /* background: linear-gradient(90deg, #040458 0%, #700808 100%); */
@@ -787,7 +787,8 @@ body.tt-magic-cursor #magic-cursor {
 .section1{
   display: flex;
   flex-direction: column;
-  /* background-color: #F33B00; */
+  /* background-color: #2cb349; */
+  /* background-color: transparent; */
   width: 20%;
   height: 300px;
   justify-content: center;
@@ -798,8 +799,9 @@ body.tt-magic-cursor #magic-cursor {
 .section2{
   display: flex;
   flex-direction: column;
-  /* background-color: #be9182; */
-  width: 18%;
+  /* background-color: #2cb349; */
+  /* background-color: transparent; */
+  width: 20%;
   height: 300px;
   justify-content: center;
   align-items: center;
@@ -823,6 +825,14 @@ body.tt-magic-cursor #magic-cursor {
   background-color: #000; /* Color of the vertical line */
   margin: 0 20px; /* Horizontal margin between sections */
 }
+.info-contact li{
+  padding: 6px 6px;
+  font-size: 17px;
+}
+.info-contact li img{
+  padding: 6px 6px;
+}
+
 
 
 @media only screen and (max-width:855px){
