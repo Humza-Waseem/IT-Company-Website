@@ -22,19 +22,22 @@
 
     </div>
     <ul class ="nav-list v-class-responsive">
-           {% comment %} <li><a href="#">Home</a></li> {% endcomment %}
-           <li><a href="{% url 'Home'%}">Home</a></li>
-           <li><a href="{% url 'Services'%}">Services</a></li>
-           <li><a href="{% url 'About'%}">About</a></li>
-           <li><a href="{% url 'Careers'%}">Careers</a></li>
-           {% comment %} <li><a href="">Services</a></li>
-           <li><a href="">About</a></li>
-           <li><a href="">Careers</a></li> {% endcomment %}
-           
-           <!-- <li><a href="">Contact Us</a></li>
-           -->
-           <button class="btn">Let's Talk</button>
-           <!-- <button class="btn">Let's Talk</button> -->
+
+       
+ 
+        {% comment %} {% for name, url in navbar.get_nav_items %}
+        <li><a href="{{ url }}">{{ name }}</a></li>
+        {% endfor %} {% endcomment %}
+        
+        <li><a href="{% url 'Home'%}">HOME</a></li>
+        <li><a href="{% url 'Services'%}">SERVICES</a></li>
+        <li><a href="{% url 'About'%}">ABOUT</a></li>
+        <li><a href="{% url 'Careers'%}">CAREERS</a></li>
+    
+
+       
+        <button class="btn">Let's Talk</button>
+
     </ul>
 
     <div class="nav-right v-class-responsive">
@@ -50,7 +53,7 @@
             </div>
             {% comment %} <img src="./assets/images/_icons/search.png" alt="searchIcon" class = "search-button" id = "searchButton"> {% endcomment %}
            
-            <img src="{% static 'images/_icons/search.png' %}" alt="searchIcon" class = "search-button" id = "searchButton"">
+            <img src="{% static 'images/_icons/search.svg' %}" alt="searchIcon" class = "search-button" id = "searchButton"">
            
             
            {% comment %} <button class="search-button" id="searchButton">Search</button>  {% endcomment %}

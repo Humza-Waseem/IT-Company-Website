@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 {% block content %}
 <div class="info-box">
     <div class= "info-sections">
@@ -21,18 +21,23 @@
 
       <section class="section2">
            <p class="text-big">Services</p>
+     
            <div class="text-small">
+            <p>Static content to test template rendering.</p>
+            <p>Services List Count: {{ servicesList|length }}</p>
             <ul>
-               {% for item in servicesList %}
-                   <li><a href="#">{{ item.title }} hello</a></li>
-                   {% comment %} <li><a href="#">{{ item.content }}</a></li>
-                   <li><a href="#">{{ item.content }}</a></li>
-                   <li><a href="#">{{ item.content }}</a></li> {% endcomment %}
-                   <!-- <p>hamzaaa</p> -->
-               {% endfor %}
-           </ul>
-           </div>
+                {% for topic in servicesList %}
+                <li>
+                    <a href="#">{{ topic.name }}</a>
+                </li>
+                {% empty %}
+                <li>No services available.</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
       </section>
+
 
         <div class="divider"></div>
 
@@ -44,9 +49,9 @@
                <li class="phone">+1 505-379-5755</li>
                <li class="email">example@gmail.com</li>
                <div. class="info-socials">
-                  <a href=""> <img src="{% static 'images/_icons/twitter.png' %}" alt="X Logo" width="25px" height="25px"> </a>
-                  <a href="#"> <img src="{% static 'images/_icons/facebook.png' %}" alt=" facebook" width="25px" height="25px"> </a>
-                  <a href="https://www.linkedin.com/company/cdoxs/?originalSubdomain=pk"> <img src="{% static 'images/_icons/linkedin.png' %}" alt=" Linkedin"  width="25px" height="25px">  </a>
+                  <a href=""> <img src="{% static 'images/_icons/twitter.svg' %}" alt="X Logo" width="25px" height="25px"> </a>
+                  <a href="#"> <img src="{% static 'images/_icons/facebook.svg' %}" alt=" facebook" width="25px" height="25px"> </a>
+                  <a href="https://www.linkedin.com/company/cdoxs/?originalSubdomain=pk"> <img src="{% static 'images/_icons/linkedin.svg' %}" alt=" Linkedin"  width="25px" height="25px">  </a>
                </div>
                <!-- <li class="socials"><img src="{% static  "images/_icons/linkedin.png" %}" alt="linkedin" width= "60px" height= "60px">  <img src="{% static  "images/_icons/facebook.png" %}" alt="facebook" width= "60px" height= "60px"></li> -->
             </ul>

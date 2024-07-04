@@ -34,16 +34,20 @@
   position: relative;
   z-index: 5;
   color: #ffffff;
+  text-align: center;
   font-size: 56px;
 }
 
 .text-small {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 400;
   text-decoration: none;
   color: white;
+  text-align: center;
   font-family: "Montserrat";
 }
+
+
 
 #dynamicText {
   /* font-weight: bold; */
@@ -422,16 +426,17 @@ body.tt-magic-cursor #magic-cursor {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 
 }
-.navBar .nav-right .search-button img {
+/* .navBar .nav-right .search-button img {
   display: flex;
   margin: auto;
-  width: 40px;
-  height: 40px;
-}
+  width: 35px;
+  height: 35px;
+} */
+
 .navBar .nav-right .search-bar.expanded {
   width: 200px;
 }
@@ -506,13 +511,14 @@ body.tt-magic-cursor #magic-cursor {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 80%;
+  max-width: 50%;
   margin: auto;
   height: 80%;
+
 }
 
 .firstSection {
-  height: 100vh;
+  height: 86vh;
 }
 
 .firstHalf {
@@ -661,6 +667,64 @@ body.tt-magic-cursor #magic-cursor {
 
 
 
+/* /////////////////////////cards////////////////////////   */
+.cards{
+  height: 182vh;
+  width: 76%;
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+  margin: auto;
+}
+.cards img{
+  width: 60px;
+  height: 60px;
+  /* border-radius: 10px; */
+margin: 10px 10px;
+}
+.cardsUpper , .cardsLower{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+.card1, .card2, .card3 ,.card4 ,.card5 ,.card6{
+border: 1px  black;
+border-radius: 10px;
+width: 350px;
+height: 320px;
+margin: 20px 20px;
+padding: 34px 31px;
+background-color: rgb(235, 235, 235);
+text-align: center;
+align-items: center;
+justify-content: center;
+}
+.card-text-small{
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-family: "Plus Jakarta Sans";
+
+}
+.card-text-big{
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  text-decoration: underline;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-family: "Plus Jakarta Sans";
+}
+
+
+
+
+
+
+
+
+
 .clienTestimonial {
   display: flex;
   justify-content: center;
@@ -772,9 +836,9 @@ body.tt-magic-cursor #magic-cursor {
   text-decoration: none;
 }
 .info-box a:hover{
-  color: #ffffff;
+  color: #e7e3e3;
 }
-.info-box a::before {
+/* .info-box a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -785,11 +849,11 @@ body.tt-magic-cursor #magic-cursor {
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
-}
-.navBar .nav-list li a:hover::before {
+} */
+/* .navBar .nav-list li a:hover::before {
   visibility: visible;
   transform: scaleX(1);
-}
+} */
 
 
 

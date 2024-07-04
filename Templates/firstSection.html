@@ -9,8 +9,8 @@
 
         <div class="firstHalf">
         
-        <p class="text-big">{{content.title}}</p>
-        <p class="text-small">{{content.description}} <span id="dynamicText" ></span>  <div class="btn-big clicked">
+        <p class="text-big">{{firstSectionContent.title}}</p>
+        <p class="text-small">{{firstSectionContent.description}} <span id="dynamicText" ></span>  <div class="btn-big clicked">
             <button id="btn-getStarted"  > Get Started</button>
            
           </div></p>
@@ -22,17 +22,17 @@
         
 
         
-        <div class="secondHalf ">
+        {% comment %} <div class="secondHalf "> {% endcomment %}
             <!--   =======================     3 GIF FOR A SLIDE SHOW    =================================-->
             {% comment %} <img src="./assets/images/_bg/giphy2.webp" alt="image" height="300px" width="300px">  {% endcomment %}
 
-            <img src="{% static 'images/_bg/giphy2.webp' %}" alt="image" height="300px" width="300px">
+            {% comment %} <img src="{% static 'images/_bg/giphy2.webp' %}" alt="image" height="300px" width="300px"> {% endcomment %}
             
             {% comment %} <a href="index.html"><img src="{% static 'css/images/_bg/Cdoxs-Logo.png' %}%}" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
 
             {% comment %} <!-- <img src="./assets/images/_bg/giphy.webp" alt="image" height="300px" width="300px">  -->
             <!-- <img src="./assets/images/_bg/giphy.webp" alt="image" height="300px" width="300px">  -->  {% endcomment %}
-        </div>
+        {% comment %} </div> {% endcomment %}
 
         <div class="arrow-button">
             <!-- <span>Next</span> -->

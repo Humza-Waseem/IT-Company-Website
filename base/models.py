@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class User(models.Model):
     username = models.CharField(max_length=100)
@@ -12,13 +13,59 @@ class User(models.Model):
     
     
 
+# class NavBar(models.Model):
+#     logo = models.ImageField(upload_to='images/_bg', blank=True, null=True)
+#     name = models.CharField(max_length=100, null=True, blank=False)
+#     links = models.JSONField(default=list, null= True, blank=True)  
+
+#     def __str__(self):
+#         return self.name
+
+
+
+
+
 class NavBar(models.Model):
     logo = models.ImageField(upload_to='images/_bg', blank=True, null=True)
     name = models.CharField(max_length=100, null=True, blank=False)
-    links = models.JSONField(default=list, null= True, blank=True)  
+
+    # Enhanced links field to store structured navigation data
+    links = models.JSONField(default=list, null=True, blank=True)
 
     def __str__(self):
         return self.name
+
+    def get_links(self):
+        """
+        Parses the JSON-formatted links field and returns a list of dictionaries,
+        each containing 'name' and 'url' keys.
+
+        Raises ValueError if the JSON data is invalid.
+        """
+
+        if self.links is None:
+            return []
+
+        try:
+            link_data = json.loads(self.links)
+            if not isinstance(link_data, list):
+                raise ValueError("Invalid links data: Must be a list of dictionaries.")
+            return link_data
+        except json.JSONDecodeError:
+            raise ValueError("Invalid JSON format in links field.")
+
+    def get_nav_items(self):
+        """
+        Returns a list of tuples suitable for constructing navigation items
+        in your template. Each tuple contains (name, url).
+
+        Raises any exceptions encountered during link parsing.
+        """
+
+        links = self.get_links()
+        return [(link['name'], link['url']) for link in links]
+
+
 
 
 class firstSection(models.Model):
@@ -33,12 +80,14 @@ class firstSection(models.Model):
 
 
 
-class service(models.Model):
-    title = models.CharField(max_length=100 , null=False, blank=False)
-    updated = models.DateTimeField(auto_now=True)  # auto_now will update the time whenever the room is updated
-    created = models.DateTimeField(auto_now_add=True)  # auto_now_add will update the time only when the room is created for the first time
+class CompanyService(models.Model):
+    name = models.CharField(max_length=100, null = True, blank = False)    
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+   
+    def __str__(self):
+        return self.name
     
-    # def __str__(self):
-    #     return self.title
-    class Meta:
-        ordering = ['-updated','created']   # here we are ordering the rooms according to the most recent updated and created room in the list..     The ( - ) sign means to update according to most recent....
+
+    # class Meta:
+    #     ordering = ['-updated','created']   # here we are ordering the rooms according to the most recent updated and created room in the list..     The ( - ) sign means to update according to most recent....
