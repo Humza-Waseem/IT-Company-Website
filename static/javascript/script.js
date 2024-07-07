@@ -1,3 +1,24 @@
+/////////////////   navbar ///////////////////////
+
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navBar');
+    if (window.scrollY > 0) {
+        if (window.scrollY > 0) {
+            navbar.classList.add('navbar-scrolled');
+            console.log(navbar.classList); // Log the class list to the console
+        }
+        // navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
+
+
+
+
+
+
+
 //////////////////////  SEARCH BAR ELONGATION ///////////////////////
 document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('searchButton');
@@ -24,26 +45,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-///////////////////PRELOADER/////////////////////
-  function counter_num() {
-    var count = setInterval(function () {
-      var c = parseInt($(".counter").text());
-      $(".counter").text((++c).toString());
-      if (c === 100) {
-        clearInterval(count);
-        $(".counter").addClass("hide");
-        $(".preloader").addClass("active");
-      }
-    });
-  }
-  counter_num();
+
+
+	// circle progressbar
+	$(".progress-bar").loading();
+
+    // progress two
+$(window).on('scroll',function(){
+	let scroll = $(window).scrollTop();
+	let oTop = $('.progress-bar').offset().top - window.innerHeight;
+	if(scroll>oTop){
+		$(".progress-bar").addClass("progressbar-active");
+	}
+	else{
+		$(".progress-bar").removeClass("progressbar-active");
+	}
+});
+
+
+
+
 
 
 //////////////////////  Get Started Button ///////////////////////
-// JavaScript to scroll the window down by 100vh when the button is clicked
-// JavaScript to scroll the window down by 100vh when the button is clicked
 
-// script.js
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the "Get Started" button

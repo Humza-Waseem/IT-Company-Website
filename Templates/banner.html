@@ -2,7 +2,7 @@
 {% block content%}
 <section class=" background firstSection "  >
 
-   {% if pageName == 'services'%}
+   {% if pageName == 'Services'%}
     <div class="box-main">
 
 
@@ -28,36 +28,58 @@
          {% endcomment %}
 
     </div>
-   
-
-    {% elif pageName == 'about'%}
+</section>
+<section>
+    {% elif pageName == 'Contact'%}
     <div class="box-main">
 
 
         <div class="firstHalf">
         
-         <p class="text-small " id= "banner"></p>
-         <p class="text-big " id= "banner">We Are CDOXS <span id="dynamicText" ></span>  
-            {% comment %} <div class="btn-big clicked">
+         <p class="text-small " id= "banner" style="text-decoration: underline;"> Contact Us</p>
+         <p class="text-biggg " id= "banner"> If You Are Interested In Talking To Us , Please Send Us A Message!
+            {% comment %} <span id="dynamicText" ></span>   {% endcomment %}
+
+            <div class="btn-big clicked">
             <button id="btn-getStarted"  > Get Started</button>
            
-            </div> {% endcomment %}
+           
+
+           
+            </div> 
+          
+         
         </p>
+        <div class="info-socials " id="contact-socials">
+            <a href=""> <img src="{% static 'images/_icons/twitter.svg' %}" alt="X Logo" width="35px" height="35px"> </a>
+            <a href="#"> <img src="{% static 'images/_icons/facebook.svg' %}" alt=" facebook" width="35px" height="35px"> </a>
+            <a href="https://www.linkedin.com/company/cdoxs/?originalSubdomain=pk"> <img src="{% static 'images/_icons/linkedin.svg' %}" alt=" Linkedin"  width="35px"height="35px"></a>
         </div>
-        <script src="{% static 'javascript/dynamic.js'%}"></script>
-        
+        </div>
       
+        <script src="{% static 'javascript/dynamic.js'%}"></script>
+
+        
+        
+        
         
 
 
-        {% comment %} <div class="arrow-button">
-            <img src="{% static 'images/_icons/right-arrow.png' %}" alt="right-arrow" width="80px" height="40px">
-        </div>
-         {% endcomment %}
-
+        
     </div>
-    {% endif %}
+    
     
 </section>
+  <section class = "contact-info">
+    <!-- <div class="contact-info-container"> -->
+    <h1 class="textfield">Write us a Message!</h1>
+    <input class="nameField"  type="text" name = "name" placeholder="Enter Your Name">
+    <input class="emailField" type="email" name = 'email' placeholder="Enter Your Email Address">
+    <input class="messageField" type="message" type = "text" name = "message" placeholder="Enter the Message">
+    <button class="btn-big">Submit</button>
+    <!-- </div>    -->
+  </section>
+  
+{% endif %}
 
 {% endblock content%}

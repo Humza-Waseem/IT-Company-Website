@@ -14,16 +14,20 @@ def home(request):
 def serviceSection(request):
 
     servicesList = CompanyService.objects.all()
+    # servicesIcon = servicesList.icon
     firstThreeServices = servicesList[:3]
     nextThreeServices = servicesList[3:6]  
+    pageName = "Services"
     
     # Store the next three objects in a variable
     context = {
         'firstThreeServices': firstThreeServices,
         'nextThreeServices': nextThreeServices,
+        'pageName': pageName,
     }
     
     return render(request, 'base/services.html', context)
+
 
 def about(request):
 
@@ -36,9 +40,7 @@ def about(request):
 
 
 def careers(request):
-    context= {
-     
-    }
+    
 
     return render(request, 'base/careers.html', context)
 
@@ -46,14 +48,20 @@ def careers(request):
 
 
 def get_navbar_data(request):
-    navbar = NavBar.objects.first()  
-
+    navigationBar = NavBar.objects.all()  
+    pagename= "navbar"
     context = {
-        'navbar': navbar,
+        'navigationBar': navigationBar,
+        'pagename': pagename,
     }
-    return render(request, 'navbar.html', context)
+    return render(request, 'navBar.html', context)
 
 
-# def contact_info(request):
-#     info = Contact.objects.first()
-#     return {'contact_info': info}
+
+
+def contact_info(request):
+    pageName = "Contact"
+    context= {
+     'pageName': pageName,
+    }
+    return render (request, 'base/contact.html',context)

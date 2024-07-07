@@ -1,7 +1,7 @@
 {% load static %}
 {% block content %}
 <nav class="navBar h-nav-responsive">
-
+    <script src="{% static 'javascript/script.js'%}"></script>
     {% comment %} <!-- -----------------------    COMPANY LOGO--------------------- --> {% endcomment %}
     <!-- <div class="header-logo">
         <a href="index.html"><img alt="LogoOfCDOXS" class="img-fluid" src="./assets/images/_bg/Cdoxs-Logo.png" width="70" height="70"></a>
@@ -28,15 +28,19 @@
         {% comment %} {% for name, url in navbar.get_nav_items %}
         <li><a href="{{ url }}">{{ name }}</a></li>
         {% endfor %} {% endcomment %}
-        
+
+        {% comment %} {% for item in navigationBar %}
+        <li><a href="{% url '{{item.urlName}}'%}">{{item.name}}</a></li>
+        {% endfor %} {% endcomment %}
         <li><a href="{% url 'Home'%}">HOME</a></li>
         <li><a href="{% url 'Services'%}">SERVICES</a></li>
         <li><a href="{% url 'About'%}">ABOUT</a></li>
-        <li><a href="{% url 'Careers'%}">CAREERS</a></li>
-    
+        <li><a href="{% url 'Careers'%}">CAREERS</a></li> 
+        
+        {% comment %} <li><a href="{% url 'Services'%}">SERVICES</a></li> {% endcomment %}
 
        
-        <button class="btn">Let's Talk</button>
+        <a href="{% url 'contact'%}"><button class="btn">Let's Talk</button></a>
 
     </ul>
 
