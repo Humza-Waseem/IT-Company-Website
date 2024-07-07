@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import NavBar, firstSection , CompanyService
+from .models import NavBar, firstSection , CompanyService, Contact
 
 # Create your views here.
 def home(request):
@@ -12,28 +12,18 @@ def home(request):
   
 
 def serviceSection(request):
-    # Dummy data for testing
-    # dummy_services = [
-    #     {'name': 'Service 1'},
-    #     {'name': 'Service 2'},
-    #     {'name': 'Service 3'},
-    # ]
-    
-    # # Normally fetched data
-    # servicesList = CompanyService.objects.all()
-    
-    # # Combine dummy data with real data (if any)
-    # combined_services = list(servicesList) + dummy_services
-    
-    # context = {'servicesList': combined_services}
-    
-    
 
-
-
-
-    return render(request, 'base/services.html')
- 
+    servicesList = CompanyService.objects.all()
+    firstThreeServices = servicesList[:3]
+    nextThreeServices = servicesList[3:6]  
+    
+    # Store the next three objects in a variable
+    context = {
+        'firstThreeServices': firstThreeServices,
+        'nextThreeServices': nextThreeServices,
+    }
+    
+    return render(request, 'base/services.html', context)
 
 def about(request):
 
@@ -53,20 +43,17 @@ def careers(request):
     return render(request, 'base/careers.html', context)
 
 
-# def NavBarContent(request):
-#     navContent = NavBar.objects.first()
-#     context= {
-#         'navContent':navContent,
-#     }
 
-#     return render(request, 'base/index.html', context)
-
-# from django.shortcuts import render
 
 def get_navbar_data(request):
-    navbar = NavBar.objects.first()  # Assuming you only have one navbar
+    navbar = NavBar.objects.first()  
 
     context = {
         'navbar': navbar,
     }
     return render(request, 'navbar.html', context)
+
+
+# def contact_info(request):
+#     info = Contact.objects.first()
+#     return {'contact_info': info}

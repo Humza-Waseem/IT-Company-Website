@@ -1,3 +1,4 @@
+{% load static%}
 {% block content%}
  <div class="topbar-five">
         <div class="container-fluid">
@@ -6,8 +7,8 @@
 
              <div class="col-lg-5 topbar-five-right">
                  <ul class="topbar-address-list">
-                     <li><i class="bi bi-telephone"></i> <a href="tel:+998-8776345">+998-8776345</a></li>
-                     <li><i class="bi bi-geo-alt"></i><a href="#">Road: 02, House: 122-123, NewYork</a></li>
+                     <li><i class="bi bi-telephone"></i> <a href="tel:+998-8776345">{{contact_info.phone}}</a></li>
+                     <li><i class="bi bi-geo-alt"></i><a href="#">{{contact_info.address}}</a></li>
                  </ul>
              </div>
          </div>

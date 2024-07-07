@@ -2,7 +2,7 @@
 {% block content%}
 <section class=" background firstSection "  >
 
-
+   {% if pageName == 'services'%}
     <div class="box-main">
 
 
@@ -28,6 +28,35 @@
          {% endcomment %}
 
     </div>
+   
+
+    {% elif pageName == 'about'%}
+    <div class="box-main">
+
+
+        <div class="firstHalf">
+        
+         <p class="text-small " id= "banner"></p>
+         <p class="text-big " id= "banner">We Are CDOXS <span id="dynamicText" ></span>  
+            {% comment %} <div class="btn-big clicked">
+            <button id="btn-getStarted"  > Get Started</button>
+           
+            </div> {% endcomment %}
+        </p>
+        </div>
+        <script src="{% static 'javascript/dynamic.js'%}"></script>
+        
+      
+        
+
+
+        {% comment %} <div class="arrow-button">
+            <img src="{% static 'images/_icons/right-arrow.png' %}" alt="right-arrow" width="80px" height="40px">
+        </div>
+         {% endcomment %}
+
+    </div>
+    {% endif %}
     
 </section>
 

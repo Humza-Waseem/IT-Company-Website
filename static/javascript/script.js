@@ -40,19 +40,91 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //////////////////////  Get Started Button ///////////////////////
+// JavaScript to scroll the window down by 100vh when the button is clicked
+// JavaScript to scroll the window down by 100vh when the button is clicked
+
+// script.js
+
 document.addEventListener('DOMContentLoaded', function() {
-    const getStartedButton = document.getElementById('btn-big');
+    // Add event listener to the "Get Started" button
+    document.getElementById('btn-getStarted').addEventListener('click', function() {
+        // Calculate the target scroll position (100vh)
+        const windowHeight = window.innerHeight;
+        const targetPosition = windowHeight;
 
-    getStartedButton.addEventListener('click', function() {
-        // getStartedButton.classList.add('clicked');
+        // Function for smooth scrolling
+        function smoothScroll(target, duration) {
+            const start = window.pageYOffset;
+            const distance = target - start;
+            let startTime = null;
 
-        // Scroll down by 100vh
-        window.scrollBy({
-            top: window.innerHeight, // Scroll down by the height of the viewport
-            behavior: 'smooth' // Smooth scrolling behavior
-        });
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, start, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // Call the smooth scroll function with a desired duration (e.g., 2000ms)
+        smoothScroll(targetPosition, 2000);
     });
 });
+
+//////////////////////////////////   COUROUSAL FOR CLIENT TESTIMONIALS  ////////////////////////////////
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const nextButton = document.getElementById('carousel-next');
+    const prevButton = document.getElementById('carousel-prev');
+
+    let currentIndex = 0;
+    const totalItems = carouselItems.length;
+
+    function updateCarousel() {
+        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    nextButton.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+    });
+
+    // Auto-scroll functionality
+    setInterval(function() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+    }, 3000); // Change the image every 3 seconds
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

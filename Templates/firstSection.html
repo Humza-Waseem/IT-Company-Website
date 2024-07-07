@@ -1,6 +1,6 @@
 {% load static%}
 {% block content%}
-<section class=" background firstSection "  >
+<section class=" background firstSection">
     
     {% comment %} <!-- <iframe src="https://www.youtube.com/embed/GxEZsyoYHGY?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Faxixtechnologies.com&widgetid=1" frameborder="0" allowfullscreen></iframe> --> {% endcomment %}
 
@@ -11,12 +11,13 @@
         
         <p class="text-big">{{firstSectionContent.title}}</p>
         <p class="text-small">{{firstSectionContent.description}} <span id="dynamicText" ></span>  <div class="btn-big clicked">
-            <button id="btn-getStarted"  > Get Started</button>
-           
-          </div></p>
+            <button id="btn-getStarted">Get Started</button>
+        </div>
+        </p>
         </div>
         {% comment %} <script src="./assets/javascript/dynamic.js"></script> {% endcomment %}
         <script src="{% static 'javascript/dynamic.js'%}"></script>
+        <script src="{% static 'javascript/script.js'%}"></script>
         
       
         
@@ -34,11 +35,11 @@
             <!-- <img src="./assets/images/_bg/giphy.webp" alt="image" height="300px" width="300px">  -->  {% endcomment %}
         {% comment %} </div> {% endcomment %}
 
-        <div class="arrow-button">
-            <!-- <span>Next</span> -->
-          {% comment %} <img src="./assets/images/_icons/right-arrow.png" alt="right-arrow" width="80px" height="40px"> {% endcomment %}
+        {% comment %} <div class="arrow-button">
+             <span>Next</span> 
+          <img src="./assets/images/_icons/right-arrow.png" alt="right-arrow" width="80px" height="40px">
             <img src="{% static 'images/_icons/right-arrow.png' %}" alt="right-arrow" width="80px" height="40px">
-        </div>
+        </div> {% endcomment %}
         
 
     </div>

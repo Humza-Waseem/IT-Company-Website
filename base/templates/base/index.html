@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{content}}" />
 
-    <title>{{title}}</title>
+    <title>{{firstSectionContent.title}}</title>
 
     <link rel="shortlink" href="https://www.cdoxs.com/index.html">
     <link rel="cononical" href="https://www.cdoxs.com/index.html">
@@ -26,7 +26,7 @@
     <meta property="og:title" content="CDOXS | Enabling a Digital Tomorrow">
 
 
-    <meta property="og:site_name" content="{{title}}">
+    <meta property="og:site_name" content="{{firstSectionContent.title}}">
     <meta property="og:url" content="https://www.cdoxs.com/index.html">
     <!-- {% comment %} 
     <link rel="icon" href="./assets/images/icons/logo-icon.svg" type="image/gif" sizes="20x20">
@@ -157,7 +157,7 @@
 
 
  
-  <hr>
+
  {% comment %} ===========================================START OF SECTIONS=====================================  {% endcomment %}
  
  {% include "sections.html"%}
@@ -170,8 +170,34 @@
 
  {% comment %} ===========================================START OF CLIENT TESTIMONIAL============================  {% endcomment %}
   
- <hr>
-<section class="clienTestimonial">    
+ {% comment %} <hr> {% endcomment %}
+
+ 
+ <div class="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/_bg/testi.png'%}" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/_bg/11.jpg'%}" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/_bg/22.jpg'%}" alt="Image 3" >
+        </div>
+    </div>
+    <div id="carousel-prev" class="carousel-nav">&lt;</div>
+    <div id="carousel-next" class="carousel-nav">&gt;</div>
+</div>
+
+
+
+
+
+
+
+
+
+{% comment %} <section class="clienTestimonial">    
   
   <div class="paragraphs">
        <div class="text-bigg">
@@ -185,7 +211,7 @@
            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eveniet alias labore itaque tenetur? Odio, sed! Quos sit modi corporis suscipit vitae quo. Ipsum, error.    Blanditiis ab veniam corporis qui?</p>
         </div>
   </div>
-</section>
+</section> {% endcomment %}
 
  {% comment %} ===========================================END OF CLIENT TESTIMONIAL==============================  {% endcomment %}
 

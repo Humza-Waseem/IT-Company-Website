@@ -2,14 +2,20 @@
 {% block content%}
 <div class="cards">
   <div class="cardsUpper">
+
+    
+    {% for services in firstThreeServices %}
     <div class="card1">
         <div class="card-image"><img src="{% static 'images/_icons/globe.svg'%}" alt="web development" class="card1Image"></div>
         <div class="card1Content">
-            <h1 class= "card-text-big">Web Development</h1>
-            <p class= "card-text-small">Web development is the work involved in developing a Web site for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain </p>
+            <h1 class= "card-text-big">{{services.name}}</h1>
+            <p class= "card-text-small">{{services.content}}</p>
         </div>
     </div>
-    <div class="card2">
+    {% endfor %}
+
+
+    {% comment %} <div class="card2">
         <div class="card-image"><img src="{% static 'images/_icons/layers-half.svg'%}" alt="web development" class="card1Image" ></div>
         <div class="card1Content">
           <h1  class= "card-text-big">  UI/ UX Designer</h1>
@@ -23,19 +29,22 @@
            <h1  class= "card-text-big">App Development</h1>
            <p class= "card-text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda magnam, sed officia molestiae expedita quibusdam esse harum possimus deserunt at!</p>
         </div>   
-    </div>
+    </div>  {% endcomment %}
     
   </div>
- <div class="cardsLower">
-    <div class="card4">
-        <div class="card-image"><img src="{% static 'images/_icons/social.svg'%}" alt="web development" class="card1Image"></div>
-        <div class="card1Content">
- 
-           <h1  class= "card-text-big">Social Media Management</h1>
-           <p class= "card-text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda magnam, sed officia molestiae expedita quibusdam esse harum possimus deserunt at!</p>
-        </div>   
-    </div>
-    <div class="card5">
+  <div class="cardsLower">
+    
+    {% for services in nextThreeServices %}
+        <div class="card4">
+            <div class="card-image"><img src="{% static 'images/_icons/globe.svg'%}" alt="web development" class="card1Image"></div>
+            <div class="card1Content">
+                <h1 class= "card-text-big">{{services.name}}</h1>
+                <p class= "card-text-small">{{services.content}}</p>
+            </div>
+        </div>
+    {% endfor %} 
+    
+    {% comment %} <div class="card5">
         <div class="card-image"><img src="{% static 'images/_icons/graph-up-arrow.svg'%}" alt="web development" class="card1Image"></div>
         <div class="card1Content">
  
@@ -50,7 +59,7 @@
            <h1  class= "card-text-big">Software Development</h1>
            <p class= "card-text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda magnam, sed officia molestiae expedita quibusdam esse harum possimus deserunt at!</p>
         </div>   
-    </div>
- </div>
+    </div> {% endcomment %}
+ </div> 
 </div>
 {% endblock content%}

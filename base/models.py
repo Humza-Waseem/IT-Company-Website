@@ -1,5 +1,5 @@
 from django.db import models
-
+# from svg_and_image_field.fields import SVGAndImageField
 
 # Create your models here.
 class User(models.Model):
@@ -81,7 +81,9 @@ class firstSection(models.Model):
 
 
 class CompanyService(models.Model):
-    name = models.CharField(max_length=100, null = True, blank = False)    
+    name = models.CharField(max_length=100, null = True, blank = False)  
+    content = models.TextField(max_length=200, null = True, blank = False) 
+    icon = models.ImageField(upload_to='static/images/_icons/', null=True, blank=True)  
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
    
@@ -91,3 +93,20 @@ class CompanyService(models.Model):
 
     # class Meta:
     #     ordering = ['-updated','created']   # here we are ordering the rooms according to the most recent updated and created room in the list..     The ( - ) sign means to update according to most recent....
+
+class Contact(models.Model):
+    # name = models.CharField(max_length=100, null = True, blank = False)  
+    email = models.EmailField(max_length=100, null = True, blank = False) 
+    # subject = models.CharField(max_length=100, null = True, blank = False)  
+    address = models.CharField(max_length=100, null = True, blank = False)
+    # message = models.TextField(max_length=200, null = True, blank = False)  
+    phone = models.CharField(max_length=100, null = True, blank = False)
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+   
+    # def __str__(self):
+    #     return self.name
+    
+
+    # class Meta:
+    #
