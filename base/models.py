@@ -3,8 +3,8 @@ from django.db.models.fields.files import ImageField
 # from django_svg_image_form_field import SvgAndImageField  # Assuming it's installed
 # from django_svg_image_form_field import SvgAndImageFormField
 # from django_svg_image_form_field import SvgAndImageField
-from django_svg_image_form_field import SvgAndImageFormField
-from django.core.files.storage import FileSystemStorage
+# from django_svg_image_form_field import SvgAndImageFormField
+# from django.core.files.storage import FileSystemStorage
 
 
 

@@ -21,6 +21,15 @@
     opacity: 0.7; 
 
 }
+.newCustomHR{
+border: none;
+width: 620px;
+height: 5px;
+/* background-color: linear-gradient(90deg, #810426 0%, #0C1844 100%); */
+background: linear-gradient(90deg, #810426 0%, #0C1844 100%);
+border-radius: 10px;
+margin-bottom: 20px;
+}
 
 
 .text-big {
@@ -89,6 +98,7 @@
   text-decoration: none;
   position: absolute;
   margin-top: 22px;
+  cursor: pointer;
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
   /* transition: 0.5s; */ /* Uncomment if you want to add transition */
@@ -112,7 +122,7 @@
   align-items: center;
   max-width: 100%;
   margin: auto;
-  height: 70vh;
+  height: 90vh;
   color: white;
   /* background: linear-gradient(90deg, #040458 0%, #700808 100%); */
   /* background: rgb(0, 0, 0); */
@@ -120,8 +130,8 @@
   flex-direction: column;
   font-family: "Montserrat";
 }
-.contact-info input{
-width : 30%;
+.contact-info-container input{
+width : 90%;
 padding: 20px 20px;
 background-color: #ece8e8;
 color: rgb(0, 0, 0);
@@ -132,13 +142,14 @@ text-align: center;
 border-radius: 10px;
 margin: 2px 0px 2px 0px;
 height: 2px;
-font-size: 20px;
+font-size: 16px;
 font-family: "Montserrat";
-
-
-
 }
-.contact-info .textfield{
+.contact-info-container input:focus{
+border: 4px solid rgb(151, 8, 8);
+}
+
+.contact-info-container .textfield{
   /* width: 50%; */
   /* background-color: #e6e0e0; */
   color: rgb(255, 255, 255);
@@ -150,11 +161,12 @@ font-family: "Montserrat";
   text-align: center;
   margin: auto;
   font-size: 42px;
+  margin-bottom: 0px;
 
 }
 
 
-.contact-info .messageField{
+.contact-info-container .messageField{
   /* width: 50%; */
   /* background-color: #e6e0e0;
   color: rgb(0, 0, 0);
@@ -164,18 +176,30 @@ font-family: "Montserrat";
 
 
 .contact-info .btn-big{
-  width: 32%;
-  padding: 10px 20px;
-  font-size: 20px;
+  width: 98%;
+  padding: 4px 9px;
+  font-size: 16px;
   border-radius: 10px;
-  background-color: rgba(11, 8, 98, 0.68);
+  background: linear-gradient(90deg, #810426 0%, #0C1844 100%);
   color: white;
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contact-info .btn-big:hover{
+  background: linear-gradient(90deg, #57041a 0%, #081130 100%);
+  /* color: white; */
+  transition: 0.5s;
 }
 
 
 
  #contact-socials{
-background-color: orange;
+background-color: rgb(253, 165, 1);
 display: flex;
 justify-content: center;
 align-items: center;
@@ -186,9 +210,12 @@ border-radius: 10px;
 }
 
  .contact-info-container{
-  max-width: 80%;
+  max-width: 90%;
   background: #dfdfeb1c;
-
+  max-height: 85%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
 } 
 
 
@@ -480,7 +507,13 @@ body.tt-magic-cursor #magic-cursor {
 }
 
 /*=======================================  TOPBAR END  =======================================*/
+.navbar-scrolled {
+  height: 50px !important;
+  transition: all 0.3s ease;
+}
+
 .navBar {
+  position: relative;
   background-color: whitesmoke;
   display: flex;
   margin-right: 0px;
@@ -490,25 +523,11 @@ body.tt-magic-cursor #magic-cursor {
   top: 0;
   height: 74px;
   cursor: pointer;
-  word-wrap: break-word;
-  word-break: break-word;
+  /* word-wrap: break-word;
+  word-break: break-word; */
   cursor: default;
 }
-.navBar .navbar-scrolled {
-  /* background-color: whitesmoke;
-  display: flex;
-  margin-right: 0px;
-  position: sticky;
-  align-items: center;
-  justify-content: center;
-  top: 0; */
-  height: 60px !important;
-  /* cursor: pointer;
-  word-wrap: break-word;
-  word-break: break-word;
-  cursor: default;
-  transition: width 0.3s ease-in-out;  */
-}
+
 
 
 .navBar .nav-logo {
@@ -612,6 +631,7 @@ body.tt-magic-cursor #magic-cursor {
   margin-left: 40px;
   margin-top: 25px;
   color: white;
+  cursor: pointer;
   /* background-color:#712cf9 ; */
   background-color: #8a0303;
   font-family: "Montserrat";
@@ -1132,14 +1152,14 @@ box-shadow: 5px 5px 15px rgb(169, 169, 169); /* Example box shadow */
  list-style: none;
 }
 .divider {
-  width: 1px; /* Width of the vertical line */
+  width: 2px; /* Width of the vertical line */
   height: 150px; /* Height of the vertical line */
   background-color: #000; /* Color of the vertical line */
   margin: 0 20px; /* Horizontal margin between sections */
 }
 .info-contact li{
   padding: 6px 6px;
-  font-size: 17px;
+  font-size: 17px; 
 }
 .info-contact li img{
   padding: 6px 6px;
@@ -1215,6 +1235,11 @@ box-shadow: 5px 5px 15px rgb(169, 169, 169); /* Example box shadow */
     /* padding-left: 0px; */
     /* margin: auto;
     margin:0px; */
+  }
+
+  .nav-logo .navbar-scrolled-logo { 
+    width:50px;
+    height:50px;
   }
 
 

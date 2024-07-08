@@ -23,18 +23,19 @@
            <p class="text-big">Services</p>
      
            <div class="text-small">
-            <p>Static content to test template rendering.</p>
-            <p>Services List Count: {{ servicesList|length }}</p>
+
             <ul>
-                {% for topic in servicesList %}
-                <li>
-                    <a href="#">{{ topic.name }}</a>
-                </li>
-                {% empty %}
-                <li>No services available.</li>
-                {% endfor %}
+             {% for item in company_service%}
+             {% if item == None %}
+              <li><a href="{% url 'Services'%}">{{item.name}}</a></li>
+              {% else%}
+              <li><a href="{% url 'Services'%}">Services</a></li>
+              {% endif %}
+             {% endfor %}
+
             </ul>
-        </div>
+       
+           </div>
         
       </section>
 
@@ -59,7 +60,7 @@
       </section>
 
          
-         <div class="divider"></div>
+         {% comment %} <div class="divider"></div> {% endcomment %}
 
 
      <!-- <section class="section4"></section> -->
