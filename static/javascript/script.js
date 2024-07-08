@@ -17,12 +17,12 @@ window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navBar');
     if (window.scrollY > 0) {
         if (window.scrollY > 0) {
-            navbar.classList.add('.navbar-scrolled-logo');
+            navbar.classList.add('navbar-scrolled-logo');
             console.log(navbar.classList); // Log the class list to the console
         }
         // navbar.classList.add('navbar-scrolled');
     } else {
-        navbar.classList.remove('.navbar-scrolled-logo');
+        navbar.classList.remove('navbar-scrolled-logo');
     }
 });
 
@@ -81,17 +81,13 @@ $(window).on('scroll',function(){
 
 
 //////////////////////  Get Started Button ///////////////////////
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Add event listener to the "Get Started" button
+ 
     document.getElementById('btn-getStarted').addEventListener('click', function() {
-        // Calculate the target scroll position (100vh)
+
         const windowHeight = window.innerHeight;
         const targetPosition = windowHeight;
 
-        // Function for smooth scrolling
         function smoothScroll(target, duration) {
             const start = window.pageYOffset;
             const distance = target - start;
@@ -115,10 +111,11 @@ document.addEventListener('DOMContentLoaded', function() {
             requestAnimationFrame(animation);
         }
 
-        // Call the smooth scroll function with a desired duration (e.g., 2000ms)
         smoothScroll(targetPosition, 2000);
     });
 });
+
+
 
 //////////////////////////////////   COUROUSAL FOR CLIENT TESTIMONIALS  ////////////////////////////////
 document.addEventListener('DOMContentLoaded', function() {

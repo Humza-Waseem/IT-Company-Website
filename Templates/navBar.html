@@ -7,12 +7,12 @@
         <a href="index.html"><img alt="LogoOfCDOXS" class="img-fluid" src="./assets/images/_bg/Cdoxs-Logo.png" width="70" height="70"></a>
     </div> -->
 
-    <div class="nav-logo  .navbar-scrolled-logo">
+    <div class="nav-logo  ">
         {% comment %} <a href="index.html"><img src="./assets/images/_bg/Cdoxs-Logo.png" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
 
         {% comment %} <a href="index.html"><img src="{% static 'css/images/_bg/Cdoxs-Logo.png' %}%}" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
         <a href="{% url 'Home'%}">
-            <img src="{% static 'images/_bg/Cdoxs-Logo.png' %}" alt="LogoOfCDOXS" width="70" height="70">
+            <img src="{% static 'images/_bg/Cdoxs-Logo.png' %}" alt="LogoOfCDOXS" >
         </a>
         
 
@@ -35,7 +35,7 @@
         <li><a href="{% url 'Home'%}">HOME</a></li>
         <li><a href="{% url 'Services'%}">SERVICES</a></li>
         <li><a href="{% url 'About'%}">ABOUT</a></li>
-        <li><a href="{% url 'Careers'%}">CAREERS</a></li> 
+        {% comment %} <li><a href="{% url 'Careers'%}">CAREERS</a></li>  {% endcomment %}
         
         {% comment %} <li><a href="{% url 'Services'%}">SERVICES</a></li> {% endcomment %}
 

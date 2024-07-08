@@ -1,3 +1,8 @@
 {% load static %}
 {% comment %} <h1>about page</h1> {% endcomment %}
-{% include 'main.html'%}
+ {% block content%}
+ {% include 'main.html'%}
+ 
+ {% include 'information.html'%}
+ {% include 'endbar.html'%}
+ {% endblock content%}

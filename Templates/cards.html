@@ -7,7 +7,7 @@
     {% for services in firstThreeServices %}
     <div class="card1">
         {% comment %} <div class="card-image"><img src="{% static 'images/_icons/globe.svg'%}" alt="web development" class="card1Image"></div> {% endcomment %}
-        <div class="card-image"><img src="{{services.icon.url}}" alt="icon" class="card1Image"></div>
+        <div class="card-image"><img src="{{services.icon}}" alt="icon" class="card1Image"></div>
         <div class="card1Content">
             <h1 class= "card-text-big">{{services.name}}</h1>
             <p class= "card-text-small">{{services.content}}</p>

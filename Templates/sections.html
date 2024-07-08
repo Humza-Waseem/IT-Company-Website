@@ -3,34 +3,41 @@
 <div class="sections">
     <script src="{% static 'javascript/script.js'%}"></script>
 
+   {% for item in one%}
     <section class="secRight visible">
+      
            <div class="paragraphs">
-            <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
+            <p class="sectionTag ">{{item.title}}</p>
        
-            <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur doloremque natus maiores debitis odio saepe dolore, accusantium qui libero.</p>
+            <p class="sectionSubTag ">{{item.description}}</p>
            </div>
            <div class = "thumbnail">
              {% comment %} <img src="./assets/images/_bg/bgg.jpg" alt="" class="imgFluid"> {% endcomment %}
-             <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
+               <img src="{{item.image.url}}" alt="thumbnail" class="imgFluid">
            </div>
-    </section>
+
+         </section>
+   {% endfor %}
    
+   {% for item in two%}
     <section class="secLeft visible">
        <div class="paragraphs">
-        <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
+        <p class="sectionTag ">{{item.title}}</p>
    
-        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur e dolorem repellendus aliquid. Ab omnis minima iure exercitationem nulla quam doloremque amet necessitatibus consequatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ratione adipisci ducimus accusamus obcaecati laudantium dolorem unde praesentium maxime eos ex tempore vero explicabo odit, magni neque consequatur. Praesentium, debitis.</p>
+        <p class="sectionSubTag ">{{item.description}}</p>
        </div>
        <div class = "thumbnail">
-           <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
+         <img src="{{item.image.url}}" alt="thumbnail" class="imgFluid">
        </div>
     </section>
-   
+   {% endfor %}
+
+   {% comment %} 
     <section class="secRight visible">
        <div class="paragraphs">
-        <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
+        <p class="sectionTag ">Lorem  sit amet consectet .</p>
    
-        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur doloremque natus maiores debitis odio saepe dolore, accusantium qui libero.</p>
+        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur doloremque natus maiores debitis odio saepe dolor</p>
        </div>
        <div class = "thumbnail">
            <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
@@ -39,14 +46,14 @@
     
     <section class="secLeft visible">
        <div class="paragraphs">
-        <p class="sectionTag ">Lorem  sit amet consectetur adipisicing elit. Odit quaerat unde .</p>
+        <p class="sectionTag ">Loremt quaerat unde .</p>
    
-        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur e dolorem repellendus aliquid. Ab omnis minima iure exercitationem nulla quam doloremque amet necessitatibus consequatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ratione adipisci ducimus accusamus obcaecati laudantium dolorem unde praesentium maxime eos ex tempore vero explicabo odit, magni neque consequatur. Praesentium, debitis.</p>
+        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur e dolorem repellendus  eos ex tempore vero explicabo odit, magni neque consequatur. Praesentium, debitis.</p>
        </div>
        <div class = "thumbnail">
           <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
        </div>
     </section>
-   
+    {% endcomment %}
 </div>
 {% endblock content%}

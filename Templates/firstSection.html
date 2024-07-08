@@ -1,5 +1,18 @@
 {% load static%}
 {% block content%}
+
+
+
+
+<style>
+    .background {
+        background: rgba(0, 0, 0, 0.7) url("{{firstSectionContent.image.url}}") ;
+        background-size: cover;
+        background-blend-mode: darken;
+        }
+</style>
+
+  
 <section class=" background firstSection">
     
     {% comment %} <!-- <iframe src="https://www.youtube.com/embed/GxEZsyoYHGY?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Faxixtechnologies.com&widgetid=1" frameborder="0" allowfullscreen></iframe> --> {% endcomment %}
@@ -17,8 +30,8 @@
         </p>
         </div>
         {% comment %} <script src="./assets/javascript/dynamic.js"></script> {% endcomment %}
-        <script src="{% static 'javascript/dynamic.js'%}"></script>
         <script src="{% static 'javascript/script.js'%}"></script>
+        <script src="{% static 'javascript/dynamic.js'%}"></script>
         
       
         

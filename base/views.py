@@ -4,8 +4,13 @@ from .models import NavBar, firstSection , CompanyService, Contact
 # Create your views here.
 def home(request):
     firstSectionContent = firstSection.objects.first()
+    sections= firstSection.objects.all()
+    one = sections[1:3]
+    two = sections[3:]
     context= {
         'firstSectionContent':firstSectionContent,
+        'one':one,
+        'two':two,
     }
 
     return render(request, 'base/index.html', context)
@@ -15,6 +20,7 @@ def serviceSection(request):
 
     servicesList = CompanyService.objects.all()
     # servicesIcon = servicesList.icon
+    
     firstThreeServices = servicesList[:3]
     nextThreeServices = servicesList[3:6]  
     pageName = "Services"
@@ -24,6 +30,7 @@ def serviceSection(request):
         'firstThreeServices': firstThreeServices,
         'nextThreeServices': nextThreeServices,
         'pageName': pageName,
+
     }
     
     return render(request, 'base/services.html', context)

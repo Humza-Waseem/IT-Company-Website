@@ -71,14 +71,17 @@
     
 </section>
   <section class = "contact-info">
+    <form action="https://api.web3forms.com/submit" method="POST">
     <div class="contact-info-container">
     <h1 class="textfield">Write us a Message!</h1>
     <!-- <hr class="customHR"> -->
-    <input class="nameField"  type="text" name = "name" placeholder="Enter Your Name">
-    <input class="emailField" type="email" name = 'email' placeholder="Enter Your Email Address">
-    <input class="messageField" type="message" type = "text" name = "message" placeholder="Enter the Message">
-    <button class="btn-big">Submit <img src="{% static 'images/_icons/arr.svg' %}" alt="right-arrow" width="35" height=" 30">  </button>
-     </div>    
+    <input type="hidden" name="access_key" value="959c7721-3682-47ab-955e-8a27efebaf9e">
+    <input class="nameField"  type="text" name = "name" placeholder="Enter Your Name" required>
+    <input class="emailField" type="email" name = 'email' placeholder="Enter Your Email Address" >
+    <input class="messageField" type="message" type = "text" name = "message" placeholder="Enter the Message" required>
+    <button  type = "submit" class="btn-big">Submit <img src="{% static 'images/_icons/arrow.png' %}" alt="rightArrow" >  </button>
+     </div>  
+    </form>  
   </section>
 
 {% endif %}
