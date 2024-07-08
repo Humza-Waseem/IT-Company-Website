@@ -37,7 +37,7 @@
         <div class="firstHalf">
         
          <p class="text-small " id= "banner" style="text-decoration: underline;"> Contact Us</p>
-         <p class="text-biggg " id= "banner"> If You Are Interested In Talking To Us , Please Send Us A Message!
+         <p class="text-biggg " id= "banner"> Lets Get in Touch!
             {% comment %} <span id="dynamicText" ></span>   {% endcomment %}
 
             <div class="btn-big clicked">
@@ -71,15 +71,16 @@
     
 </section>
   <section class = "contact-info">
-    <!-- <div class="contact-info-container"> -->
+    <div class="contact-info-container">
     <h1 class="textfield">Write us a Message!</h1>
+    <!-- <hr class="customHR"> -->
     <input class="nameField"  type="text" name = "name" placeholder="Enter Your Name">
     <input class="emailField" type="email" name = 'email' placeholder="Enter Your Email Address">
     <input class="messageField" type="message" type = "text" name = "message" placeholder="Enter the Message">
-    <button class="btn-big">Submit</button>
-    <!-- </div>    -->
+    <button class="btn-big">Submit <img src="{% static 'images/_icons/arr.svg' %}" alt="right-arrow" width="35" height=" 30">  </button>
+     </div>    
   </section>
-  
+
 {% endif %}
 
 {% endblock content%}
