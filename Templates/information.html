@@ -23,15 +23,17 @@
            <p class="text-big">Services</p>
      
            <div class="text-small">
+            <ul>     
 
-            <ul>
-             {% for item in company_service%}
-             {% if item == None %}
-              <li><a href="{% url 'Services'%}">{{item.name}}</a></li>
-              {% else%}
-              <li><a href="{% url 'Services'%}">Services</a></li>
-              {% endif %}
-             {% endfor %}
+
+               <li><a href="{% url 'Services'%}"> Web Development</a></li>
+               <li><a href="{% url 'Services'%}"> UI/UX</a></li>
+               <li><a href="{% url 'Services'%}"> App Development</a></li>
+               <li><a href="{% url 'Services'%}"> SEO SERVICES</a></li>
+               <li><a href="{% url 'Services'%}"> Software Development</a></li>
+
+
+
 
             </ul>
        
