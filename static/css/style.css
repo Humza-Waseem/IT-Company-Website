@@ -7,14 +7,14 @@
 /* {
   background: linear-gradient(90deg, #C80036 0%, #0C1844 100%);
 } */
-/* 
-.background {
-  background: rgba(0, 0, 0, 0.7) url("../images/_bg/coding.jpg");
+ 
 
-  background-size: cover;
-  background-blend-mode: darken;
-  
-} */
+.background {
+        background: rgba(0, 0, 0, 0.7) url("{% static 'images/_bg/11.jpg' %}") ;
+        background-size: cover;
+        background-blend-mode: darken;
+} 
+
 .customHR{
     width: 50%; 
     border: 1px solid linear-gradient(90deg, #C80036 0%, #0C1844 100%);
@@ -1111,7 +1111,7 @@ box-shadow: 5px 5px 15px rgb(169, 169, 169); /* Example box shadow */
   align-items: center;
   max-width: 1000vh;
   margin: auto;
-  height: 80vh;
+  height: 70vh;
   /* background: linear-gradient(90deg, #040458 0%, #700808 100%); */
   background: linear-gradient(90deg, #850909 0%, #0e1c50 100%);
   /* color: #C80036; */

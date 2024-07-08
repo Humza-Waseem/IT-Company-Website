@@ -88,6 +88,18 @@ class firstSection(models.Model):
         ordering = ['created']
 
     
+class pagesContent(models.Model):
+    name= models.CharField(max_length=50 , null=False, blank=False)
+    title = models.CharField(max_length=50 , null=False, blank=False)
+    description = models.TextField(max_length=200, null=False, blank=False)
+    image = models.ImageField(upload_to='images/_bg', blank=True, null=True)
+    updated = models.DateTimeField(auto_now=True, null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True, null=False)
+
+    def __str__(self):
+         return self.name
+    class Meta:
+        ordering = ['created']
 
 
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import NavBar, firstSection , CompanyService, Contact
+from .models import NavBar, firstSection , CompanyService, Contact,pagesContent
 
 # Create your views here.
 def home(request):
@@ -15,6 +15,15 @@ def home(request):
 
     return render(request, 'base/index.html', context)
   
+  
+def getPageContent(request):
+    pageContent = pagesContent.objects.all()
+    context = {
+        'pageContent': pageContent,
+    }
+    return render(request, 'base/banner.html', context)
+
+
 
 def serviceSection(request):
 

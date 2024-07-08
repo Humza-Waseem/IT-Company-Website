@@ -1,8 +1,10 @@
 {% load static%}
 {% block content%}
-<section class=" background firstSection "  >
 
-   {% if pageName == 'Services'%}
+{% if pageName == 'Services'%}
+  <section class=" background firstSection"  >
+
+
     <div class="box-main">
 
 
@@ -28,18 +30,28 @@
          {% endcomment %}
 
     </div>
-</section>
-<section>
-    {% elif pageName == 'Contact'%}
+  </section>
+
+
+{% elif pageName == 'Contact'%}
+  <section  class=" background firstSection" >
+    <style>
+        .background {
+            background: rgba(0, 0, 0, 0.7) url("{{firstSectionContent.image.url}}") ;
+            background-size: cover;
+            background-blend-mode: darken;
+            }
+    </style> 
+    
     <div class="box-main">
 
 
         <div class="firstHalf">
-        
+      {% if pageContent.name == "Contact"%}
          <p class="text-small " id= "banner" style="text-decoration: underline;"> Contact Us</p>
          <p class="text-biggg " id= "banner"> Lets Get in Touch!
             {% comment %} <span id="dynamicText" ></span>   {% endcomment %}
-
+      {% endif %}
             <div class="btn-big clicked">
             <button id="btn-getStarted"  > Get Started</button>
            
@@ -69,8 +81,10 @@
     </div>
     
     
-</section>
-  <section class = "contact-info">
+   </section>
+
+
+   <section class = "contact-info">
     <form action="https://api.web3forms.com/submit" method="POST">
     <div class="contact-info-container">
     <h1 class="textfield">Write us a Message!</h1>
