@@ -96,7 +96,7 @@
 .btn-big #btn-getStarted {
   background-color: transparent;
   color: white;
-  padding: 10px 20px; /* Adjusted padding for better visibility */
+  padding: 10px 20px; 
   border-radius: 23px;
   font-size: 20px;
   font-weight: 500;
@@ -104,9 +104,9 @@
   position: absolute;
   margin-top: 22px;
   cursor: pointer;
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
-  /* transition: 0.5s; */ /* Uncomment if you want to add transition */
+  left: 50%; 
+  transform: translateX(-50%); 
+
 }
 
 .btn-big #btn-getStarted:hover {
@@ -115,9 +115,9 @@
   transition: 0.7s;
 }
 
-.btn-big  .clicked{
+/* .btn-big  .clicked{
 
-}
+} */
 
 
 

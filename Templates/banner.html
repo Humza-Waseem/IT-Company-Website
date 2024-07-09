@@ -9,17 +9,17 @@
 
 
         <div class="firstHalf">
-        
-         <p class="text-small " id= "banner">OUR SERVICES</p>
-         <p class="text-big " id= "banner">{{firstSectionContent.description}} <span id="dynamicText" ></span>  
+         <p class="text-small " id= "banner">Our Services</p>
+         <p class="text-big " id= "banner"><span id="dynamicText" ></span>  
             {% comment %} <div class="btn-big clicked">
             <button id="btn-getStarted"  > Get Started</button>
-           
+        
             </div> {% endcomment %}
+
         </p>
         </div>
         <script src="{% static 'javascript/dynamic.js'%}"></script>
-        
+   
       
         
 
@@ -35,38 +35,29 @@
 
 {% elif pageName == 'Contact'%}
   <section  class=" background firstSection" >
-    <style>
-        .background {
-            background: rgba(0, 0, 0, 0.7) url("{{firstSectionContent.image.url}}") ;
-            background-size: cover;
-            background-blend-mode: darken;
-            }
-    </style> 
+
     
     <div class="box-main">
 
 
         <div class="firstHalf">
-      {% if pageContent.name == "Contact"%}
-         <p class="text-small " id= "banner" style="text-decoration: underline;"> Contact Us</p>
-         <p class="text-biggg " id= "banner"> Lets Get in Touch!
-            {% comment %} <span id="dynamicText" ></span>   {% endcomment %}
-      {% endif %}
-            <div class="btn-big clicked">
-            <button id="btn-getStarted"  > Get Started</button>
-           
-           
 
-           
-            </div> 
+
+             <p class="text-small " id= "banner" style="text-decoration: underline;"> Contact Us </p>
+             <p class="text-biggg " id= "banner"> Lets Get in Touch!</p>
+
+             <div class="btn-big clicked">
+               <button id="btn-getStarted"  > Get Started</button>
+             </div> 
+             <script src="{% static 'javascript/script.js'%}"></script>
+
           
          
-        </p>
-        <div class="info-socials " id="contact-socials">
+          <div class="info-socials " id="contact-socials">
             <a href=""> <img src="{% static 'images/_icons/twitter.svg' %}" alt="X Logo" width="35px" height="35px"> </a>
             <a href="#"> <img src="{% static 'images/_icons/facebook.svg' %}" alt=" facebook" width="35px" height="35px"> </a>
             <a href="https://www.linkedin.com/company/cdoxs/?originalSubdomain=pk"> <img src="{% static 'images/_icons/linkedin.svg' %}" alt=" Linkedin"  width="35px"height="35px"></a>
-        </div>
+          </div>
         </div>
       
         <script src="{% static 'javascript/dynamic.js'%}"></script>

@@ -11,6 +11,7 @@ urlpatterns = [
     
     path('',views.home ,name= "Home"),
     path('', views.get_navbar_data, name='navbar'),
+    path('', views.getPageContent, name='banner'),
     # ... other URL patterns
     path("Services/", views.serviceSection, name="Services"),
     # path('Services/',views.serviceSection ,name= "Services"),

@@ -17,19 +17,27 @@ def home(request):
   
   
 def getPageContent(request):
-    pageContent = pagesContent.objects.all()
+    pageContent = pagesContent.objects.all()  # Correct model name
+    print(pageContent)  # Add this line to print the QuerySet
+    for page in pageContent:
+        print(page.name, page.title, page.content)  # Print each item in the QuerySet
     context = {
         'pageContent': pageContent,
     }
-    return render(request, 'base/banner.html', context)
+    return render(request, 'base/main.html', context)
+
+
+    # pagevalue = pagesContent.objects.all()
+    # context = {
+    #     'pagevalue': pagevalue,
+    # }
+    # return render(request, 'base/banner.html', context)
 
 
 
 def serviceSection(request):
 
-    servicesList = CompanyService.objects.all()
-    # servicesIcon = servicesList.icon
-    
+    servicesList = CompanyService.objects.all()    
     firstThreeServices = servicesList[:3]
     nextThreeServices = servicesList[3:6]  
     pageName = "Services"
@@ -58,7 +66,7 @@ def about(request):
 def careers(request):
     
 
-    return render(request, 'base/careers.html', context)
+    return render(request, 'base/careers.html')
 
 
 
