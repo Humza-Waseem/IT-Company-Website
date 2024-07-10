@@ -1,38 +1,37 @@
   ///////////////////////////////////   DYNAMIC TEXT   //////////////////////////////////////
   document.addEventListener('DOMContentLoaded', function() {
-    const textElement = document.getElementById('dynamicText');
-    const words = ["Web Development", "Digital Marketing", "Data Analysis", "Graphic Design", "UI/UX Design"];
-    let index = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-  
-    function type() {
-      const currentWord = words[index];
-      let displayedText = textElement.textContent;
-  
-      if (!isDeleting) {
-        // Typing effect
-        textElement.textContent = currentWord.slice(0, charIndex++);
-        if (charIndex > currentWord.length) {
-          isDeleting = true;
-          setTimeout(type, 1000); // Pause before starting to delete
-          return;
-        }
-      } else {
-        // Deleting effect
-        textElement.textContent = currentWord.slice(0, charIndex--);
-        if (charIndex < 0) {
-          isDeleting = false;
-          index = (index + 1) % words.length;
-          setTimeout(type, 500); // Pause before starting to type the next word
-          return;
-        }
+  const textElement = document.getElementById('dynamicText');
+  const words = ["Web Development", "Digital Marketing", "Data Analysis", "Graphic Design", "UI/UX Design"];
+  let index = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentWord = words[index];
+    let displayedText = textElement.textContent;
+
+    if (!isDeleting) {
+      // Typing effect
+      textElement.textContent = currentWord.slice(0, charIndex++);
+      if (charIndex > currentWord.length) {
+        charIndex--; // Delete the last character before switching words
+        isDeleting = true;
       }
-      setTimeout(type, isDeleting ? 50 : 100); // Adjust speed of typing and deleting
+    } else {
+      // Deleting effect
+      textElement.textContent = currentWord.slice(0, charIndex--);
+      if (charIndex < 0) {
+        isDeleting = false;
+        index = (index + 1) % words.length;
+        charIndex = 0; // Reset for the new word
+      }
     }
-  
-    setTimeout(type, 500); // Start typing after a delay
-  });
+    setTimeout(type, isDeleting ? 150 : 150); // Adjust delay between characters
+  }
+
+  setTimeout(type, 1000); // Start typing after a 1 second delay (adjust for desired pause)
+});
+
   
 
 

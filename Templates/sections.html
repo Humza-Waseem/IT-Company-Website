@@ -1,5 +1,12 @@
 {% load static%}
 {% block content%}
+<div class="sectionContent">
+   <p class="text-bigy">Explore Some of Our Projects.</p>
+   <p class="text-small">
+      CDOXS empowers hundreds of clients globally to embrace modern technology and elevate customer experiences.</p>
+   
+
+</div>
 <div class="sections">
     <script src="{% static 'javascript/script.js'%}"></script>
 
@@ -20,7 +27,7 @@
    {% endfor %}
    
    {% for item in two%}
-    <section class="secLeft visible">
+    <section class="secLeft visible .secLeft slideFromLeft" >
        <div class="paragraphs">
         <p class="sectionTag ">{{item.title}}</p>
    
@@ -31,6 +38,7 @@
        </div>
     </section>
    {% endfor %}
+   <script src="{% static 'javascript/sections.js' %}"></script>
 
    {% comment %} 
     <section class="secRight visible">

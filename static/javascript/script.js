@@ -32,6 +32,8 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
 //////////////////////  SEARCH BAR ELONGATION ///////////////////////
 document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('searchButton');
@@ -101,6 +103,21 @@ document.addEventListener('DOMContentLoaded', function() {
         smoothScroll(targetPosition, 1000);
     });
 });
+
+
+
+
+////////////////////////////SECTIONS ANIMATION//////////////////////////
+
+
+
+
+
+
+
+
+
+
 
 
 

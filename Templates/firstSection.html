@@ -23,7 +23,10 @@
            <hr class="newCustomHR">
            <p class="text-small">{{firstSectionContent.description}} <span id="dynamicText" ></span>  </p>
            <div class="btn-big clicked">
-              <button id="btn-getStarted">Get Started</button>
+              {% comment %} <button id="btn-getStarted">Get Started</button> {% endcomment %}
+              <!-- HTML !-->
+              <button id="btn-getStarted" role="button">Get Started</button>
+
            </div>
             <script src="{% static 'javascript/dynamic.js' %}"></script>
             <script src="{% static 'javascript/script.js' %}"></script>
