@@ -713,9 +713,8 @@ height: 70px;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
 }
-.navBar .nav-list button {
-  /* visibility: ; */
-  /* transform: scaleX(1); */
+/* .navBar .nav-list button {
+
   width: 70px;
   height: 30px;
  
@@ -723,21 +722,21 @@ height: 70px;
   margin-top: 25px;
   color: white;
   cursor: pointer;
-  /* background-color:#712cf9 ; */
+
   background-color: #8a0303;
   font-family: "Montserrat";
   border-radius: 6px;
   font-weight: 400px;
 }
 .navBar .nav-list button:hover{
-  /* background-color: #f8f8f8; */
+
   background-color:#6e0101 ;
 
 }
 .navBar .nav-list li a:hover::before {
   visibility: visible;
   transform: scaleX(1);
-}
+} */
 
 
 /*=======================================
@@ -990,11 +989,15 @@ transition: all 5s ease;
 /* /////////////////////////cards////////////////////////   */
 .cards{
   height: 870px;
-  width: 76%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   /* display: flex; */
   margin: auto;
+  background-image: url("/static/images/_bg/11.jpg")  ; 
+  background-repeat: no-repeat;
+  background-size: cover; /* Optional: to cover the entire area */
+  background-position: center; /* Optional: to center the image */
 }
 .cards img{
   width: 60px;
@@ -1007,6 +1010,7 @@ margin: 10px 10px;
   justify-content: center;
   display: flex;
   margin: auto;
+  width: 70%;
 }
 .card1, .card2, .card3 ,.card4 ,.card5 ,.card6{
 border: 1px  black;
@@ -1169,8 +1173,84 @@ box-shadow: 5px 5px 15px rgb(169, 169, 169); /* Example box shadow */
 
 
 
+/* ////////////////////////////////////   CONTACT US BUTTON  ///////////////////////////////// */
 
 
+/* CSS */
+.button-85 {
+  text-align: center;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 120px;
+  /* margin: auto; */
+  margin: 20px 10px 10px 26px;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* /////////////////////////////////////////////- CONTACT US BUTTON -////////////////////////////////////////////// */
 
 
 
@@ -1243,13 +1323,11 @@ box-shadow: 5px 5px 15px rgb(169, 169, 169); /* Example box shadow */
 
 
 .hamburger{
-
   position: absolute;
   cursor: pointer;
   right: 5%;
   top: 15px;
   display: none;
-
 }
 .line{
   width: 33px;
@@ -1333,38 +1411,19 @@ box-shadow: 5px 5px 15px rgb(169, 169, 169); /* Example box shadow */
 
 
 
-.section1{
+.section1, .section2 , .section3{
   display: flex;
   flex-direction: column;
   /* background-color: #2cb349; */
   /* background-color: transparent; */
-  width: 20%;
+  width: 200px;
   height: 340px;
   justify-content: center;
   align-items: center;
 
   
 }
-.section2{
-  display: flex;
-  flex-direction: column;
-  /* background-color: #2cb349; */
-  /* background-color: transparent; */
-  width: 20%;
-  height: 340px;
-  justify-content: center;
-  align-items: center;
-}
-.section3{
-  display: flex;
-  flex-direction: column;
-  /* background-color: #2cb349; */
-  /* background-color: transparent; */
-  width: 20%;
-  height: 340px;
-  justify-content: center;
-  align-items: center;
-}
+
 .info-sections li{ 
  list-style: none;
 }
@@ -1413,6 +1472,7 @@ info-socials a {
     /* margin-top: 10px; */
     transition: all 1s ease-out;
     background: #C80036;
+    position: relative;
     
     /* max-width: 100vh;
     max-height: 100vh; */
@@ -1442,11 +1502,11 @@ info-socials a {
     transition: all 0.3s ease-in-out;
   }
 
-  .navBar .nav-list button:hover{
-    /* background-color: #f8f8f8; */
+  /* .navBar .nav-list button:hover{
+    background-color: #f8f8f8;
     background-color:#0C1844; ;
   
-  }
+  } */
   .navBar .nav-list li a:hover::before {
     visibility: visible;
     transform: scaleX(1);
@@ -1503,7 +1563,142 @@ display: none;
   .box-main .secondHalf{
     max-width: 80%;
   }
+
+  .cards{
+     height: 1200px;
+   /* width: 26%;
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column; 
+  }
+  .cardsUpper {
+    margin-top: 10px;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  .cardsLower{
+    flex-direction: column;
+    margin-top: 0px;
+    
+  }
+  .card1, .card2, .card3 ,.card4 ,.card5 ,.card6{
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 120px;
+    /* margin: 5px 5px; */
+    padding: 10px 10px;
+    box-shadow: 5px 5px 15px rgb(169, 169, 169); /* Example box shadow */
+    }
+    .cards img{
+      width: 20px;
+      height: 20px;
+      margin: 0px;
+      /* border-radius: 10px; */
+    /* margin: 10px 10px; */
+    }
+    .card-text-small{
+      font-size: 8px;
+      /* font-weight: 400;
+      color: rgb(0, 0, 0);
+      font-family: "Plus Jakarta Sans"; */
+    
+    }
+    .card-text-big{
+      margin-top: 0px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      /* text-decoration: underline; */
+      /* font-weight: 400;
+      color: rgb(0, 0, 0);
+      font-family: "Plus Jakarta Sans"; */
+    }
+
+  .section1, .section2  , .section3{
+    width: 84px;
+        margin-right: 42px;
+        margin-left: 8px;
+  }
+  .dividerResponsive{
+   
+    visibility: hidden;
+    width: 0px; /* Width of the vertical line */
+    height: 0px; /* Height of the vertical line */
+    /* background-color: #000; Color of the vertical line */
+    margin:  0px; /* Horizontal margin between sections */
+  }
+
+  .section1 .text-big, .section2 .text-big , .section3 .text-big{
+    font-size: 24px;
+    color: white;
+  
+  }
+
+  .section1  .text-small, .section2  .text-small, .section3 .text-small{
+   font-size: 16px;
+  }
+  .endingBarContent{
+    font-size: 12px;
+  
+  }
+  .hamburger.hidden {
+    display: none; /* Hidden class to hide the element */
+  }
+  .newCustomHR{
+    display: none;
+  
+  }
+  #btn-getStarted {
+    left: 26%;
+    padding: 6px 39px;
+  }
+
+  .sectionContent .text-bigy{
+    font-size: 26px;
+  }
+  .sectionContent .text-small{
+    font-size: 16px;
+  }
+  .sections .secRight .thumbnail img {
+  width: 180px;
+    height: 560px;
+  }
+  .sections .secLeft .thumbnail img {
+  width: 180px;
+    height: 560px;
+  }
+  .paragraphs{
+    width: 140px;
+    height: 560px;
+  }
+  .sections .secRight .sectionTag{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  .sections .secRight .sectionSubTag{
+    font-size: 16px;
+  }
+  .sections .secLeft .sectionTag{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  .sections .secLeft .sectionSubTag{
+    font-size: 16px;
+  }
 }
+  
+
+
+
+
+
+
+
 
 #magic-cursor {
   position: absolute;

@@ -9,3 +9,16 @@ burger.addEventListener('click',()=>{
     rightNav.classList.toggle('v-class-responsive');
     navbar.classList.toggle('h-nav-responsive');
 })
+
+document.addEventListener('scroll', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const scrollThreshold = window.innerHeight * 0.1; // 10% of the window height
+  
+    if (window.scrollY > scrollThreshold) {
+      hamburger.classList.add('hidden');
+    } else {
+      hamburger.classList.remove('hidden');
+    }
+  });
+  
+  
