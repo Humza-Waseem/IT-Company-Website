@@ -3,49 +3,47 @@
 <div class="info-box">
     <div class= "info-sections">
 
+       {% comment %} <section class="section-text-big">
+         <div class="sec-item">Company</div>
+         <div class="sec-item">Services</div>
+         <div class="sec-item">Contact</div>
 
-        <section class="section1">
-           <p class="text-big">Company</p>
-           <div class="text-small">
-            <ul>
-              <li><a href="{% url 'Home'%}">Home</a></li>
-              <!-- <li><a href="{% url 'Services'%}">Services</a></li> -->
-              <li><a href="{% url 'About'%}">About</a></li>
-              <li><a href="{% url 'Careers'%}">Careers</a></li>
-               <li><a href="{% url 'contact'%}">Contact</a></li>
-            </ul>
-            </div>
-        </section>
-
-        <div class="divider dividerResponsive"></div>
-
-      <section class="section2">
-           <p class="text-big">Services</p>
+       </section> {% endcomment %}
+       <section class="section1">
+         <h2 class="sec-text-big">Company</h2>
+         <div class="text-small">
+             <ul>
+                 <li><a href="{% url 'Home'%}">Home</a></li>
+                 <!-- <li><a href="{% url 'Services'%}">Services</a></li> -->
+                 <li><a href="{% url 'About'%}">About</a></li>
+                 <li><a href="{% url 'Careers'%}">Careers</a></li>
+                 <li><a href="{% url 'contact'%}">Contact</a></li>
+             </ul>
+         </div>
+     </section>
      
-           <div class="text-small">
-            <ul>     
-
-
-               <li><a href="{% url 'Services'%}"> Web Development</a></li>
-               <li><a href="{% url 'Services'%}"> UI/UX</a></li>
-               <li><a href="{% url 'Services'%}"> App Development</a></li>
-               <li><a href="{% url 'Services'%}"> SEO SERVICES</a></li>
-               <li><a href="{% url 'Services'%}"> Software Development</a></li>
-
-
-
-
-            </ul>
-       
-           </div>
-        
-      </section>
+     <div class="divider dividerResponsive"></div>
+     
+     <section class="section2">
+         <h2 class="sec-text-big">Services</h2>
+         <div class="text-small">
+             <ul>
+                 <li><a href="{% url 'Services'%}">Web Development</a></li>
+                 <li><a href="{% url 'Services'%}">UI/UX</a></li>
+                 <li><a href="{% url 'Services'%}">App Development</a></li>
+                 <li><a href="{% url 'Services'%}">SEO SERVICES</a></li>
+                 <li><a href="{% url 'Services'%}">Software Development</a></li>
+             </ul>
+         </div>
+     </section>
+     
+     
 
 
         <div class="divider dividerResponsive"></div>
 
       <section class="section3">
-            <p class="text-big">Contact</p>
+            <h2 class=" sec-text-big">Contact</h2>
             <div class="text-small">
             <ul class="info-contact">
                <li class="address"> {{contact_info.address}}</li>
