@@ -2,14 +2,14 @@ from django.contrib import admin
 # from .models import Image
 # from django.utils.html import format_html
 # Register your models here.
-from .models import User,NavBar,firstSection,CompanyService,Contact,pagesContent
+from .models import User,NavBar,firstSection,CompanyService,Contact,pagesContent,Careers
 # from django_svg_image_form_field import SvgAndImageFormField
 
 
 admin.site.register(User)
 admin.site.register(NavBar)
 admin.site.register(firstSection)
-
+admin.site.register(Careers)
 
 # class CompanyServiceAdminForm(forms.ModelForm):
 #     class Meta:

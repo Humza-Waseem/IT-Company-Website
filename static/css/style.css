@@ -29,7 +29,7 @@
   margin-top: 22px;
   position: absolute;
   font-size: 20px;
-  left: 43%;
+  left: 46%;
 }
 
 #btn-getStarted:hover {
@@ -115,18 +115,61 @@ margin-bottom: 250px;
 
 }
 
-.data{
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.data {
   width: 700px;
   height: 152px;
-  background-color: #222fa6;
+  background: linear-gradient(270deg, #C80036, #1e3588, #1c4ac9, #750229);
+  background-size: 600% 600%;
+  animation: gradient 10s ease infinite;
   display: flex;
-  flex: left;
-  align-items: left;
-  display: inline-block;
-  margin-left: 571px;
-  margin-top: -80px;
+  justify-content: space-between;
+  align-items: center;
   color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0 auto; /* Centers the box horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
 }
+
+.project-info, .client-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-info {
+  margin-left: 50px;
+}
+.client-info{
+  margin-right : 50px;
+}
+.number {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+
+
 .text-testi{
  
     margin-top: 10px;
@@ -1072,6 +1115,7 @@ transition: all 5s ease;
 
 
 /* /////////////////////////cards////////////////////////   */
+
 .cards{
   height: 870px;
   width: 100%;
@@ -1079,7 +1123,7 @@ transition: all 5s ease;
   justify-content: center;
   /* display: flex; */
   margin: auto;
-  background-image: url("/static/images/_bg/11.jpg")  ; 
+  background-image: url("/static/images/_bg/bss.jfif")  ; 
   background-repeat: no-repeat;
   background-size: cover; /* Optional: to cover the entire area */
   background-position: center; /* Optional: to center the image */
@@ -1110,12 +1154,34 @@ align-items: center;
 justify-content: center;
 box-shadow: 5px 5px 15px rgb(169, 169, 169); /* Example box shadow */
 }
+
 .card-text-small{
   font-size: 16px;
   font-weight: 400;
   color: rgb(0, 0, 0);
   font-family: "Plus Jakarta Sans";
 
+}
+.apply-link{
+  color: #0C1844;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Montserrat";
+  text-decoration: none;
+
+
+ 
+}
+.apply-link:hover{
+  color: #C80036;
+  transition: 0.7s;
+  /* text-decoration: underline; */
+  
+}
+
+.career-cards{
+  display: flex;
+  flex-direction: row;
 }
 .card-text-big{
   margin-top: 20px;

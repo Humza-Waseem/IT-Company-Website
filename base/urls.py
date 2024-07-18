@@ -4,7 +4,7 @@ from django.urls.conf import include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from .views import getCareers
 
 
 urlpatterns = [
@@ -16,7 +16,7 @@ urlpatterns = [
     path("Services/", views.serviceSection, name="Services"),
     # path('Services/',views.serviceSection ,name= "Services"),
     path('About/',views.about ,name= "About"),
-    path('Careers/',views.careers ,name= "Careers"),
+    path('Careers/',getCareers.as_view() ,name= "Careers"),
     path('Contact/',views.contact_info ,name= "contact"),    
 ]
 

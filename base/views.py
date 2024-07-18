@@ -1,5 +1,11 @@
 from django.shortcuts import render
-from .models import NavBar, firstSection , CompanyService, Contact,pagesContent
+from django.http import HttpResponse
+from django.template import loader
+from django.shortcuts import render
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import NavBar, firstSection , CompanyService, Contact,pagesContent, Careers
 
 # Create your views here.
 def home(request):
@@ -16,6 +22,22 @@ def home(request):
     return render(request, 'base/index.html', context)
   
   
+
+
+class getCareers(ListView):
+    
+    model = Careers
+    template_name = 'base/careers.html'
+    context_object_name = 'jobs'   # This is used to specify the name of the object that we want to use in the template. In this case, we are using tasks as the object name
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['jobs'] = context['jobs'].all # this allows us to filter the tasks based on the user that is logged in. This will only show the tasks that are created by the user that is logged in
+        # context['count'] = context['jobs'].count() # this will count the number of tasks that are not completed
+        return context
+
+
+
+
 def getPageContent(request):
     pageContent = pagesContent.objects.all()  # Correct model name
     print(pageContent)  # Add this line to print the QuerySet

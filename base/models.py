@@ -29,8 +29,18 @@ class NavBar(models.Model):
         return self.name
 
 
+class Careers(models.Model):
+    title = models.CharField(max_length=100, null=False, blank=False)
+    description = models.TextField(max_length=150, null=False, blank=False)
+    image = models.ImageField(upload_to='images/_bg', blank=True, null=True)
+    updated = models.DateTimeField(auto_now=True, null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True, null=False)
+    url = models.CharField(max_length=100, null=True, blank=False)
 
-
+    def __str__(self):
+         return self.title
+    class Meta:
+        ordering = ['-created' , '-updated']
 
 # class NavBar(models.Model):
 #     logo = models.ImageField(upload_to='images/_bg', blank=True, null=True)
