@@ -1,30 +1,85 @@
 {% load static%}
 {% block content%}
-<div class="sectionContent">
-   <p class="text-bigy">Explore Some of Our Projects.</p>
-   <p class="text-small">
+ <!-- <div class="sectionContent">
+   <p class="text-bigy">What we Do</p>
+      <p class="text-small">
       CDOXS empowers hundreds of clients globally to embrace modern technology and elevate customer experiences.</p>
    
 
-</div>
+</div>  -->
 <div class="sections">
     <script src="{% static 'javascript/script.js'%}"></script>
 
-   {% for item in one%}
+   {% comment %} {% for item in one%} {% endcomment %}
     <section class="secRight visible">
-      
-           <div class="paragraphs">
-            <p class="sectionTag ">{{item.title}}</p>
+      <div class = "thumbnail">
+         <img src="{% static 'images/_bg/11.jpg' %} "alt="" class="imgFluid"> 
+         <div class="about-five-quote">
+            <h4>Our Target to Esay Solution of Busniess Progress &amp; Customer Satisfaction <span class="solid-line"></span></h4>
+        </div>
+            <!-- <img src="{{image.url}}" alt="thumbnail" class="imgFluid"> -->
+      </div>
+      <div class="paragraphs">
+              <p class="sectionTag-top ">Get to Know</p>
+
+              <p class="sectionTag ">Know <span>About</span> Us</p>
        
-            <p class="sectionSubTag ">{{item.description}}</p>
-           </div>
-           <div class = "thumbnail">
-             {% comment %} <img src="./assets/images/_bg/bgg.jpg" alt="" class="imgFluid"> {% endcomment %}
-               <img src="{{item.image.url}}" alt="thumbnail" class="imgFluid">
-           </div>
+              <p class="sectionSubTag ">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness</p>
+
+
+
+
+
+
+
+              <h4 class="text-achievement">Our Achievements:</h4>
+            
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
+                          <h6>Human Agency -22</h6>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
+                          <h6>Best Quality Service</h6>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
+                          <h6>International Award</h6>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
+                          <h6>Galaxy Award-18</h6>
+                      </div>
+                  </div>
+                  {% comment %} <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
+                          <h6>Human Agency -22</h6>
+                      </div>
+                  </div> {% endcomment %}
+              </div>
+         
+      </div>
+
+
+
+            
+
+
+
+            
+           
 
          </section>
-   {% endfor %}
+   {% comment %} {% endfor %} {% endcomment %}
    
    {% for item in two%}
     <section class="secLeft visible .secLeft slideFromLeft" >
