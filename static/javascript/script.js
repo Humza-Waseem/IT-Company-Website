@@ -1,30 +1,30 @@
-/////////////////   navbar ///////////////////////
+// /////////////////   navbar ///////////////////////
 
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navBar');
-    if (window.scrollY > 0) {
-        if (window.scrollY > 0) {
-            navbar.classList.add('navbar-scrolled');
-            console.log(navbar.classList); // Log the class list to the console
-        }
-        // navbar.classList.add('navbar-scrolled');
-    } else {
-        navbar.classList.remove('navbar-scrolled');
-    }
-});
+// window.addEventListener('scroll', function() {
+//     const navbar = document.querySelector('.navBar');
+//     if (window.scrollY > 0) {
+//         if (window.scrollY > 0) {
+//             navbar.classList.add('navbar-scrolled');
+//             console.log(navbar.classList); // Log the class list to the console
+//         }
+//         // navbar.classList.add('navbar-scrolled');
+//     } else {
+//         navbar.classList.remove('navbar-scrolled');
+//     }
+// });
 
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navBar');
-    if (window.scrollY > 0) {
-        if (window.scrollY > 0) {
-            navbar.classList.add('navbar-scrolled-logo');
-            console.log(navbar.classList); // Log the class list to the console
-        }
-        // navbar.classList.add('navbar-scrolled');
-    } else {
-        navbar.classList.remove('navbar-scrolled-logo');
-    }
-});
+// window.addEventListener('scroll', function() {
+//     const navbar = document.querySelector('.navBar');
+//     if (window.scrollY > 0) {
+//         if (window.scrollY > 0) {
+//             navbar.classList.add('navbar-scrolled-logo');
+//             console.log(navbar.classList); // Log the class list to the console
+//         }
+//         // navbar.classList.add('navbar-scrolled');
+//     } else {
+//         navbar.classList.remove('navbar-scrolled-logo');
+//     }
+// });
 
 
 

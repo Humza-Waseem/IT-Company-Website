@@ -2,10 +2,7 @@
 {% block content %}
 <nav class="navBar h-nav-responsive">
     <script src="{% static 'javascript/script.js'%}"></script>
-    {% comment %} <!-- -----------------------    COMPANY LOGO--------------------- --> {% endcomment %}
-    <!-- <div class="header-logo">
-        <a href="index.html"><img alt="LogoOfCDOXS" class="img-fluid" src="./assets/images/_bg/Cdoxs-Logo.png" width="70" height="70"></a>
-    </div> -->
+   
 
     <div class="nav-logo  ">
         {% comment %} <a href="index.html"><img src="./assets/images/_bg/Cdoxs-Logo.png" alt="LogoOfCDOXS"width="70" height="70"></a> {% endcomment %}
@@ -34,17 +31,21 @@
         {% endfor %} {% endcomment %}
         <li><a href="{% url 'Home'%}">HOME</a></li>
         <li><a href="{% url 'Services'%}">SERVICES</a></li>
-        {% comment %} <li><a href="{% url 'About'%}">ABOUT</a></li> {% endcomment %}
+        <li><a href="{% url 'About'%}">ABOUT</a></li>
         <li><a href="{% url 'Careers'%}">CAREERS</a></li> 
         
         {% comment %} <li><a href="{% url 'Services'%}">SERVICES</a></li> {% endcomment %}
 
        
-        <a href="{% url 'contact'%}"><button class="button-85">Let's Talk</button></a>
+        <!-- <a href="{% url 'contact'%}"><button class="button-85" style="    margin-left: 300px;">Let's Talk</button></a> -->
+        <a href="{% url 'contact'%}"> <button class="button-27"  >Let's Talk</button></a>
+<!-- HTML !-->
+<!-- <button class="button-27" >Button 27</button> -->
+
 
     </ul>
 
-    <div class="nav-right v-class-responsive">
+    {% comment %} <div class="nav-right v-class-responsive">
         <!-- <div class="search-icon">
             <input type="text" name="" id="">
            <button> <img src="./assets/images/_icons/search.png "alt="search-icon" width="10px" height="10px"></button>
@@ -55,14 +56,13 @@
               <input type="text" class="search-input" id="search" placeholder="Search..." name = "search">
               <span class="close-icon" id="closeIcon">&times;</span>
             </div>
-            {% comment %} <img src="./assets/images/_icons/search.png" alt="searchIcon" class = "search-button" id = "searchButton"> {% endcomment %}
+         
            
-            <img src="{% static 'images/_icons/search.svg' %}" alt="searchIcon" class = "search-button" id = "searchButton"">
+            <img src="{% static 'images/_icons/search.svg' %}" alt="searchIcon" class = "search-button" id = "searchButton">
            
             
-           {% comment %} <button class="search-button" id="searchButton">Search</button>  {% endcomment %}
         </div>
-    </div>
+    </div> {% endcomment %}
     <div class="hamburger ">
         <div class="line"></div>
         <div class="line"></div>

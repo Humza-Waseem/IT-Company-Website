@@ -1,13 +1,13 @@
 {% load static%}
 {% block content%}
 
-<style>
+{% comment %} <style>
     .background {
         background: rgba(0, 0, 0, 0.7) url("{{firstSectionContent.image.url}}") ;
         background-size: cover;
         background-blend-mode: darken;
         }
-</style> 
+</style>  {% endcomment %}
 
   
 <section class=" background firstSection">
@@ -25,7 +25,8 @@
            <div class="btn-big clicked">
               {% comment %} <button id="btn-getStarted">Get Started</button> {% endcomment %}
               <!-- HTML !-->
-              <button id="btn-getStarted" role="button">Get Started</button>
+              {% comment %} <button id="btn-getStarted" role="button">Get Started</button> {% endcomment %}
+              <button class="button-27 " id = "btn-getStarted"role= "button">Get Started</button>
 
            </div>
             <script src="{% static 'javascript/dynamic.js' %}"></script>
