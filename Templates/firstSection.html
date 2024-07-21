@@ -26,19 +26,31 @@
               {% comment %} <button id="btn-getStarted">Get Started</button> {% endcomment %}
               <!-- HTML !-->
               {% comment %} <button id="btn-getStarted" role="button">Get Started</button> {% endcomment %}
-              <button class="button-27 " id = "btn-getStarted"role= "button">Get Started</button>
-
+              {% comment %} <button class="button-27 " id = "btn-getStarted"role= "button">Get Started</button> {% endcomment %}
+              {% comment %} <button class="button-27 " id = "btn-getStarted" role= "button">Get Started</button> {% endcomment %}
+              <button class="button-80" id = "btn-getStarted" role="button">Get Started <img src="../static/images/_icons/arrow-down.svg" class="arrow-down-img" alt="arrow"></button>
            </div>
+
+
+
+           {% comment %} <div class="button-block"><a data-w-id="02805844-0300-e786-9bd0-0cc4b70b4c30" href="#" class="button-inner w-inline-block"><p class="button_text">Hover me</p><img src="https://assets.website-files.com/5da97be6b37bee4caf5941f9/5da97d62b37bee3deb595104_arrow_right.png" alt="" class="arrow_img" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><div class="button_background" style="background-color: rgba(255, 171, 157, 0.5); width: 60px; height: 60px;"></div></a></div> {% endcomment %}
+
+
+
+
+
+
+
            
 
             <script src="{% static 'javascript/dynamic.js' %}"></script>
             <script src="{% static 'javascript/script.js' %}"></script>
         </div>
-        <a href="Services" class="view-more-circle">
+        {% comment %} <a href="Services" class="view-more-circle">
             <span></span>
             <h5 class="linear-text-two">View More</h5>
             <img src="assets/images/icons/arro-long.svg" alt="">
-            </a>
+        </a> {% endcomment %}
         <script src="{% static 'javascript/dynamic.js' %}"></script>
       
         
@@ -64,7 +76,7 @@
         
 
     </div>
-    
+    {% comment %} <hr> {% endcomment %}
 </section>
 
 {% endblock content%}
