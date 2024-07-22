@@ -39,20 +39,25 @@
 
        
         <!-- <a href="{% url 'contact'%}"><button class="button-85" style="    margin-left: 300px;">Let's Talk</button></a> -->
-        <a href="{% url 'contact'%}"> <button class="button-27"  >Let's Talk</button></a>
+        <!-- <a href="{% url 'contact'%}"> <button class="button-27"  >Let's Talk</button></a> -->
+        <!-- HTML !-->
+        {% comment %} <a href="{% url 'contact'%}"></a><button class="button-80" role="button">Let's Talk</button></a> {% endcomment %}
+       <!-- <a href="{% url 'contact'%}"><button class="button-81" role="button">Button 81</button></a> -->
+
+
 <!-- HTML !-->
 <!-- <button class="button-27" >Button 27</button> -->
 
 
     </ul>
 
-    {% comment %} <div class="nav-right v-class-responsive">
+    <div class="nav-right v-class-responsive">
         <!-- <div class="search-icon">
             <input type="text" name="" id="">
            <button> <img src="./assets/images/_icons/search.png "alt="search-icon" width="10px" height="10px"></button>
         </div> -->
 
-        <div class="search-container">
+        {% comment %} <div class="search-container">
             <div class="search-bar" id="searchBar">
               <input type="text" class="search-input" id="search" placeholder="Search..." name = "search">
               <span class="close-icon" id="closeIcon">&times;</span>
@@ -62,8 +67,12 @@
             <img src="{% static 'images/_icons/search.svg' %}" alt="searchIcon" class = "search-button" id = "searchButton">
            
             
-        </div>
-    </div> {% endcomment %}
+        </div> {% endcomment %}
+        <a href="{% url 'contact'%}"></a><button class="button-80" role="button">Let's Talk</button></a>
+
+    </div> 
+
+
     <div class="hamburger ">
         <div class="line"></div>
         <div class="line"></div>
