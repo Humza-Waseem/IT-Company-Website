@@ -91,6 +91,10 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body  class="tt-magic-cursor bg-image-overlay">
     <!-- ==================================================PRELOADERN  START ==============================-->
@@ -124,7 +128,7 @@
         
         
   <!-- ==================================================TOPBAR Start==============================-->
-     {% include 'topbar.html'%}
+     {% comment %} {% include 'topbar.html'%} {% endcomment %}
   <!-- ==================================================TOPBAR END==============================-->
 
 
@@ -154,7 +158,7 @@
  {% include "firstSection.html"%}
 
  {% comment %} ===========================================END OF Banner=========================================  {% endcomment %}
-
+{% include 'data.html'%}
 
 
  
@@ -173,7 +177,7 @@
   
  {% comment %} <hr> {% endcomment %}
 
- <div class="data">
+ {% comment %} <div class="data">
     <div class="project-info">
       <div class="number">150+</div>
       <div class="label">Completed Projects</div>
@@ -182,7 +186,7 @@
       <div class="number">300+</div>
       <div class="label">Happy Clients</div>
     </div>
-  </div>
+  </div> {% endcomment %}
   
 
  <div class=" text-testi"> What our Clients say</div>
