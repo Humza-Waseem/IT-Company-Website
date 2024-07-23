@@ -1,32 +1,88 @@
 // /////////////////   navbar ///////////////////////
 
+// window.addEventListener('scroll', function() {
+//     const navbar = document.querySelector('.navBar');
+//     if (window.scrollY > 0) {
+//         if (window.scrollY > 0) {
+//             navbar.classList.add('navbar-scrolled');
+//             console.log(navbar.classList); // Log the class list to the console
+//         }
+//         // navbar.classList.add('navbar-scrolled');
+//     } else {
+//         navbar.classList.remove('navbar-scrolled');
+//     }
+// });
+
+// window.addEventListener('scroll', function() {
+//     const navbar = document.querySelector('.navBar');
+//     if (window.scrollY > 0) {
+//         if (window.scrollY > 0) {
+//             navbar.classList.add('navbar-scrolled-logo');
+//             console.log(navbar.classList); // Log the class list to the console
+//         }
+//         // navbar.classList.add('navbar-scrolled');
+//     } else {
+//         navbar.classList.remove('navbar-scrolled-logo');
+//     }
+// });
+
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navBar');
-    if (window.scrollY > 0) {
-        if (window.scrollY > 0) {
-            navbar.classList.add('navbar-scrolled');
-            console.log(navbar.classList); // Log the class list to the console
-        }
-        // navbar.classList.add('navbar-scrolled');
+
+    // Add or remove classes based on scroll position
+    // if (window.scrollY > 0) {
+    //     navbar.classList.add('navbar-scrolled');
+    //     navbar.classList.add('navbar-scrolled-logo');
+    // } else {
+    //     navbar.classList.remove('navbar-scrolled');
+    //     navbar.classList.remove('navbar-scrolled-logo');
+    // }
+
+    // Hide or show navbar based on specific scroll positions
+    if (window.scrollY > 100 && window.scrollY < 700) {
+        navbar.classList.add('hidden');
+        navbar.classList.add('navbar-scrolled');
+    } else if (window.scrollY >= 700) {
+        navbar.classList.remove('hidden');
+        navbar.classList.add('navbar-scrolled');
     } else {
+        navbar.classList.remove('hidden');
         navbar.classList.remove('navbar-scrolled');
     }
-});
 
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navBar');
-    if (window.scrollY > 0) {
-        if (window.scrollY > 0) {
-            navbar.classList.add('navbar-scrolled-logo');
-            console.log(navbar.classList); // Log the class list to the console
-        }
-        // navbar.classList.add('navbar-scrolled');
-    } else {
-        navbar.classList.remove('navbar-scrolled-logo');
-    }
+    // Log the class list to the console for debugging
+    console.log(navbar.classList);
 });
 
 
+// /////////////////   SECTION  ANIMATION ///////////////////////
+// document.addEventListener('DOMContentLoaded', function() {
+//     const elements = document.querySelectorAll('.secRight .hidden');
+
+//     function isInViewport(element) {
+//         const rect = element.getBoundingClientRect();
+//         return (
+//             rect.top >= 0 &&
+//             rect.left >= 0 &&
+//             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//         );
+//     }
+
+//     function checkElements() {
+//         elements.forEach(element => {
+//             if (isInViewport(element)) {
+//                 element.classList.add('visible');
+//             }
+//         });
+//     }
+
+//     window.addEventListener('scroll', checkElements);
+//     window.addEventListener('resize', checkElements);
+
+//     // Initial check
+//     checkElements();
+// });
 
 
 
