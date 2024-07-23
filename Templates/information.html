@@ -1,14 +1,25 @@
 {% load static %}
 {% block content %}
 <div class="info-box">
+    <section class="headingsection text-big">
+        Empowering Your Business with Innovative IT Solutions
+    </section>
     <div class= "info-sections">
 
-       {% comment %} <section class="section-text-big">
-         <div class="sec-item">Company</div>
-         <div class="sec-item">Services</div>
-         <div class="sec-item">Contact</div>
+        <section class="section4">
+            <div class="nav-logo  ">  
+                <a href="{% url 'Home'%}">
+                    <img src="{% static 'images/_bg/Cdoxs-Logo.png' %}" alt="LogoOfCDOXS" >
+                    <div class="text-logo">CDOXS</div>
+                </a>
+            </div>
+            <div class="info-socials">
+                <!-- <a href=""> <img src="{% static 'images/_icons/twitter.svg' %}" alt="X Logo" width="25px" height="25px"> </a> -->
+                <a href="#"> <img src="{% static 'images/_icons/facebook.svg' %}" alt=" facebook" width="25px" height="25px"> </a>
+                <a href="https://www.linkedin.com/company/cdoxs/?originalSubdomain=pk"> <img src="{% static 'images/_icons/linkedin.svg' %}" alt=" Linkedin"  width="25px" height="25px">  </a>
+            </div>
+        </section>
 
-       </section> {% endcomment %}
        <section class="section1">
          <h2 class="sec-text-big">Company</h2>
          <div class="text-small">
@@ -36,9 +47,6 @@
              </ul>
          </div>
      </section>
-     
-     
-
 
         <div class="divider dividerResponsive"></div>
 
@@ -49,11 +57,11 @@
                <li class="address"> {{contact_info.address}}</li>
                <li class="phone">{{contact_info.phone}}</li>
                <li class="email">{{contact_info.email}}</li>
-               <div class="info-socials">
+               <!-- <div class="info-socials">
                   <a href=""> <img src="{% static 'images/_icons/twitter.svg' %}" alt="X Logo" width="25px" height="25px"> </a>
                   <a href="#"> <img src="{% static 'images/_icons/facebook.svg' %}" alt=" facebook" width="25px" height="25px"> </a>
                   <a href="https://www.linkedin.com/company/cdoxs/?originalSubdomain=pk"> <img src="{% static 'images/_icons/linkedin.svg' %}" alt=" Linkedin"  width="25px" height="25px">  </a>
-               </div>
+               </div> -->
                <!-- <li class="socials"><img src="{% static  "images/_icons/linkedin.png" %}" alt="linkedin" width= "60px" height= "60px">  <img src="{% static  "images/_icons/facebook.png" %}" alt="facebook" width= "60px" height= "60px"></li> -->
             </ul>
          </div>
