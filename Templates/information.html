@@ -3,7 +3,11 @@
 <div class="info-box">
     <section class="headingsection text-big">
         Empowering Your Business with Innovative IT Solutions
+        <div class = "button-80">
+            <a href="{% url 'contact'%}" role="button">Contact Us</a>
+        </div>
     </section>
+
     <div class= "info-sections">
 
         <section class="section4">
@@ -66,13 +70,22 @@
             </ul>
          </div>
       </section>
-
+      
          
          {% comment %} <div class="divider"></div> {% endcomment %}
 
 
      <!-- <section class="section4"></section> -->
     </div>
+    {% comment %} <div class="endingBar">
+        <div class="endingBarContent">
+            <p> &copy 2024 | CDOXS &nbsp;  &nbsp; &nbsp;</p> 
+            <p>Let's make amazing things together!</p>
+            
+            <!-- <button>click</button>
+            <button>hi</button> -->
+        </div>
+    </div> {% endcomment %}
 
 </div>
 {% endblock content %}

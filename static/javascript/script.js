@@ -39,7 +39,7 @@ window.addEventListener('scroll', function() {
     // }
 
     // Hide or show navbar based on specific scroll positions
-    if (window.scrollY > 100 && window.scrollY < 700) {
+    if (window.scrollY > 40 && window.scrollY < 700) {
         navbar.classList.add('hidden');
         navbar.classList.add('navbar-scrolled');
     } else if (window.scrollY >= 700) {
