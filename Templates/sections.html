@@ -12,13 +12,20 @@
 
    {% comment %} {% for item in one%} {% endcomment %}
     <section class="secRight visible">
-      <div class = "thumbnail">
-         <img src="{% static 'images/_bg/gi.webp' %} "alt="" class="imgFluid"> 
-         <div class="about-five-quote">
-            <h4>Our Target to Esay Solution of Busniess Progress &amp; Customer Satisfaction <span class="solid-line"></span></h4>
-        </div>
+        <div class="thumbnail">
+            <!-- Replace the image with a video element -->
+            <video autoplay muted loop playsinline class="videoFluid">
+                <source src="{% static 'images/_bg/anime.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="about-five-quote">
+                <h4>Our Target to Easy Solution of Business Progress &amp; Customer Satisfaction <span class="solid-line"></span></h4>
+            </div>
+            <!-- Comment out or remove the old image line -->
             <!-- <img src="{{image.url}}" alt="thumbnail" class="imgFluid"> -->
-      </div>
+        </div>
+       <script src="{% static 'javascript/sections.js' %}"></script>
+        
       <div class="paragraphs">
               <p class="sectionTag-top " id= "dynamicText">Get to Know</p>
 

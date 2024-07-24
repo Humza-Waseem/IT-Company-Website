@@ -32,6 +32,19 @@
   setTimeout(type, 1000); // Start typing after a 1 second delay (adjust for desired pause)
 });
 
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const textSmall = document.querySelector(".text-small");
+    const dynamicText = document.getElementById("dynamicText");
+
+    textSmall.addEventListener("animationend", function() {
+      dynamicText.style.opacity = 1; // Show the span text after animation
+    });
+  });
+
+
   
 
 
