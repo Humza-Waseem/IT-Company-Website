@@ -11,8 +11,14 @@
 
   
 <section class=" background firstSection">
+    {% comment %} <div class = "about-shape-1 z-index-3">
+        <img src="{% static 'images/_bg/breadcrumb-shape-1.png'%}" alt="">
+    </div> {% endcomment %}
+    {% comment %} <div class = "about-shape-2 z-index-3">
+        <img src="{% static 'images/_bg/breadcrumb-shape-2.png'%}" alt="">
+    </div> {% endcomment %}
     {% include "navBar.html" %}
-    <hr class = "lightHR" style="opacity: 1;">
+    {% comment %} <hr class = "lightHR" style="opacity: 1;"> {% endcomment %}
     {% comment %} <!-- <iframe src="https://www.youtube.com/embed/GxEZsyoYHGY?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Faxixtechnologies.com&widgetid=1" frameborder="0" allowfullscreen></iframe> --> {% endcomment %}
 
     <div class="box-main">
@@ -22,19 +28,20 @@
         
            {% comment %} <p class="text-big">{{firstSectionContent.title}}</p> {% endcomment %}
             <div class="main-text-wrapper">
-              <p class="text-big">Lets <span >Build </span></p>
-              <p class="text-big">Great Things Together</p>
+               <p class="text-big">Lets <span >Build </span></p>
+               <p class="text-big">Great Things Together</p>
         
               {% comment %} <hr class="newCustomHR"> {% endcomment %}
-              <p class="text-small">{{firstSectionContent.description}} <span id="dynamicText" ></span>  </p>
+                  <p class="text-small">{{firstSectionContent.description}} <span id="dynamicText" ></span>  </p>
+            
+            <div class = "mainButtons">
+                <div class="btn-big clicked">
+                    <button class="button-80" id = "btn-getStarted" role="button">Get Started <img src="../static/images/_icons/arrow-down.svg"       class="arrow-down-img" alt="arrow"></button>
+                </div>
+                <div class="btn-big clicked">
+                    <button class="button-80" id = "btn-getStarted" role="button">Get Started <img src="../static/images/_icons/arrow-down.svg"       class="arrow-down-img" alt="arrow"></button>
+                </div>
             </div>
-            <div class="btn-big clicked">
-               {% comment %} <button id="btn-getStarted">Get Started</button> {% endcomment %}
-               <!-- HTML !-->
-                {% comment %} <button id="btn-getStarted" role="button">Get Started</button> {% endcomment %}
-                {% comment %} <button class="button-27 " id = "btn-getStarted"role= "button">Get Started</button> {% endcomment %}
-                {% comment %} <button class="button-27 " id = "btn-getStarted" role= "button">Get Started</button> {% endcomment %}
-                <button class="button-80" id = "btn-getStarted" role="button">Get Started <img src="../static/images/_icons/arrow-down.svg"   class="arrow-down-img" alt="arrow"></button>
             </div>
             <script src="{% static 'javascript/dynamic.js' %}"></script>
             <script src="{% static 'javascript/script.js' %}"></script>
@@ -68,6 +75,11 @@
         </div> {% endcomment %}
         
 
+    </div>
+    <div class = "box-main-video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="{% static 'images/_bg/anime.mp4' %}" type="video/mp4">
+        </video>
     </div>
     {% comment %} <hr> {% endcomment %}
 </section>
