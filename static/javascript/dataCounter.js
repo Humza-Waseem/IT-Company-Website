@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (max <= 10) {
             increment = 1; // Slow increment for small numbers
-            stepTime = 200; // Slower step time for small numbers
-        } else if (max <= 100) {
+            stepTime = 400; // Slower step time for small numbers
+        } else if (max < 100) {
             increment = Math.ceil(max / 100); // Medium increment for medium numbers
-            stepTime = 50; // Medium step time for medium numbers
+            stepTime = 20; // Medium step time for medium numbers
         } else {
             increment = Math.ceil(max / 200); // Faster increment for large numbers
-            stepTime = 20; // Faster step time for large numbers
+            stepTime = 10; // Faster step time for large numbers
         }
 
         const timer = setInterval(() => {
