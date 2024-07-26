@@ -10,7 +10,6 @@
 <div class="sections">
     <script src="{% static 'javascript/script.js'%}"></script>
 
-   {% comment %} {% for item in one%} {% endcomment %}
     <section class="secRight visible">
         <div class="thumbnail">
             <!-- Replace the image with a video element -->
@@ -36,18 +35,23 @@
               <h4 class="text-achievement">Our Achievements:</h4>
             
               <div class="swiper-wrapper">
+                 <div class= "card">
                   <div class="swiper-slide">
                       <div class="achievement-single">
                           <img src="{% static 'images/_bg/8.jfif'%}" alt="image">
                           <h6>Human Agency -22</h6>
                       </div>
                   </div>
+                </div>
+                <div class= "card">
                   <div class="swiper-slide">
                       <div class="achievement-single">
                           <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
                           <h6>Best Quality Service</h6>
                       </div>
                   </div>
+                  </div>
+                  <div class= "card">
                   <div class="swiper-slide">
                       <div class="achievement-single">
                         
@@ -57,12 +61,16 @@
                           <h6>International Award</h6>
                       </div>
                   </div>
+                  </div>
+                  <div class= "card">
                   <div class="swiper-slide">
                       <div class="achievement-single">
                           <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
                           <h6>Galaxy Award-18</h6>
                       </div>
                   </div>
+                  </div>
+
                 
               </div>
          
@@ -78,44 +86,47 @@
            
 
     </section>
-   {% comment %} {% endfor %} {% endcomment %}
-   
-    {% for item in two%}
-    <section class="secLeft visible .secLeft slideFromLeft" >
-       <div class="paragraphs">
-        <p class="sectionTag ">{{item.title}}</p>
-   
-        <p class="sectionSubTag ">{{item.description}}</p>
-       </div>
-       <div class = "thumbnail">
-         <img src="{{item.image.url}}" alt="thumbnail" class="imgFluid">
-       </div>
-    </section>
-   {% endfor %}
-   <script src="{% static 'javascript/sections.js' %}"></script>
 
-   {% comment %} 
-    <section class="secRight visible">
-       <div class="paragraphs">
-        <p class="sectionTag ">Lorem  sit amet consectet .</p>
+<div class = "text-big Process">Our <span style="font-style: italic;"> Process</span> </div>
+   <section class="secLeft visible">
    
-        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur doloremque natus maiores debitis odio saepe dolor</p>
-       </div>
-       <div class = "thumbnail">
-           <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
-       </div>
-    </section>
-    
-    <section class="secLeft visible">
-       <div class="paragraphs">
-        <p class="sectionTag ">Loremt quaerat unde .</p>
+      <div class="paragraphs">
+        <p class="sectionTag ">Hello </p>
+        <p class="sectionSubTag ">lore mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ols gome loge flamil lanlut</p>
+      </div>
+      <div class = "thumbnail">
+         {% comment %} <img src="{{item.image.url}}" alt="thumbnail" class="imgFluid"> {% endcomment %}
+         <img src="{% static 'images/_bg/mono.svg'%}" alt="thumbnail" class="imgFluid">
+      </div>
+   </section>
+   <section class="secRight visible" style="display: flex; flex-direction: row-reverse;">
    
-        <p class="sectionSubTag ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  laudantium totam deserunt ea dignissimos labore delectus laboriosam dolorem fuga pariatur e dolorem repellendus  eos ex tempore vero explicabo odit, magni neque consequatur. Praesentium, debitis.</p>
-       </div>
-       <div class = "thumbnail">
-          <img src="{% static "images/_bg/bgg.jpg" %}" alt="thumbnail" class= "imgFluid">
-       </div>
-    </section>
-    {% endcomment %}
+      <div class="paragraphs">
+        <p class="sectionTag ">Hello </p>
+        <p class="sectionSubTag ">lore mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ols gome loge flamil lanlut</p>
+      </div>
+      <div class = "thumbnail">
+         {% comment %} <img src="{{item.image.url}}" alt="thumbnail" class="imgFluid"> {% endcomment %}
+         <img src="{% static 'images/_bg/mono.svg'%}" alt="thumbnail" class="imgFluid">
+      </div>
+   </section>
+   <section class="secLeft visible">
+   
+      <div class="paragraphs">
+        <p class="sectionTag ">Hello </p>
+        <p class="sectionSubTag ">lore mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ol mins input suito watier int ols gome loge flamil lanlut</p>
+      </div>
+      <div class = "thumbnail">
+         {% comment %} <img src="{{item.image.url}}" alt="thumbnail" class="imgFluid"> {% endcomment %}
+         <img src="{% static 'images/_bg/mono.svg'%}" alt="thumbnail" class="imgFluid">
+      </div>
+   </section>
+   
+  
+
+
+  
+
+
 </div>
 {% endblock content%}
