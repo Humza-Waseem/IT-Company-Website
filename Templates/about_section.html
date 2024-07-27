@@ -1,0 +1,66 @@
+{% load static%}
+<script src="{% static 'javascript/script.js'%}"></script>
+
+    <section class="secRight visible">
+        <div class="thumbnail">
+            <!-- Replace the image with a video element -->
+            <video autoplay muted loop playsinline class="videoFluid">
+                <source src="{% static 'images/_bg/anime.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="about-five-quote">
+                <h4>Our Target to Easy Solution of Business Progress &amp; Customer Satisfaction <span class="solid-line"></span></h4>
+            </div>
+            <!-- Comment out or remove the old image line -->
+            <!-- <img src="{{image.url}}" alt="thumbnail" class="imgFluid"> -->
+        </div>
+       <script src="{% static 'javascript/sections.js' %}"></script>
+        
+      <div class="paragraphs">
+              {% comment %} <p class="sectionTag-top " id= "dynamicText">Get to Know</p> {% endcomment %}
+
+              <p class="sectionTag "><span style="font-family: DM Serif Display; font-size: 58px; font-style: italic;">About &nbsp;</span> Us</p>
+              <script src="{% static 'javascript/sections.js' %}"></script>
+
+              <p class="sectionSubTag ">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness</p>
+              <h4 class="text-achievement">Our Achievements:</h4>
+            
+              <div class="swiper-wrapper">
+                 <div class= "card">
+                  <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/8.jfif'%}" alt="image">
+                          <h6>Human Agency -22</h6>
+                      </div>
+                  </div>
+                </div>
+                <div class= "card">
+                  <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
+                          <h6>Best Quality Service</h6>
+                      </div>
+                  </div>
+                  </div>
+                  <div class= "card">
+                  <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/im.jfif'%}" alt="image">
+                          <h6>International Award</h6>
+                      </div>
+                  </div>
+                  </div>
+                  <div class= "card">
+                  <div class="swiper-slide">
+                      <div class="achievement-single">
+                          <img src="{% static 'images/_bg/11.jpg'%}" alt="image">
+                          <h6>Galaxy Award-18</h6>
+                      </div>
+                  </div>
+                  </div>
+
+                
+              </div>
+         
+      </div>
+    </section>

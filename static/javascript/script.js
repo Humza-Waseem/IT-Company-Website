@@ -202,6 +202,30 @@ document.addEventListener('DOMContentLoaded', function() {
     checkVisibility();
   });
 
+
+////////////////////////////////////////////////    BACK TO TOP BUTTON  ////////////////////////////////
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+  window.addEventListener("scroll", function() {
+      // Check if the scroll position is greater than 170vh
+      if (window.scrollY > window.innerHeight * 1.7) {
+          scrollToTopButton.classList.add("show");
+      } else {
+          scrollToTopButton.classList.remove("show");
+      }
+  });
+
+  scrollToTopButton.addEventListener("click", function() {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+  });
+});
+
+
+
   
 
 
