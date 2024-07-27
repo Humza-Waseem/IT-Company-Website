@@ -7,10 +7,19 @@
    
 
 </div>  -->
+<div class="cube-loader">
+  <div class="cube-top"></div>
+  <div class="cube-wrapper">
+    <span style="--i:0" class="cube-span"></span>
+    <span style="--i:1" class="cube-span"></span>
+    <span style="--i:2" class="cube-span"></span>
+    <span style="--i:3" class="cube-span"></span>
+  </div>
+</div> 
 <div class="sections">
     {% include 'about_section.html'%}
-
-    <div class = "text-big Process">Our <span style="font-style: italic;"> Process</span> </div>
+    {% include 'data.html'%}
+    
     {% include 'process.html'%}
   
 </div>
