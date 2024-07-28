@@ -226,9 +226,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  
+/////////////////////////////////////////////  GLOWING BALL IN LINE ///////////////////////////////////////
+const timelineLine = document.querySelector('.timeline-line');
+const glowingBall = document.querySelector('.glowing-arrow');
+const timeline = document.querySelector('.timeline');
 
-
+window.addEventListener('scroll', () => {
+  const scrollTop = timeline.scrollTop;
+  timelineLine.style.top = `${scrollTop}px`;
+  glowingBall.style.top = `${scrollTop + 50}px`; // Adjust offset as needed
+});
 
 
 

@@ -51,7 +51,7 @@
 
     </ul>
 
-    <div class="nav-right v-class-responsive">
+    <div class="nav-right v-class-responsive" S>
         <!-- <div class="search-icon">
             <input type="text" name="" id="">
            <button> <img src="./assets/images/_icons/search.png "alt="search-icon" width="10px" height="10px"></button>
@@ -68,8 +68,40 @@
            
             
         </div> {% endcomment %}
-        <a href="{% url 'contact'%}"><button class="button-80" role="button">Let's Talk</button></a>
-        {% comment %} <a href="{% url 'contact'%}"><button class="button-54" role="button">Let's Talk</button></a> {% endcomment %}
+        {% comment %} <a href="{% url 'contact'%}"><button class="button-80" role="button">Let's Talk</button></a> {% endcomment %}
+        <label for="themeToggle" class="themeToggle st-sunMoonThemeToggleBtn" type="checkbox">
+            <input type="checkbox" id="themeToggle" class="themeToggleInput" />
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              stroke="none"
+            >
+              <mask id="moon-mask">
+                <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                <circle cx="11" cy="3" r="8" fill="black"></circle>
+              </mask>
+              <circle
+                class="sunMoon"
+                cx="10"
+                cy="10"
+                r="8"
+                mask="url(#moon-mask)"
+              ></circle>
+              <g>
+                <circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+                <circle class="sunRay sunRay2" cx="14" cy="16.928" r="1.5"></circle>
+                <circle class="sunRay sunRay3" cx="6" cy="16.928" r="1.5"></circle>
+                <circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+                <circle class="sunRay sunRay5" cx="6" cy="3.1718" r="1.5"></circle>
+                <circle class="sunRay sunRay6" cx="14" cy="3.1718" r="1.5"></circle>
+              </g>
+            </svg>
+          </label>
+          
+        {% comment %} <a href="{% url 'contact'%}"><button class="button-54" role="button">Let's Talk</button></a> {% endcomment %}    <script src="{% static 'javascript/dark-theme.js'%}"></script>
+
 
     </div> 
 

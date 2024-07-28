@@ -7,7 +7,7 @@
    
 
 </div>  -->
-<div class="cube-loader">
+{% comment %} <div class="cube-loader">
   <div class="cube-top"></div>
   <div class="cube-wrapper">
     <span style="--i:0" class="cube-span"></span>
@@ -15,12 +15,14 @@
     <span style="--i:2" class="cube-span"></span>
     <span style="--i:3" class="cube-span"></span>
   </div>
-</div> 
+</div>  {% endcomment %}
+{% include 'cube.html'%}
 <div class="sections">
-    {% include 'about_section.html'%}
-    {% include 'data.html'%}
-    
-    {% include 'process.html'%}
+  {% include 'about_section.html'%}
+ 
+  {% include 'cube-small.html'%}
+  {% include 'data.html'%}
+  {% comment %} {% include 'process.html'%} {% endcomment %}
   
 </div>
 {% endblock content%}

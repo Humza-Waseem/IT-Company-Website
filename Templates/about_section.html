@@ -19,7 +19,9 @@
       <div class="paragraphs">
               {% comment %} <p class="sectionTag-top " id= "dynamicText">Get to Know</p> {% endcomment %}
 
-              <p class="sectionTag "><span style="font-family: DM Serif Display; font-size: 58px; font-style: italic;">About &nbsp;</span> Us</p>
+              {% comment %} <div class="sectionTag "><span style="font-family: DM Serif Display; font-size: 58px; font-style: italic;">About &nbsp;</span> Us   {% include 'pyramid.html'%} </div> {% endcomment %}
+              <div class="sectionTag "><span style="font-family: DM Serif Display; font-size: 58px; font-style: italic;">About &nbsp;</span> Us   </div>
+              
               <script src="{% static 'javascript/sections.js' %}"></script>
 
               <p class="sectionSubTag ">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness</p>

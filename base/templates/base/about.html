@@ -10,7 +10,7 @@
 {% comment %} <h1>about page</h1> {% endcomment %}
  {% block content%}
  {% include 'main.html'%}
- 
+ {% include 'navbar.html'%}
  <div class="aboutContent">
     <div class="aboutContainer">
 
@@ -26,7 +26,7 @@
  </div>
 
  {% include 'information.html'%}
- {% include 'endbar.html'%}
+ {% comment %} {% include 'endbar.html'%} {% endcomment %}
  {% endblock content%}
 </body>
 </html>

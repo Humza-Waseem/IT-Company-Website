@@ -61,9 +61,9 @@
 
     <!-- <link rel="stylesheet" href="./assets/css/style.css">     -->
     <link rel='stylesheet' type='text/css' media= 'screen' href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!--  The CSS file I added -->
     <!-- <link rel="stylesheet" href="./assets/_css/style.css"> -->
@@ -165,7 +165,7 @@
 
 
  {% comment %} ===========================================START OF SECTIONS=====================================  {% endcomment %}
- 
+
  {% include "sections.html"%}
  {% comment %} {% include 'data.html'%} {% endcomment %}
  
@@ -190,7 +190,7 @@
   </div> {% endcomment %}
   
 
- <div class=" text-testi"> What our Clients say</div>
+ {% comment %} <div class=" text-testi"> What our Clients say</div>
  <div class="carousel">
     <div class="carousel-inner">
         
@@ -206,9 +206,9 @@
     </div>
     <div id="carousel-prev" class="carousel-nav">&lt;</div>
     <div id="carousel-next" class="carousel-nav">&gt;</div>
-</div>
-
-
+</div> {% endcomment %}
+{% comment %} <div class=" text-big Process"> What our <span style="font-style: italic;">Clients</span> say</div> {% endcomment %}
+{% include 'carousal.html'%}
 
 
 
@@ -236,7 +236,7 @@
 
 
 
-
+{% include 'team.html'%}
  {% comment %} ===========================================START OF Information section===========================  {% endcomment %}
   {% comment %} <hr class = "customHR"> {% endcomment %}
 {% include 'information.html'%}

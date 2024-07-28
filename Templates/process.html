@@ -1,17 +1,24 @@
 {% load static%}
-<div class = "text-big Process" >Our <span style="font-style: italic; "> Process</span> </div>
 <div class="timeline">
-    <div class="timeline-line"></div>
+  <div class = "text-big Process" style="display: flex; flex-direction: row;" >Our <span style="font-style: italic; "> Process</span> 
+    
+</div>
+
+  <div class="timeline-line"></div>
+  <div class="glowing-arrow"></div>
+  
+  <script src="{% static 'javascript/script.js'%}"></script>
+
     <div class="timeline-content">
         <div class="timeline-item">
-            <p class="timeline-title text-small">Planning</p>
+            <p class="timeline-title text-small"></p>
             {% comment %} <div class = "step3"><img src="{% static 'images/_bg/11.jpg'%}" alt="step3"></div>      </div> {% endcomment %}
             <div class = "step1">
               <div class="card">
               <img src="{% static 'images/_icons/idea.png' %}" alt="planingPic">
                   <p class = "text-big card-text">Planning </p>
                 <div class="card__content">
-                  <p class="card__title">Card Title
+                  <p class="card__title">Project Planning
                   </p><p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 </div>
               </div>
@@ -19,14 +26,14 @@
               
           </div>
         <div class="timeline-item">
-            <p class="timeline-title text-small"</p>
+            <p class="timeline-title text-small"></p>
             {% comment %} <div class = "step3"><img sr>Designc="{% static 'images/_bg/11.jpg'%}" alt="step3"></div>      </div> {% endcomment %}
             <div class = "step2">
               <div class="card">
                 <img src="{% static 'images/_icons/des.png' %}" alt="designPic">
                   <p class = "text-big card-text">Design</p>
                 <div class="card__content">
-                  <p class="card__title">Card Title
+                  <p class="card__title">Design
                   </p><p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 </div>
               </div>
@@ -34,7 +41,7 @@
               
         </div>
         <div class="timeline-item">
-          <p class="timeline-title text-small">Code</p>
+          <p class="timeline-title text-small"></p>
          {% comment %} < class = "step3"><img src="{% static 'images/_bg/11.jpg'%}" alt="step3"></ div>      </div> {% endcomment %}
           <div class = "step3">
            <div class="card">
@@ -42,14 +49,14 @@
               <br>
               <p class = "text-big card-text">Code</p>
             <div class="card__content">
-              <p class="card__title">Card Title
+              <p class="card__title">Code & Development
               </p><p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
             </div>
            </div>
           </div>
         </div>
         <div class="timeline-item">
-            <p class="timeline-title text-small">Quality Assurance</p>
+            <p class="timeline-title text-small"></p>
             {% comment %} <div class = "step3"><img src="{% static 'images/_bg/11.jpg'%}" alt="step3"></div>      </div> {% endcomment %}
             <div class = "step4">
               <div class="card">
@@ -57,7 +64,7 @@
                   <br>
                   <p class = "text-big card-text">Quality Assurance </p>
                 <div class="card__content">
-                  <p class="card__title">Card Title
+                  <p class="card__title">Quality Assurance & Testing
                   </p><p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 </div>
               </div>

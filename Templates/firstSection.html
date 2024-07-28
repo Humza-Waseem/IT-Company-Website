@@ -18,7 +18,9 @@
         
            {% comment %} <p class="text-big">{{firstSectionContent.title}}</p> {% endcomment %}
             <div class="main-text-wrapper">
-                <p class="text-small" style="font-size: 18px; color: #720505; font-weight: 700;" >---{{firstSectionContent.title}} </p>
+                <p class="text-small" style="font-size: 18px; color: #720505; font-weight: 700;" >        
+                 {% comment %} <span class= "hyphenLine">-</span>  {% endcomment %}
+                   {{firstSectionContent.title}} </p>
                <p class="text-big">Lets <span >Build </span></p>
                <p class="text-big">Great Things Together</p>
         
@@ -26,9 +28,18 @@
                   <p class="text-small">{{firstSectionContent.description}} <span id="dynamicText" ></span>  </p>
             
             <div class = "mainButtons">
-                <div class="btn-big clicked">
-                    <button class="button-80" id = "btn-getStarted" role="button">Get Started <img src="{% static 'images/_icons/arrow-down.svg'%}"       class="arrow-down-img" alt="arrow"></button>
-                </div>
+                 <div class="btn-big clicked">
+                    <button class="button-80" id = "btn-getStarted" role="button">Contact Us <img src="{% static 'images/_icons/arrow-down.svg'%}"       class="arrow-down-img" alt="arrow"></button>
+                    {% comment %} <button class="button-80" id = "btn-getStarted" role="button">Contact Us <img src="{% static 'images/_icons/arrow-down.svg'%}"       class="arrow-down-img" alt="arrow"></button> {% endcomment %}
+                </div> 
+                {% comment %} <button id="btn-getStarted" class="btn80"> {% endcomment %}
+                    {% comment %} <svg class="svgIcon" viewBox="0 0 384 512">
+                      <path
+                        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+                      ></path>
+                    </svg> {% endcomment %}
+                    {% comment %} <img class="svgIcon" viewBox="0 0 384 512" src="../static/images/_icons/rrr.png" alt=""> {% endcomment %}
+                {% comment %} </button> {% endcomment %}
                 {% comment %} <div class="btn-big clicked">
                     <button class="button-80" id = "btn-getStarted" role="button">Get Started <img src="../static/images/_icons/arrow-down.svg"       class="arrow-down-img" alt="arrow"></button>
                 </div> {% endcomment %}
@@ -40,15 +51,19 @@
         
         <script src="{% static 'javascript/dynamic.js' %}"></script>
 
+        
         <div class="secondHalf ">
-            
+
+           <div class = "secondHalfContainer"> 
             <img src="{% static 'images/_bg/nmn.png'%}" alt="image" height="300px" width="300px"> 
+           </div>
            
          
         </div>
     </div>
     
 </section>
+<hr style="height : 1px; background-color: #e7e7e7; color: #f3f3f3; border: none;" >
 <button id="scrollToTopButton" class="button">
     <svg class="svgIcon" viewBox="0 0 384 512">
       <path
