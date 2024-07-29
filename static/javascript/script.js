@@ -247,6 +247,27 @@ document.querySelector('.main__scroll').addEventListener('click', function(event
 });
 
 
+/////////////////////////////      TECH STACKS    //////////////////////////
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector('.tech-stack-images');
+  const images = container.querySelectorAll('img');
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
+
+  images.forEach(image => {
+      const randomX = Math.random() * (containerWidth - image.width);
+      const randomY = Math.random() * (containerHeight - image.height);
+      
+      image.style.left = `${randomX}px`;
+      image.style.top = `${randomY}px`;
+  });
+});
+
+
+
+
+
+
 
 ////////////////////////MAGIC CURSOR////////////////////////
 

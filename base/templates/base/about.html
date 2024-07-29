@@ -48,10 +48,12 @@
            <div class="aboutImage topImage"><img src="{% static 'images/_bg/bgg.png' %}" alt="about image" ></div>
         </div>     
       </div>
-       
     </div>
  </div>
-
+ {% include 'scrollToTopButton.html'%}
+ {% include 'data.html'%}
+ {% comment %} {% include 'team.html'%} {% endcomment %}
+{% comment %} {% include 'careerCard.html'%} {% endcomment %}
  {% include 'information.html'%}
  {% endblock content%}
 </body>
