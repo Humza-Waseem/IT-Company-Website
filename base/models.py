@@ -32,7 +32,9 @@ class NavBar(models.Model):
 class Careers(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False)
     description = models.TextField(max_length=150, null=False, blank=False)
-    image = models.ImageField(upload_to='images/_bg', blank=True, null=True)
+    image = models.ImageField(upload_to='images/_bg', blank=True, null=True, default='./static/images/_bg/default.jpg')
+    jobType = models.CharField(max_length=100, null=False, blank=False)
+    location = models.CharField(max_length=100, null=False, blank=False)
     updated = models.DateTimeField(auto_now=True, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True, null=False)
     url = models.CharField(max_length=100, null=True, blank=False)

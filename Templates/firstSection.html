@@ -17,10 +17,10 @@
         <div class="firstHalf">
         
            {% comment %} <p class="text-big">{{firstSectionContent.title}}</p> {% endcomment %}
-            <div class="main-text-wrapper">
+            <div class="main-text-wrapper mtwfs">
                 <p class="text-small" style="font-size: 18px; color: #720505; font-weight: 700;" >        
                  {% comment %} <span class= "hyphenLine">-</span>  {% endcomment %}
-                   {{firstSectionContent.title}} </p>
+                  {{firstSectionContent.title}} </p>
                <p class="text-big">Lets <span >Build </span></p>
                <p class="text-big">Great Things Together</p>
         
@@ -29,20 +29,22 @@
             
             <div class = "mainButtons">
                  <div class="btn-big clicked">
-                    <button class="button-80" id = "btn-getStarted" role="button">Contact Us <img src="{% static 'images/_icons/arrow-down.svg'%}"       class="arrow-down-img" alt="arrow"></button>
                     {% comment %} <button class="button-80" id = "btn-getStarted" role="button">Contact Us <img src="{% static 'images/_icons/arrow-down.svg'%}"       class="arrow-down-img" alt="arrow"></button> {% endcomment %}
-                </div> 
-                {% comment %} <button id="btn-getStarted" class="btn80"> {% endcomment %}
-                    {% comment %} <svg class="svgIcon" viewBox="0 0 384 512">
-                      <path
-                        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-                      ></path>
-                    </svg> {% endcomment %}
-                    {% comment %} <img class="svgIcon" viewBox="0 0 384 512" src="../static/images/_icons/rrr.png" alt=""> {% endcomment %}
-                {% comment %} </button> {% endcomment %}
-                {% comment %} <div class="btn-big clicked">
-                    <button class="button-80" id = "btn-getStarted" role="button">Get Started <img src="../static/images/_icons/arrow-down.svg"       class="arrow-down-img" alt="arrow"></button>
-                </div> {% endcomment %}
+                    <div class="main__action">
+                      <a class="main__scroll" href="#">
+                        <div class="main__scroll-box">
+                          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M11.9997 13.1716L7.04996     8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z" fill="rgba(28,28,30,1)">
+                            </path>
+                          </svg>
+                        </div>
+                    
+                        <span class="main__scroll-text">Get Started</span>
+                      </a>
+                    </div>
+                 </div> 
+
             </div>
             </div>
             <script src="{% static 'javascript/dynamic.js' %}"></script>
@@ -64,13 +66,8 @@
     
 </section>
 <hr style="height : 1px; background-color: #e7e7e7; color: #f3f3f3; border: none;" >
-<button id="scrollToTopButton" class="button">
-    <svg class="svgIcon" viewBox="0 0 384 512">
-      <path
-        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-      ></path>
-    </svg>
-</button>
+{% include 'scrollToTopButton.html'%}
+
 <script src="{% static 'javascript/script.js' %}"></script>
 
 {% endblock content%}

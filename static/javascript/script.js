@@ -237,7 +237,14 @@ window.addEventListener('scroll', () => {
   glowingBall.style.top = `${scrollTop + 50}px`; // Adjust offset as needed
 });
 
-
+////////////////////    get started   /////       //////
+document.querySelector('.main__scroll').addEventListener('click', function(event) {
+  event.preventDefault();
+  window.scrollBy({
+    top: window.innerHeight * 1.5, // 150% of the viewport height
+    behavior: 'smooth'
+  });
+});
 
 
 

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,27 +7,52 @@
     <title>About | CDOXS</title>
 </head>
 <body>
-    {% load static %}
-{% comment %} <h1>about page</h1> {% endcomment %}
  {% block content%}
  {% include 'main.html'%}
- {% include 'navbar.html'%}
  <div class="aboutContent">
     <div class="aboutContainer">
-
-        <div class="about-dark">
-            <div class=" aboutText1 ">About US <span></span></div>
-            </div>
+        {% include 'navbar.html'%}
+      <div class = "aboutFIrstHalf">
+        <div class = "main-text-wrapper mtwa">
+            <!-- <p class="text-small" style="font-size: 18px; color: #720505; font-weight: 700;" >        
+        
+                 {{firstSectionContent.title}} </p> -->
+            <div class=" aboutText1 text-big " ><span>About </span> us</div>
+            
            
-        <div class="about-light">
-            <div class=" aboutText2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet porro reiciendis molestiae unde? Dolorum eum similique, tempore consequatur nam ipsam <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, odio?</span></div>
-            </div>
-           
+          {% comment %} <div class="about-light"> {% endcomment %}
+              <div class=" aboutText2">Lorem ipsum dolor sit amet consectetur adipisicing  amet consectetur adipisicing elit. Amet porro ?</span></div>
+              <div class = "mainButtons mainBTNabout">
+                <div class="btn-big clicked">
+                   <button class="button-80" id = "btn-getStarted" role="button">Contact Us </button>
+                   {% comment %} <div class="main__action">
+                     <a class="main__scroll" href="#">
+                       <div class="main__scroll-box">
+                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 0h24v24H0z" fill="none"></path>
+                           <path d="M11.9997 13.1716L7.04996     8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z" fill="rgba(28,28,30,1)">
+                           </path>
+                         </svg>
+                       </div>
+                   
+                       <span class="main__scroll-text">Get Started</span>
+                     </a>
+                   </div> {% endcomment %}
+                </div> 
+    
+           </div>
+          {% comment %} </div> {% endcomment %}
+        </div>
+        <div class="aboutImage">
+           <div class="aboutImage bottomImage"> <img src="{% static 'images/_bg/bggg.png' %}" alt="about image" ></div>
+           <div class="aboutImage topImage"><img src="{% static 'images/_bg/bgg.png' %}" alt="about image" ></div>
+        </div>     
+      </div>
+       
     </div>
  </div>
 
  {% include 'information.html'%}
- {% comment %} {% include 'endbar.html'%} {% endcomment %}
  {% endblock content%}
 </body>
 </html>
