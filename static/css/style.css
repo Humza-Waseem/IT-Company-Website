@@ -2739,7 +2739,7 @@ color: white;
 
 .info-box .text-small{
   font-weight: 400px;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
   color: white;
   color: var(--text-primary);
@@ -2846,6 +2846,8 @@ color: white;
   /* margin-bottom: 100px; */
   text-align: center;
   padding-bottom: 10px;
+  POSITION: RELATIVE;
+    LEFT: 61PX;
 
 }
 .section4 .nav-logo img{
@@ -2854,6 +2856,7 @@ color: white;
   margin: auto;
   margin-top: 10px;
   margin-left: 10px;
+  
   /* padding-left: 10px;*/
 }
 .section1, .section2 , .section3{
@@ -2894,13 +2897,15 @@ position: absolute;
 }
 .info-contact li{
   padding: 6px 6px;
-  font-size: 17px; 
+  font-size: 14px; 
 }
 .info-contact li img{
   padding: 10px 10px;
 }
 .info-socials {
   padding: 4px 21px;
+  POSITION: RELATIVE;
+  LEFT: 56PX; 
 }
 .btn-cssbuttons {
   /* --btn-color: var(--secondary-dark); */
@@ -4497,15 +4502,15 @@ font-family: "Plus Jakarta Sans";
 
 
  
- .tech-stack {
+ /* .tech-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 500px; /* Adjust the height as needed */
-  background-color: #f8f9fa; /* Optional background color */
+  height: 500px; 
+  background-color: #f8f9fa; 
   margin-top: 30px;
 }
 
@@ -4519,11 +4524,14 @@ font-family: "Plus Jakarta Sans";
   width: 100%;
   height: 100%;
 }
+.tech-stack{
+  height: 150vh;
+}
 
-.center-element {
+.center-element img {
   position: absolute;
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
+  width: 100px; 
+  height: 100px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -4531,12 +4539,11 @@ font-family: "Plus Jakarta Sans";
 
 .tech-stack .tech-icon {
   position: absolute;
-  width: 50px; /* Adjust as needed */
-  height: 50px; /* Adjust as needed */
+  width: 60px; 
+  height: 60px; 
   transition: transform 0.3s ease-in-out;
 }
 
-/* Positioning each tech icon around the central element */
 .tech-html5 {
   top: 20%;
   left: 30%;
@@ -4567,7 +4574,149 @@ font-family: "Plus Jakarta Sans";
   left: 20%;
 }
 
-/* Add hover effect if needed */
 .tech-icon:hover {
   transform: scale(1.2);
+} */
+
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-color: transparent;
+  margin-top: 30px;
+}
+
+.techStackText {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 100px;
+}
+.techStackText-small{
+  font-size: 14px;
+  color: maroon;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 10px;
+  /* margin-top: 10px; */
+  /* animation: none !important; */
+}
+.tech-stack-container {
+  position: relative;
+  width: 100%;
+  height: 145vh;
+  /* margin-top: 0px; */
+}
+
+.center-element {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-element img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.tech-stack .tech-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-html5 {
+  top: 17%;
+  left: 33%;
+}
+
+.tech-css3 {
+  top: 39%;
+  left: 67%;
+}
+
+.tech-javascript {
+  top: 70%;
+  left: 60%;
+}
+
+.tech-python {
+  top: 73%;
+  left: 33%;
+}
+
+.tech-django {
+  top: 58%;
+  left: 12%;
+}
+
+.tech-bootstrap {
+  top: 39%;
+  left: 20%;
+}
+
+.tech-angular {
+  top: 16%;
+  left: 54%;
+}
+
+.tech-dotnet {
+  top: 13%;
+  left: 80%;
+}
+
+.tech-flutter {
+  top: 73%;
+  left: 80%;
+}
+
+.tech-react {
+  top: 17%;
+  left: 13%;
+}
+
+.tech-mysql {
+  top: 74%;
+  left: 8%;
+}
+
+.tech-php {
+  top: 53%;
+  left: 76%;
+}
+
+.tech-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 0; 
+}
+
+.tech-lines line {
+  stroke: rgb(151, 235, 151);
+  stroke-width: 2;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+}
+
+.center-element {
+  z-index: 1; 
 }

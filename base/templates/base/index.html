@@ -210,26 +210,49 @@
     <div id="carousel-next" class="carousel-nav">&gt;</div>
 </div> {% endcomment %}
 {% comment %} <div class=" text-big Process"> What our <span style="font-style: italic;">Clients</span> say</div> {% endcomment %}
-<div class="tech-stack">
-    <div  class= "text-big techStackText">All major&nbsp; <span>Tech Stacks</span></div>
+{% comment %} <div class="tech-stack"> {% endcomment %}
     <div class="tech-stack-container">
-        <div class="center-element">
-            <!-- Central element content (e.g., logo or icon) -->
-            <img src="{% static 'images/_icons/layers-half.svg' %}" alt="Central Icon">
-        </div>
+        <div class="text-big techStackText">All major&nbsp; <span>Tech Stacks</span></div>
+        <div class="text-small techStackText-small">At CDOXS we work in all big Tech Stacks</span></div>
+        
         <div class="tech-stack">
+            <div class="center-element">
+                <img src="{% static 'images/_bg/logo-main.png' %}" alt="Central Icon">
+            </div>
+            
+            <svg class="tech-lines" width="100%" height="100%">
+                <line x1="50%" y1="50%" x2="38%" y2="25%" class="line-html5" />
+                <line x1="50%" y1="50%" x2="67%" y2="44%" class="line-css3" />
+                <line x1="50%" y1="50%" x2="60%" y2="70%" class="line-javascript" />
+                <line x1="50%" y1="50%" x2="38%" y2="72%" class="line-python" />
+                <line x1="50%" y1="50%" x2="18%" y2="59%" class="line-django" />
+                <line x1="50%" y1="50%" x2="25%" y2="44%" class="line-bootstrap" />
+                <line x1="50%" y1="50%" x2="55%" y2="25%" class="line-angular" />
+                <line x1="50%" y1="50%" x2="80%" y2="20%" class="line-dotnet" />
+                <line x1="50%" y1="50%" x2="80%" y2="73%" class="line-flutter" />
+                <line x1="50%" y1="50%" x2="18%" y2="23%" class="line-react" />
+                <line x1="50%" y1="50%" x2="13%" y2="76%" class="line-mysql" />
+                <line x1="50%" y1="50%" x2="76%" y2="56%" class="line-php" />
+            </svg>
+            
             <img src="{% static 'images/_icons/html.png' %}" alt="HTML5" class="tech-icon tech-html5">
             <img src="{% static 'images/_icons/css.png' %}" alt="CSS3" class="tech-icon tech-css3">
             <img src="{% static 'images/_icons/js.png' %}" alt="JavaScript" class="tech-icon tech-javascript">
             <img src="{% static 'images/_icons/py.png' %}" alt="Python" class="tech-icon tech-python">
             <img src="{% static 'images/_icons/dj.png' %}" alt="Django" class="tech-icon tech-django">
+            <img src="{% static 'images/_icons/angular.png' %}" alt="JavaScript" class="tech-icon tech-angular">
+            <img src="{% static 'images/_icons/dotnet.png' %}" alt="Python" class="tech-icon tech-dotnet">
+            <img src="{% static 'images/_icons/flutter.png' %}" alt="Django" class="tech-icon tech-flutter">
             <img src="{% static 'images/_icons/bootstrap.png' %}" alt="Bootstrap" class="tech-icon tech-bootstrap">
-            
-            <!-- Add more tech icons as needed -->
+            <img src="{% static 'images/_icons/react.png' %}" alt="React" class="tech-icon tech-react">
+            <img src="{% static 'images/_icons/my.png' %}" alt="MySQL" class="tech-icon tech-mysql">
+            <img src="{% static 'images/_icons/php.png' %}" alt="PHP" class="tech-icon tech-php">
         </div>
     </div>
     
-</div>
+    
+{% comment %} </div> {% endcomment %}
+
 
 
 
