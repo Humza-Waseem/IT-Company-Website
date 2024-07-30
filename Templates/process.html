@@ -1,74 +1,71 @@
 {% load static%}
 <div class="timeline">
-  <div class = "text-big Process" style="display: flex; flex-direction: row;" >Our <span style="font-style: italic; "> Process</span> 
-    
-</div>
+  <div class = "text-big Process" style="display: flex; flex-direction: row;" >Our <span style="font-style: italic; "> Process</span> </div>
 
-  <div class="timeline-line"></div>
-  <div class="glowing-arrow"></div>
+  {% comment %} <div class="timeline-line"></div> {% endcomment %}
   
-  <script src="{% static 'javascript/script.js'%}"></script>
-
-    <div class="timeline-content">
-        <div class="timeline-item">
-            <p class="timeline-title text-small"></p>
-            {% comment %} <div class = "step3"><img src="{% static 'images/_bg/11.jpg'%}" alt="step3"></div>      </div> {% endcomment %}
-            <div class = "step1">
-              <div class="card">
-              <img src="{% static 'images/_icons/idea.png' %}" alt="planingPic">
-                  <p class = "text-big card-text">Planning </p>
-                <div class="card__content">
-                  <p class="card__title">Project Planning
-                  </p><p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-              </div>
-        </div>
-              
+  <div class= "timeline-content">
+    <div class="flip-card flipcard-1">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <p class="title">Planning</p>
+              <p>Hover Me</p>
           </div>
-        <div class="timeline-item">
-            <p class="timeline-title text-small"></p>
-            {% comment %} <div class = "step3"><img sr>Designc="{% static 'images/_bg/11.jpg'%}" alt="step3"></div>      </div> {% endcomment %}
-            <div class = "step2">
-              <div class="card">
-                <img src="{% static 'images/_icons/des.png' %}" alt="designPic">
-                  <p class = "text-big card-text">Design</p>
-                <div class="card__content">
-                  <p class="card__title">Design
-                  </p><p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-              </div>
-            </div>
-              
-        </div>
-        <div class="timeline-item">
-          <p class="timeline-title text-small"></p>
-         {% comment %} < class = "step3"><img src="{% static 'images/_bg/11.jpg'%}" alt="step3"></ div>      </div> {% endcomment %}
-          <div class = "step3">
-           <div class="card">
-            <img src="{% static 'images/_icons/code.png' %}" alt="designPic">
-              <br>
-              <p class = "text-big card-text">Code</p>
-            <div class="card__content">
-              <p class="card__title">Code & Development
-              </p><p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            </div>
-           </div>
+          <div class="flip-card-back">
+              <p class="title">BACK</p>
+              <p>Leave Me</p>
           </div>
-        </div>
-        <div class="timeline-item">
-            <p class="timeline-title text-small"></p>
-            {% comment %} <div class = "step3"><img src="{% static 'images/_bg/11.jpg'%}" alt="step3"></div>      </div> {% endcomment %}
-            <div class = "step4">
-              <div class="card">
-                <img src="{% static 'images/_icons/qa.png' %}" alt="designPic">
-                  <br>
-                  <p class = "text-big card-text">Quality Assurance </p>
-                <div class="card__content">
-                  <p class="card__title">Quality Assurance & Testing
-                  </p><p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-              </div>
-            </div>
-              
-        </div>
+      </div>
+    </div>
+    <div class="flip-card flipcard-2">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <p class="title">Design</p>
+              <p>Hover Me</p>
+          </div>
+          <div class="flip-card-back">
+              <p class="title">BACK</p>
+              <p>Leave Me</p>
+          </div>
+      </div>
+    </div>
+    <div class="flip-card flipcard-3">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <p class="title">Development</p>
+              <p>Hover Me</p>
+          </div>
+          <div class="flip-card-back">
+              <p class="title">BACK</p>
+              <p>Leave Me</p>
+          </div>
+      </div>
+    </div>
+    <div class="flip-card flipcard-4">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <p class="title">Testing & QA</p>
+              <p>Hover Me</p>
+          </div>
+          <div class="flip-card-back">
+              <p class="title">BACK</p>
+              <p>Leave Me</p>
+          </div>
+      </div>
+    </div>
+    <div class="flip-card flipcard-5">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <p class="title">Maintenance</p>
+              <p>Hover Me</p>
+          </div>
+          <div class="flip-card-back">
+              <p class="title">BACK</p>
+              <p>Leave Me</p>
+          </div>
+      </div>
+    </div>
   </div>
+
+
+</div>

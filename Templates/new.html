@@ -1,0 +1,37 @@
+{% load static%}
+<section id="client-feedback">
+    <div class="feedback-carousel">
+      <div class="feedback-item">
+        <img src="{% static 'images/_bg/masoon.png'%}" alt="Client 1">
+        <h2>Client 1</h2>
+        <p>Testimonial text goes here.</p>
+      </div>
+      <div class="feedback-item">
+        <img src="{% static 'images/_bg/testi.png'%}" alt="Client 1">
+        <h2>Client 1</h2>
+        <p>Testimonial text goes here.</p>
+      </div>
+      <div class="feedback-item">
+        <img src="{% static 'images/_bg/22.jpg'%}" alt="Client 1">
+        <h2>Client 1</h2>
+        <p>Testimonial text goes here.</p>
+      </div>
+      <div class="feedback-item">
+        <img src="{% static 'images/_bg/22.jpg'%}" alt="Client 1">
+        <h2>Client 1</h2>
+        <p>Testimonial text goes here.</p>
+      </div>
+      </div>
+</section>
+{% comment %} <section id="client-feedback">
+    <div class="feedback-carousel">
+      {% for testimonial in testimonials %}
+        <div class="feedback-item">
+          <img src="{% static testimonial.image %}" alt="{{ testimonial.name }}">
+          <h2>{{ testimonial.name }}</h2>
+          <p>{{ testimonial.testimonial }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section> {% endcomment %}
+  

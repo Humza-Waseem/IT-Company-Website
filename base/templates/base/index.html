@@ -102,15 +102,8 @@
      {% comment %} <div class="preloader">
         <div class="counter">0</div>
     </div>    {% endcomment %}
-    <div class=" preloader">
-        <div class="loader">
-            <div></div>
-        
-            <div></div>
-        </div>
-    </div>  
+   {% include 'preloader.html'%}
    
-    <script src="{% static 'javascript/preloader.js'%}"></script>
     <script src="{% static 'javascript/script.js'%}"></script>
     <!-- ==================================================PRELOADERN  END ==============================-->
     
@@ -177,6 +170,7 @@
 
  {% include "sections.html"%}
  {% include 'team.html'%}
+ {% include 'new.html'%}
 
  {% comment %} {% include 'data.html'%} {% endcomment %}
  

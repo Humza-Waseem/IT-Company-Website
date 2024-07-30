@@ -7,11 +7,11 @@
     {% include 'main.html'%}
 </head>
 <body>
-    
-    {% load static %}
-
-
-{% block content%}
+  {% load static %}
+  
+  
+  {% block content%}
+  {% include 'preloader.html'%}
 
 
 <div class="career-container">
@@ -26,7 +26,7 @@
   {% include 'scrollToTopButton.html'%}
 
   <div class="cards career-cards">
-    <p class = " info-text text-big" > Positions <span>Available</span> </p>
+    <p class = " info-text text-big" > Open <span>Positions:{}</span> </p>
     {% include 'careerCard.html'%}
     
  

@@ -1,6 +1,6 @@
 {% load static%}
 <div class=" text-big Process"> What our <span style="font-style: italic;">Clients</span> say</div>
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+{% comment %} <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -37,4 +37,29 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div> {% endcomment %}
+
+<section id="client-feedback">
+    <div class="feedback-carousel">
+      <div class="feedback-item">
+        <img src="{% static 'images/_bg/masoon.png'%}" alt="Client 1">
+        <h2>Client 1</h2>
+        <p>Testimonial text goes here.</p>
+      </div>
+      <div class="feedback-item">
+        <img src="{% static 'images/_bg/testi.png'%}" alt="Client 1">
+        <h2>Client 1</h2>
+        <p>Testimonial text goes here.</p>
+      </div>
+      <div class="feedback-item">
+        <img src="{% static 'images/_bg/22.jpg'%}" alt="Client 1">
+        <h2>Client 1</h2>
+        <p>Testimonial text goes here.</p>
+      </div>
+      <div class="feedback-item">
+        <img src="{% static 'images/_bg/22.jpg'%}" alt="Client 1">
+        <h2>Client 1</h2>
+        <p>Testimonial text goes here.</p>
+      </div>
+      </div>
+</section>
