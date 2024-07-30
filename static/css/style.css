@@ -2262,10 +2262,9 @@ margin: 10px 10px;
   width: 70%;
 }
 .card1, .card2, .card3, .card4, .card5, .card6 {
-  /* border: 1px solid black; Added 'solid' to s/pecify border style */
   border-radius: 10px;
   width: 85%;
-  height: 154px; /* Ensure only one height is defined */
+  height: 154px;
   padding: 34px 31px;
   background-color: rgb(250, 250, 250);
   text-align: center;
@@ -2273,10 +2272,11 @@ margin: 10px 10px;
   justify-content: center;
   display: flex;
   flex-direction: row;
-  box-shadow: 1px 2px 5px rgb(169, 169, 169);
+  /* box-shadow: 1px 2px 5px rgb(169, 169, 169); */
   margin: auto;
   margin: 10px 0;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Shortened duration */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #e3e2e2;
 }
 
 .card1:hover {
@@ -2968,7 +2968,7 @@ position: absolute;
   font-size: 16px;
   line-height: 1;
   color: white;
-  background: none;
+  /* background: none; */
   border: none;
   outline: none;
   overflow: hidden;
@@ -3774,7 +3774,6 @@ body.tt-magic-cursor #magic-cursor {
 .card-text{
   margin-top: 10px;
   font-size: 20px;
-  /* animation: none; */
 font-family: "Plus Jakarta Sans";
 }
 
@@ -4792,7 +4791,7 @@ font-family: "Plus Jakarta Sans";
 }
 
 .tech-lines line {
-  stroke: rgb(177, 239, 177);
+  stroke: rgb(224, 220, 255);
   stroke-width: 2;
 }
 
@@ -4803,9 +4802,6 @@ font-family: "Plus Jakarta Sans";
 .center-element {
   z-index: 1; 
 }
-
-
-
 
 .card{
   border: none !important; 
@@ -4832,7 +4828,9 @@ font-family: "Plus Jakarta Sans";
 
 }
 .preloader.hidden {
-  opacity: 0; /* Preloader after fade-out */
+  /* opacity: 0; Preloader after fade-out */
+  visibility: hidden;
+  display: none;
 }
 
 
@@ -4844,7 +4842,7 @@ font-family: "Plus Jakarta Sans";
 
 .loader div {
   position: absolute;
-  border: 4px solid #767bff;
+  border: 4px solid #5c61ff;
   border-radius: 50%;
   animation: loader8435 1s ease-out infinite;
 }
@@ -4870,3 +4868,42 @@ font-family: "Plus Jakarta Sans";
     opacity: 0;
   }
 }
+
+
+
+
+
+/* .carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-item-inner {
+  display: flex;
+}
+
+.text-container {
+  flex: 0 0 30%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+img {
+  flex: 0 0 70%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+} */

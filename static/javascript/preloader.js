@@ -20,6 +20,6 @@ var loader = document.getElementsByClassName('preloader')[0];
 
 window.addEventListener('load', function() {
   setTimeout(function() {
-    loader.classList.add('hidden');  // Add 'hidden' class with transition
-  }, 300); 
+    loader.classList.add('hidden');  
+  }, 100); 
 });

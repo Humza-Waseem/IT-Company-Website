@@ -28,8 +28,8 @@
                   <p class="text-small">{{firstSectionContent.description}} <span id="dynamicText" ></span>  </p>
             
             <div class = "mainButtons">
-                 <div class="btn-big clicked">
-                    {% comment %} <button class="button-80" id = "btn-getStarted" role="button">Contact Us <img src="{% static 'images/_icons/arrow-down.svg'%}"       class="arrow-down-img" alt="arrow"></button> {% endcomment %}
+                {% comment %} <div class="btn-big clicked">
+                    
                     <div class="main__action">
                       <a class="main__scroll" href="#">
                         <div class="main__scroll-box">
@@ -43,8 +43,10 @@
                         <span class="main__scroll-text">Get Started</span>
                       </a>
                     </div>
-                 </div> 
-
+                </div>  {% endcomment %}
+                <div class = "btn-big clicked ">
+                 <button class = "button-80"> <a href="{% url 'contact'%}" role="button">Contact Us</a></button>
+                </div>
             </div>
             </div>
             <script src="{% static 'javascript/dynamic.js' %}"></script>
@@ -66,7 +68,7 @@
     
 </section>
 <hr style="height : 1px; background-color: #e7e7e7; color: #f3f3f3; border: none;" >
-{% include 'scrollToTopButton.html'%}
+
 
 <script src="{% static 'javascript/script.js' %}"></script>
 
