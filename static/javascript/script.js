@@ -28,22 +28,17 @@
 
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navBar');
+    const vh = window.innerHeight;
 
-    // Add or remove classes based on scroll position
-    // if (window.scrollY > 0) {
-    //     navbar.classList.add('navbar-scrolled');
-    //     navbar.classList.add('navbar-scrolled-logo');
-    // } else {
-    //     navbar.classList.remove('navbar-scrolled');
-    //     navbar.classList.remove('navbar-scrolled-logo');
-    // }
-
-    // Hide or show navbar based on specific scroll positions
-    if (window.scrollY > 40 && window.scrollY < 700) {
+    // Add or remove classes based on specific scroll positions
+    if (window.scrollY > 40 && window.scrollY < 150 * vh / 100) {
         navbar.classList.add('hidden');
-        navbar.classList.add('navbar-scrolled');
-    } else if (window.scrollY >= 700) {
+        navbar.classList.remove('navbar-scrolled');
+    } else if (window.scrollY >= 150 * vh / 100) {
         navbar.classList.remove('hidden');
+        // navbar.classList.remove('navBar');
+        navbar.classList.remove('.navbar-hidden');
+        navbar.classList.remove('h-nav-responsive');
         navbar.classList.add('navbar-scrolled');
     } else {
         navbar.classList.remove('hidden');
@@ -53,6 +48,33 @@ window.addEventListener('scroll', function() {
     // Log the class list to the console for debugging
     console.log(navbar.classList);
 });
+
+//////////////////////////     SECTION TITLE      ////////////////////////////////
+document.addEventListener('DOMContentLoaded', function() {
+  const sectionTitle = document.querySelector('.section-title');
+
+  const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              observer.unobserve(entry.target);
+          }
+      });
+  }, observerOptions);
+
+  observer.observe(sectionTitle);
+});
+
+
+
+
+
 
 
 // /////////////////   SECTION  ANIMATION ///////////////////////

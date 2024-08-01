@@ -1,9 +1,57 @@
 {% load static%}
 {% block content%}
 <div class="cards">
+    <div class="servicesCard-main">
+        <div class="card-image"><img src="{% static 'images/_bg/im.jfif'%}" alt="web development" class="card1Image">  </div> 
+        <h1 class= "card-text-big cardmain">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi </h1>
+       <!-- <div class="card-image">
+           <img src="{% static 'images/_icons/des.png'%}" alt="icon" class="card1Image">
+       </div>-->
+       <div class="card1Content">
+          
+           <!-- <p class= "card-text-small">{{services.content}}</p> -->
+       </div> 
+   </div>
+
+    
+     <div class="card-side">
+      <div class="card-image">
+        <img src="{% static 'images/_icons/des.png'%}" alt="icon" class="card1Image">
+      </div>
+      <div class="card1Content">
+        <h1 class= "card-text-big">{{services.name}}</h1>
+        <p class= "card-text-small">{{services.content}}</p>
+      </div>
+     </div>
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
   <div class="cardsUpper">
 
     
+
+
     {% for services in firstThreeServices %}
     <div class="servicesCard">
         {% comment %} <div class="card-image"><img src="{% static 'images/_icons/globe.svg'%}" alt="web development" class="card1Image"></div> {% endcomment %}
