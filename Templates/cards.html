@@ -1,9 +1,22 @@
 {% load static%}
 {% block content%}
 <div class="cards">
-    <div class="servicesCard-main">
-        <div class="card-image"><img src="{% static 'images/_bg/im.jfif'%}" alt="web development" class="card1Image">  </div> 
-        <h1 class= "card-text-big cardmain">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi </h1>
+    {% comment %} <div class=""> {% endcomment %}
+    <!-- <div class=" servicesCard-main card-image"><img src="{% static 'images/_bg/im.jfif'%}" alt="web development" class="card1Image">  
+             <h1 class= "card-text-big cardmain">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi 
+            <button class="btn" style=" font-family: Urbanist; font-size: 14px; position: relative; left: 15px;"> Contact US</button>
+        </h1> 
+    </div>  -->
+
+    <div class="cardmainwithImage">
+        <!-- <img src="{% static 'images/_bg/im.jfif'%}" alt="webDev"> -->
+        <div class= "cardmainwithImageText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi 
+            <button class="btn" style=" font-family: Urbanist; font-size: 14px; position: relative; left: 15px;"> Contact US</button>
+        </div> 
+
+    </div>
+      
+       
        <!-- <div class="card-image">
            <img src="{% static 'images/_icons/des.png'%}" alt="icon" class="card1Image">
        </div>-->
@@ -11,7 +24,7 @@
           
            <!-- <p class= "card-text-small">{{services.content}}</p> -->
        </div> 
-   </div>
+   {% comment %} </div> {% endcomment %}
 
     
      <div class="card-side">

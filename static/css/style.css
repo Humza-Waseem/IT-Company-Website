@@ -2221,31 +2221,32 @@ transition: all 5s ease;
  
 .card-side{
   position: relative;
-    /* margin: auto; */
-    width: 297px;
-    height: 323px;
-    left: 900px;
-    border: 2px solid;
-    bottom: 490px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    width: 45%;
-    height: 400px;
-    padding: 20px 34px 20px 31px;
-    /* background-color: rgb(250, 250, 250); */
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin: 0px 6px 0px 6px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: 1px solid #000000;
-    width: 274px;
-    height: 400px;
+  /* margin: auto; */
+  /* width: 297px; */
+  /* height: 323px; */
+  left: 809px;
+  /* border: 2px solid; */
+  bottom: 398px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 45%;
+  height: 400px;
+  padding: 20px 34px 20px 31px;
+  /* background-color: rgb(250, 250, 250); */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin: 0px 6px 0px 6px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #000000;
+  width: 246px;
+  height: 397px;
+  width: 312px;
 }
 
 .cards{
@@ -2259,6 +2260,13 @@ transition: all 5s ease;
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center;  */
+  height: 250vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    margin: auto;
+    max-width: 100%;
 }
 .cards img{
   width: 60px;
@@ -2271,7 +2279,7 @@ margin: 10px 10px;
     justify-content: center;
     display: flex;
     margin: auto;
-    width: 70%;
+    width: 95%;
     position: relative;
     bottom: 311px;
 }
@@ -5078,14 +5086,10 @@ img {
 
 
 /* /////////////////////////       SERVICES             ////////////////// */
-.servicesCard-main{
+/* .servicesCard-main{
   width:750px;
-  height: 500px;
+  height: 450px;
   border-radius: 20px;
-  /* width: 85%; */
-  /* height: 400px; */
-  /* padding: 20px 34px 20px 31px; */
-  /* background-color: rgb(250, 250, 250); */
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -5093,11 +5097,35 @@ img {
   flex-direction: column;
   margin: auto;
   margin: 0px 6px 0px 6px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid #ebebeb;
+  border: 1px solid #230808;
   position: relative;
-  left: 50px;
+
  
+} */
+ .cardmainwithImage{
+   width: 60%;
+   height: 400px;
+   position: relative;
+   background-image: url(../images/_bg/11.jpg);
+   left: 20px;
+   border-radius: 20px;
+ }
+ .cardmainwithImageText{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: auto;
+  flex-direction: column;
+  position: relative;
+  top: 200px;
+  font-family: "Urbanist";
+  /* width: 40%;
+  max-width: 40%; */
+  width: 93%;
+    max-width: 93%;
+  
 }
 .cardmain{
   width: 90%;
@@ -5123,7 +5151,8 @@ img {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  left: 40px;
+  left: 10px;
+  top: 10px;
  
   
   
@@ -5143,7 +5172,16 @@ img {
   margin: 0px 6px 0px 6px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border: 1px solid #ebebeb;
+  /* border: 1px solid #000000; */
+  width: 246px;
+  height: 397px;
+  width: 312px;
+  margin: 0px 20px 10px 21px;
 }
+.servicesCard:hover{
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .servicesCard .card-image{
   width: 100px;
   height: 100px;
@@ -5203,7 +5241,7 @@ img {
 .rating {
   margin: 5px 0; /* Adjust the margin as needed */
   position: relative;
-  top: 27px;
+  top: -5px;
   background: rgb(128, 128, 216)    ;
   border-radius: 30px;
   padding: 5px 10px 5px 10px ;
@@ -5264,23 +5302,34 @@ img {
   position: relative;
   top: 10px;
 }
-.feedback-content h2{
+.feedback-content h3{
   position: relative;
-  top: 40px;
+  /* top: 40px; */
   /* font-size: ; */
   color: var(--heading-dark);
   font-family: "Urbanist";
+}
+.feedback-content h6{
+  position: relative;
+  /* top: 40px; */
+  /* font-size: ; */
+  color: var(--heading-dark);
+  /* color: maroon; */
+  font-family: "Urbanist";
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .feedback {
   position: relative;
     white-space: nowrap;
     white-space: normal;
-    top: 34px;
+    /* top: 34px; */
     font-size: 14px;
     font-family: "Urbanist";
     color: rgb(160, 160, 160);
     color: var(--secondary-dark);
+    bottom: 22px;
 }
 .feedback-image{
   width: 200px;
@@ -5290,15 +5339,15 @@ img {
   
 }
 .feedback-item img{
-  width: 180px;
-  height: 180px;
-  border-radius: 20%;
+  width: 148px;
+  height: 148px;
+  border-radius: 35%;
   /* display: flex; */
   /* align-items: center; */
   margin: auto;
   border: 1px solid rgb(224, 224, 224);
   /* opacity: 0.7; */
-  /* padding: 10px 10px 10px 10px ; */
+  /* padding: 10px 10px 10px 10px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .feedback-item img:hover{
