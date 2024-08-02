@@ -49,6 +49,27 @@ window.addEventListener('scroll', function() {
     console.log(navbar.classList);
 });
 
+
+
+
+/////////////////////////////    CAROUSAL   ////////////////////////////////
+const prevArrow = document.getElementById('prev-arrow');
+const nextArrow = document.getElementById('next-arrow');
+const feedbackCarousel = document.querySelector('.feedback-carousel');
+
+let scrollAmount = 0;
+
+nextArrow.addEventListener('click', () => {
+    feedbackCarousel.scrollBy({ left: 300, behavior: 'smooth' });
+    scrollAmount += 300;
+});
+
+prevArrow.addEventListener('click', () => {
+    feedbackCarousel.scrollBy({ left: -300, behavior: 'smooth' });
+    scrollAmount -= 300;
+});
+
+
 //////////////////////////     SECTION TITLE      ////////////////////////////////
 document.addEventListener('DOMContentLoaded', function() {
   const sectionTitle = document.querySelector('.section-title');
