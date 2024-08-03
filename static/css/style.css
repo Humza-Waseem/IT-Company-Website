@@ -2381,7 +2381,7 @@ color: white;
 .career-cards {
   display: flex;
   flex-direction: column;
-  padding: 20px; /* Optional: for better spacing */
+  padding: 20px; 
   height: auto;
 }
 
