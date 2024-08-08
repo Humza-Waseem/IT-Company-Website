@@ -963,6 +963,12 @@ border-radius: 10px;
     justify-content:space-around;
     /* margin: auto; */
     /* margin-left: 202px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* margin: auto; */
+    /* margin-left: 202px; */
+    width: 376px;
 }
 
 
@@ -2306,13 +2312,14 @@ margin: 10px 10px;
 .card-image{
   width: 155px;
   /* height: 143px; */
-  height: 155px;
+  height: 100px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  right: 40px;
+  /* right: 10px; */
   position: relative;
-  bottom: 10px;
+  /* bottom: 10px; */
+  /* left: 118px;*/
 }
 .card1Content{
   display: flex;
@@ -2395,6 +2402,7 @@ color: white;
   font-family: "Urbanist";
   /* width: 200px; */
   width: 260px;
+  margin-bottom: 15px;
 }
 .careerLast{
   width: 100%;
@@ -2926,7 +2934,7 @@ margin-left: 0px;
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 6px;
   position: absolute;
   top: 0;
   left: 0;
@@ -4332,16 +4340,18 @@ font-family: "Plus Jakarta Sans";
   padding: 50px 0;
   /* background-color: #004c98; */
   /* background: linear-gradient(90.37deg, #1acaff 0.29%, #ff2420 99.68%); */
-  /* background-color: #eae7e7; */
+  /* background-color: #c4b8b8; */
   text-align: center;
   margin-bottom: 0px;
   height: 80vh;
+
 }
 .team-container{
   width: 80%;
   margin: auto;
   /* background: linear-gradient( 90deg, #f8e7e7 0.29%, #e4eff4 99.68%);   */
-  /* background: linear-gradient(to bottom right, transparent, #ececec); Adjust the gradient colors as needed */
+  background: linear-gradient(to bottom right, transparent, #f8f6f6); 
+  
   border-radius: 20px;
   height: 400px;
   padding: 20px;
@@ -4943,7 +4953,7 @@ font-family: "Plus Jakarta Sans";
 }
 
 .tech-lines line {
-  stroke: rgb(196, 255, 148);
+  stroke: rgb(202, 243, 169);
   stroke-width: 2;
 }
 
@@ -5232,7 +5242,7 @@ img {
   /* margin: auto; */
   /* margin: 0px 6px 0px 6px; */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid #4b0000;
+  border: 1px solid #1411112b;
   /* border: 1px solid #000000; */
   width: 246px;
   height: 340px;
@@ -5240,7 +5250,7 @@ img {
   margin: 0px 20px 10px 21px;
 }
 .servicesCard:hover{
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.466);
 }
 
 .servicesCard .card-image{
@@ -5254,7 +5264,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* right: 40px; */
   /* position: relative; */
   /* bottom: 10px;*/
-  left: -26px;
+  /* left: -26px; */
 }
 .servicesCard .card-image img{
       /* width: 100%; */
